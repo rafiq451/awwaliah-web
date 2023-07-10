@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .carousel {
+    width: 100%;
+    height: 400px; /* Sesuaikan tinggi carousel dengan kebutuhan Anda */
+  }
+
+  .carousel-inner {
+    display: flex;
+  }
+
+  .carousel-item {
+    opacity: 0;
+  }
+
+  .carousel-item.active {
+    opacity: 1;
+  }
+
+  .carousel-nav button {
+    opacity: 0.5;
+    transition: opacity 0.3s;
+  }
+
+  .carousel-nav button:hover {
+    opacity: 1;
+  }
+}
+
+.navbar-fixed {
+  @apply fixed z-[9999] bg-primary bg-opacity-[35%];
+  backdrop-filter: blur(5px);
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
+}
+.span-color {
+  @apply bg-white;
+}
+
+.sejarah {
+  @apply text-primary font-semibold text-lg lg:text-2xl mt-10 mb-2;
+}
+
+.text-color {
+  @apply lg:text-white;
+}
+.hover-berita {
+  @apply w-0 h-0 group-hover:w-40 group-hover:h-40 sm:w-0 sm:h-0 group-hover:sm:w-32 group-hover:sm:h-32 md:w-0 md:h-0 group-hover:md:w-36 group-hover:md:h-36 lg:w-0 lg:h-0 group-hover:lg:w-32 group-hover:lg:h-32 xl:w-0 xl:h-0 group-hover:xl:h-40 group-hover:xl:w-40 group-hover:scale-110;
+}
+.dropdown {
+  @apply block;
+}
+.dropdown-menu {
+  @apply text-base text-secondry py-3 mx-6 flex hover:text-primary;
+}
+
+.hamburger-line {
+  @apply w-[30px] h-[2px] my-2 block;
+}
+
+.hamburger-active > span:nth-child(1) {
+  @apply rotate-45;
+}
+.hamburger-active > span:nth-child(2) {
+  @apply scale-0;
+}
+.hamburger-active > span:nth-child(3) {
+  @apply -rotate-45;
+}
