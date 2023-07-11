@@ -1,8 +1,8 @@
-<header class="w-full bg-transparent absolute top-0 left-0 items-center flex z-10 ">
+<header class="w-full bg-transparent absolute top-0 left-0 items-center flex z-10 font-['Poppins']">
       <div class="container">
         <div class="flex justify-between items-center relative">
           <div id="logo" class="w-24 h-24 p-2">
-            <a href=""><img src="img/logo/logo_yayasan.svg" alt="" /></a>
+            <a href=""><img src="{{ asset('img/logo/logo_yayasan.svg') }}" alt="" /></a>
           </div>
           <div class="flex items-center px-4">
             <button id="hamburger" name=" hamburger" class="block absolute right-4 lg:hidden">
@@ -46,14 +46,23 @@
                           ></a>
                         <div class="absolute hidden border border-primary bg-slate-50 shadow-lg rounded-lg max-w-[250px] w-full top-19 left-4 lg:left-10">
                           <ul class="block">
-                            <li><a href="" class="dropdown-menu">TK</a></li>
-                            <li><a href="" class="dropdown-menu">SDIT</a></li>
-                            <li><a href="/tingkatsmpPlus" class="dropdown-menu">SMP PLUS</a></li>
+                            <li><a href="#" class="dropdown-menu">TK</a></li>
+                            <li><a href="#" class="dropdown-menu">SDIT</a></li>
+                            <li><a href="/pendidikan/" class="dropdown-menu">SMP PLUS</a></li>
                             <li><a href="" class="dropdown-menu">MA</a></li>
                           </ul>
                         </div>
                       </li>
-                      <li><a href="" class="dropdown-menu">NON FORMAL</a></li>
+                      <li>
+                        <a href="#non-formal" class="dropdown-menu">NON FORMAL <span class="mx-2"><i class="bi bi-chevron-down"></i></span></a>
+                        <div class="absolute hidden border border-primary bg-slate-50 shadow-lg rounded-lg max-w-[250px] w-full top-19 left-4 lg:left-10">
+                          <ul class="block">
+                            <li><a href="#" class="dropdown-menu">Pondok Pesantren</a></li>
+                            <li><a href="#" class="dropdown-menu">Asrama anak Yatim</a></li>
+                            <li><a href="/pendidikan/" class="dropdown-menu">asrama tahfidz</a></li>
+                          </ul>
+                        </div>
+                      </li>
                     </ul>
                   </div>
                 </li>

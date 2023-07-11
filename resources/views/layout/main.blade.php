@@ -8,6 +8,16 @@
     <!-- fontawwesome -->
     <link rel="stylesheet" href="fontawesome/css/all.css" />
 
+    {{-- font poppins --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600&display=swap" rel="stylesheet">
+
+    {{-- font Viga --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600&family=Viga&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
 
     <!--  -->
@@ -29,7 +39,7 @@
         <div class="max-w-full">
           <div class="flex flex-wrap justify-center p-4 my-6">
             <div class="w-full lg:w-[50%]">
-              <div class="w-40 h-40 mx-auto mb-4"><img src="img/logo/logo_yayasan.svg" alt="" /></div>
+              <div class="w-40 h-40 mx-auto mb-4"><img src="{{ asset( 'img/logo/logo_yayasan.svg') }}" alt="" /></div>
               <h2 class="text-center text-xl font-bold">Awwaliah Al-Asiyah</h2>
               <div class="flex text-center mt-6 mb-2">
                 <span class="mx-3"><i class="fa-solid fa-envelope-circle-check"></i></span>
@@ -46,7 +56,7 @@
             </div>
             <div class="w-full lg:w-[50%] my-5">
               <div class="max-w-full overflow-hidden rounded-md">
-                <img src="img/berita/ber1.jpg" alt="" />
+                <img src="{{ asset('img/berita/ber1.jpg') }}" alt="" />
               </div>
             </div>
           </div>
@@ -100,6 +110,7 @@
     </footer>
     <!-- footer end -->
 
-    <script src="js/script.js"></script>
+    {{-- <script src="{{ @vite('js/script.js') }}" defer></script> --}}
+    @vite('public/js/script.js')
   </body>
 </html>

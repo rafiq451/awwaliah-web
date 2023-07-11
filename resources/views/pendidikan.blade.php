@@ -1,3 +1,4 @@
+{{-- @dd($formal) --}}
 @extends('layout/main')
 
 @section('container')
@@ -11,7 +12,7 @@
             <button id="prevBtn" class="hidden carousel-prev px-3 py-2 bg-gray-800 text-white rounded-full focus:outline-none"><i class="bi bi-arrow-left"></i></button>
             <button id="nextBtn" class=" hidden carousel-next px-3 py-2 bg-gray-800 text-white rounded-full focus:outline-none"><i class="bi bi-arrow-right"></i></button>
           <div class="w-full">
-            <img src="img/sekolah/school.jpg" alt="">          
+            <img src="{{ asset('img/sekolah/school.jpg') }}" alt="">          
           </div>
         </div>
         </div>
@@ -23,7 +24,7 @@
     <section id="#sejarah" class="p-8  -mt-[25rem] sm:-mt-[23rem] md:-mt-[13rem] lg:-mt-[10rem]">
       <div class="container">
         <div class="w-full">
-          <h4 class="text-2xl font-semibold -mt-2 md:mt-6 lg:text-4xl lg:mt-5 text-secondry">Tingkat SMP Plus</h4>
+          <h4 class="text-2xl font-semibold -mt-2 md:mt-6 lg:text-4xl lg:mt-5 text-secondry">{{ $formal["title"] }}</h4>
             <div class="w-[20%] md:w-[10%] my-4  h-1 rounded-sm bg-tex"></div>           
           <div class="  my-10  w-full">
             <h2 class="sejarah">Sejarah</h2>

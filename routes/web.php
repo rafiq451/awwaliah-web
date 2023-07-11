@@ -17,25 +17,36 @@ Route::get('/', function () {
     
     $pFormal = [
         [
+            'title' => 'Tingkat TK',
+            'title-nav' => 'TK',
+            'slug' => 'taman-anak',
+            'logo' => 'pondok.svg',
+            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis placeat perferendis deleniti non similique recusandae?'
+        ],
+        [
             'title' => 'Pondok Pesantren',
+            'title-nav' => 'pondok',
             'slug' => 'pondok-pesantren',
             'logo' => 'pondok.svg',
             'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis placeat perferendis deleniti non similique recusandae?'
         ],
         [
             'title' => 'Tingkat MA',
+            'title-nav' => 'MA',
             'slug' => 'tingkat-ma',
             'logo' => 'maa.svg',
             'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis placeat perferendis deleniti non similique recusandae?'
         ],
         [
             'title' => 'Tingkat SMP Plus',
+            'title-nav' => 'SMP Plus',
             'slug' => 'tingkat-smp-plus',
             'logo' => 'smp.svg',
             'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis placeat perferendis deleniti non similique recusandae?'
         ],
         [
             'title' => 'Tingkat SDIT',
+            'title-nav' => 'SDIT',
             'slug' => 'tingkat-sdit',
             'logo' => 'sdit.svg',
             'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis placeat perferendis deleniti non similique recusandae?'
@@ -74,14 +85,59 @@ Route::get('/identitas', function () {
 
 // pendidikan
 Route::get('/pendidikan/{slug}', function ($slug) {
+    $pFormal = [
+        [
+            'title' => 'Tingkat TK',
+            'title-nav' => 'TK',
+            'slug' => 'taman-anak',
+            'logo' => 'pondok.svg',
+            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis placeat perferendis deleniti non similique recusandae?'
+        ],
+        [
+            'title' => 'Pondok Pesantren',
+            'title-nav' => 'pondok',
+            'slug' => 'pondok-pesantren',
+            'logo' => 'pondok.svg',
+            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis placeat perferendis deleniti non similique recusandae?'
+        ],
+        [
+            'title' => 'Tingkat MA',
+            'title-nav' => 'MA',
+            'slug' => 'tingkat-ma',
+            'logo' => 'maa.svg',
+            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis placeat perferendis deleniti non similique recusandae?'
+        ],
+        [
+            'title' => 'Tingkat SMP Plus',
+            'title-nav' => 'SMP Plus',
+            'slug' => 'tingkat-smp-plus',
+            'logo' => 'smp.svg',
+            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis placeat perferendis deleniti non similique recusandae?'
+        ],
+        [
+            'title' => 'Tingkat SDIT',
+            'title-nav' => 'SDIT',
+            'slug' => 'tingkat-sdit',
+            'logo' => 'sdit.svg',
+            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis placeat perferendis deleniti non similique recusandae?'
+        ],
+    ];
+    $new_post = [];
+    foreach($pFormal as $formal) {
+        if($formal["slug"] === $slug) {
+            $new_post = $formal;
+        }
+    }
     return view('pendidikan' , [
-        'title' => 'single'   
+        'title' => 'single',
+        'formal' => $new_post  
     ]);
 });
 
 
 // berita terkini
 Route::get('/berita', function () {
+    
     return view('berita/beritaterkini' , [
         'title' => 'Berita terkini'
     ]);

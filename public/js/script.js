@@ -83,8 +83,10 @@ const listBerita = document.querySelector('nav#nav-menu ul li:nth-child(2) a');
 const dropDown = document.querySelector('nav#nav-menu ul li:nth-child(2) div');
 const listPendidikan = document.querySelector('nav#nav-menu ul li:nth-child(5).color a');
 const pendidikan = document.querySelector('nav#nav-menu ul li:nth-child(5).color div');
-const list = document.querySelector('#nav-menu ul li:nth-child(5).color div ul li a');
+const list = document.querySelectorAll('#nav-menu ul li:nth-child(5).color div ul li ');
 const listFormal = document.querySelector('#nav-menu ul li:nth-child(5).color div ul li div');
+const listNonFormal = document.querySelector('#nav-menu ul li.color:nth-child(5) div ul li:nth-child(2) div');
+// const listN = document.querySelector('#nav-menu ul li.color:nth-child(5) div ul li:nth-child(2) a');
 
 // About
 listBerita.addEventListener('mouseover', function () {
@@ -121,11 +123,11 @@ listPendidikan.addEventListener('mouseout', function () {
 });
 
 // pendidikan formal
-list.addEventListener('mouseover', function () {
+list[0].addEventListener('mouseover', function () {
   listFormal.classList.add('dropdown');
 });
 
-list.addEventListener('mouseout', function () {
+list[0].addEventListener('mouseout', function () {
   listFormal.classList.remove('dropdown');
 
   listFormal.addEventListener('mouseover', function () {
@@ -134,5 +136,23 @@ list.addEventListener('mouseout', function () {
 
   listFormal.addEventListener('mouseout', function () {
     listFormal.classList.remove('dropdown');
+  });
+});
+// console.log(listNonFormal);
+
+// pendidikan non formal
+list[5].addEventListener('mouseover', function () {
+  listNonFormal.classList.add('dropdown');
+});
+
+list[5].addEventListener('mouseout', function () {
+  listNonFormal.classList.remove('dropdown');
+
+  listNonFormal.addEventListener('mouseover', function () {
+    listNonFormal.classList.add('dropdown');
+  });
+
+  listNonFormal.addEventListener('mouseout', function () {
+    listNonFormal.classList.remove('dropdown');
   });
 });

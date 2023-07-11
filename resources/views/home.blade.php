@@ -21,7 +21,7 @@
     <section id="#berita" class="p-8 bg-slate-200 -mt-[29rem] sm:-mt-[24rem] md:-mt-[10rem]">
       <div class="container">
         <div class="w-full">
-          <h4 class="text-center font-bold text-2xl lg:text-4xl lg:mt-5 text-secondry">Berita Terkini</h4>
+          <h4 class="text-center font-bold text-2xl lg:text-4xl lg:mt-5 font-['Viga'] text-secondry">Berita Terkini</h4>
           <div class="flex justify-center mt-2 mx-6 items-center">
             <span class="mx-2"><div class="w-7 lg:w-10 h-[1px] bg-secondry"></div></span>
             <h2 class="text-primary text-2xl">
@@ -40,7 +40,8 @@
                     </div>
                   </div>
                 </a>
-                <h4 class="py-2 text-lg font-semibold text-secondry">Lorem Ipsum</h4>
+                <p class="text-primary font-['Poppins']">20-03-2023</p>
+                <h4 class=" text-lg font-semibold text-secondry">Lorem Ipsum</h4>
               </div>
             </div>
             <div class="mb-8 sm:p-4 sm:w-1/2 lg:w-1/3">
@@ -53,7 +54,8 @@
                     </div>
                   </div>
                 </a>
-                <h4 class="py-2 text-lg font-semibold text-secondry">Lorem Ipsum</h4>
+                <p class="text-primary font-['Poppins']">20-03-2023</p>
+                <h4 class=" text-lg font-semibold text-secondry">Lorem Ipsum</h4>
               </div>
             </div>
             <div class="mb-8 sm:p-4 sm:w-1/2 lg:w-1/3">
@@ -66,7 +68,8 @@
                     </div>
                   </div>
                 </a>
-                <h4 class="py-2 text-lg font-semibold text-secondry">Lorem Ipsum</h4>
+                <p class="text-primary font-['Poppins']">20-03-2023</p>
+                <h4 class=" text-lg font-semibold text-secondry">Lorem Ipsum</h4>
               </div>
             </div>
           </div>
@@ -79,7 +82,7 @@
     <section id="#logo" class="w-full bg-primary pt-10">
       <div class="container">
         <div class="w-full p-10">
-          <h4 class="text-center font-bold text-2xl lg:text-4xl lg:mt-5 text-white">Logo Pendidikan</h4>
+          <h4 class="text-center font-bold text-2xl lg:text-4xl lg:mt-5 font-['Viga'] text-white">Logo Pendidikan</h4>
           <div class="flex justify-center mt-4 mx-6 items-center">
             <span class="mx-2"><div class="w-9 lg:w-10 h-[1px] bg-white"></div></span>
             <h2 class="text-kuns text-2xl">
@@ -106,7 +109,7 @@
     <section id="#pendidikan" class="w-full bg-slate-200 pt-10">
       <div class="container">
         <div class="w-full p-10">
-          <h4 class="text-center font-bold text-2xl lg:text-4xl lg:mt-5 text-secondry">Awwaliah Al-asiyah</h4>
+          <h4 class="text-center font-bold text-2xl lg:text-4xl lg:mt-5 font-['Viga'] text-secondry">Awwaliah Al-asiyah</h4>
           <div class="flex justify-center mt-4 mx-6 items-center">
             <span class="mx-2"><div class="w-9 lg:w-10 h-[1px] bg-secondry"></div></span>
             <h2 class="text-primary text-2xl">
@@ -121,9 +124,9 @@
               <div class="rounded-lg shadow-lg overflow-hidden bg-white bg-opacity-60 mb-4">
                 <img src="img/sekolah/school.jpg" alt="" />
                 <div class="mx-6 py-8">
-                  <h4 class="mb-3 text-xl font-semibold text-primary">{{ $item['title'] }}</h4>
-                  <p class="font-medium text-tex mb-5">{{ $item['deskripsi'] }}</p>
-                  <a href="/pendidikan/{{ $item['slug'] }}" class="text-sm font-semibold text-secondry bg-kuns px-4 py-2 rounded-lg">Lihat Selengkapnya</a>
+                  <h4 class="mb-3 text-xl font-semibold font-['Viga'] text-primary">{{ $item['title'] }}</h4>
+                  <p class="font-medium font-['Poppins'] text-tex mb-5">{{ $item['deskripsi'] }}</p>
+                  <a href="/pendidikan/{{ $item['slug'] }}" class="text-sm font-medium font-['Poppins'] duration-200 transition-all hover:bg-yellow-300 hover:text-primary text-secondry bg-kuns px-4 py-2 rounded-lg">Lihat Selengkapnya</a>
                 </div>
               </div>
             </div>
@@ -139,8 +142,8 @@
       <div class="bg-black w-full h-full bg-opacity-60">
         <div class="container">
           <div class="w-full py-8">
-            <h4 class="text-center font-bold mb-6 text-2xl lg:text-4xl lg:mt-7 text-white">Video Awwaliah Al-Asiyah</h4>
-            <h2 class="text-white hover:text-primary text-7xl md:text-[100px] lg:text-[130px] xl:text-[150px] text-center">
+            <h4 class="text-center font-bold mb-6 text-2xl lg:text-4xl lg:mt-7 font-['Viga'] text-white">Video Awwaliah Al-Asiyah</h4>
+            <h2 class="text-white hover:text-primary transition-all duration-200 text-7xl md:text-[100px] lg:text-[130px] xl:text-[150px] text-center">
               <a href=""><i class="fa-brands fa-youtube"></i></a>
             </h2>
           </div>
@@ -149,6 +152,7 @@
     </section>
     <!-- Video section end -->
 
+    {{-- <script src="{{ @vite('js/script.js') }}" defer></script> --}}
 @endsection    
 
   
