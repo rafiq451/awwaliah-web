@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <!-- fontawwesome -->
-    <link rel="stylesheet" href="fontawesome/css/all.css" />
+    <link rel="stylesheet" href="{{ asset("fontawesome/css/all.css")  }}"/>
 
     {{-- font poppins --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +40,8 @@
           <div class="flex flex-wrap justify-center p-4 my-6">
             <div class="w-full lg:w-[50%]">
               <div class="w-40 h-40 mx-auto mb-4"><img src="{{ asset( 'img/logo/logo_yayasan.svg') }}" alt="" /></div>
-              <h2 class="text-center text-xl font-bold">Awwaliah Al-Asiyah</h2>
+              <h2 class="text-center font-['Viga'] text-xl font-bold">Awwaliah Al-Asiyah</h2>
+              <div class="font-['Poppins'] font-normal">
               <div class="flex text-center mt-6 mb-2">
                 <span class="mx-3"><i class="fa-solid fa-envelope-circle-check"></i></span>
                 <a href=""><p>Awwaliah Al-asiyah</p></a>
@@ -53,6 +54,7 @@
                 <span class="mx-3"><i class="bi bi-telephone-fill"></i></span>
                 <a href=""><p>-0187198279287</p></a>
               </div>
+            </div>
             </div>
             <div class="w-full lg:w-[50%] my-5">
               <div class="max-w-full overflow-hidden rounded-md">

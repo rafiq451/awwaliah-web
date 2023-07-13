@@ -23,13 +23,7 @@ Route::get('/', function () {
             'logo' => 'pondok.svg',
             'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis placeat perferendis deleniti non similique recusandae?'
         ],
-        [
-            'title' => 'Pondok Pesantren',
-            'title-nav' => 'pondok',
-            'slug' => 'pondok-pesantren',
-            'logo' => 'pondok.svg',
-            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis placeat perferendis deleniti non similique recusandae?'
-        ],
+        
         [
             'title' => 'Tingkat MA',
             'title-nav' => 'MA',
@@ -52,9 +46,35 @@ Route::get('/', function () {
             'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis placeat perferendis deleniti non similique recusandae?'
         ],
     ];
+
+    $berita = [
+        [
+            'title' => 'Kejuaraan Olimpiade',
+            'slug' => 'kejuaraan-olimpiade',
+            'image' => 'ber1.jpg',
+            'tanggal' => '20-02-2023',
+            'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsa culpa fuga molestias quas, laborum sequi sed itaque totam deserunt.'
+        ],
+        [
+            'title' => 'Bencana Alam',
+            'slug' => 'bencana-alam',
+            'image' => 'ber1.jpg',
+            'tanggal' => '18-12-2023',
+            'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsa culpa fuga molestias quas, laborum sequi sed itaque totam deserunt.'
+        ],
+        [
+            'title' => 'Juara Lomba',
+            'slug' => 'juara-lomba',
+            'image' => 'ber1.jpg',
+            'tanggal' => '21-10-2023',
+            'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsa culpa fuga molestias quas, laborum sequi sed itaque totam deserunt.'
+        ],
+
+     ];
     return view('home', [
         'title' => 'Home',
-        'pendidikan' => $pFormal
+        'pendidikan' => $pFormal,
+        'berita' => $berita,
     ]);
 });
 
@@ -94,13 +114,6 @@ Route::get('/pendidikan/{slug}', function ($slug) {
             'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis placeat perferendis deleniti non similique recusandae?'
         ],
         [
-            'title' => 'Pondok Pesantren',
-            'title-nav' => 'pondok',
-            'slug' => 'pondok-pesantren',
-            'logo' => 'pondok.svg',
-            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis placeat perferendis deleniti non similique recusandae?'
-        ],
-        [
             'title' => 'Tingkat MA',
             'title-nav' => 'MA',
             'slug' => 'tingkat-ma',
@@ -128,17 +141,82 @@ Route::get('/pendidikan/{slug}', function ($slug) {
             $new_post = $formal;
         }
     }
-    return view('pendidikan' , [
+    return view('Pformal/pendidikan' , [
         'title' => 'single',
         'formal' => $new_post  
     ]);
 });
 
 
-// berita terkini
+// berita terkini all
 Route::get('/berita', function () {
+    $berita = [
+        [
+            'title' => 'Kejuaraan Olimpiade',
+            'slug' => 'kejuaraan-olimpiade',
+            'image' => 'ber1.jpg',
+            'tanggal' => '20-02-2023',
+            'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsa culpa fuga molestias quas, laborum sequi sed itaque totam deserunt.'
+        ],
+        [
+            'title' => 'Bencana Alam',
+            'slug' => 'bencana-alam',
+            'image' => 'ber1.jpg',
+            'tanggal' => '18-12-2023',
+            'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsa culpa fuga molestias quas, laborum sequi sed itaque totam deserunt.'
+        ],
+        [
+            'title' => 'Juara Lomba',
+            'slug' => 'juara-lomba',
+            'image' => 'ber1.jpg',
+            'tanggal' => '21-10-2023',
+            'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsa culpa fuga molestias quas, laborum sequi sed itaque totam deserunt.'
+        ],
+            
+     ];
     
-    return view('berita/beritaterkini' , [
-        'title' => 'Berita terkini'
+    return view('berita/beritaall' , [
+        'title' => 'Berita terkini',
+        'beritaAll' => $berita
     ]);
 });
+
+// berita terkini slug
+Route::get('/berita/{slug}', function($slug){
+    $berita = [
+        [
+            'title' => 'Kejuaraan Olimpiade',
+            'slug' => 'kejuaraan-olimpiade',
+            'image' => 'ber1.jpg',
+            'tanggal' => '20-02-2023',
+            'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsa culpa fuga molestias quas, laborum sequi sed itaque totam deserunt.'
+        ],
+        [
+            'title' => 'Bencana Alam',
+            'slug' => 'bencana-alam',
+            'image' => 'ber1.jpg',
+            'tanggal' => '18-12-2023',
+            'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsa culpa fuga molestias quas, laborum sequi sed itaque totam deserunt.'
+        ],
+        [
+            'title' => 'Juara Lomba',
+            'slug' => 'juara-lomba',
+            'image' => 'ber1.jpg',
+            'tanggal' => '21-10-2023',
+            'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsa culpa fuga molestias quas, laborum sequi sed itaque totam deserunt.'
+        ],
+            
+     ];
+     $detail_berita = [];
+     foreach ($berita as $bterkini ) {
+        if($bterkini['slug'] === $slug) {
+            $detail_berita = $bterkini;
+        }
+     }
+
+    return view('berita/beritaterkini', [
+        'title' => 'single',
+        'dberita' => $detail_berita
+    ]);
+});
+

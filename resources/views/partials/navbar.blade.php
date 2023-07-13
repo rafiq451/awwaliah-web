@@ -33,7 +33,7 @@
                   <a href="#usaha" class="text-base text-secondry py-3 mx-6 flex hover:text-primary">Usaha</a>
                 </li>
                 <li class="color">
-                  <a href="#berita" class="text-base text-secondry py-3 mx-6 flex hover:text-primary">Berita</a>
+                  <a href="/berita" class="text-base text-secondry py-3 mx-6 flex hover:text-primary">Berita</a>
                 </li>
                 <li class="color">
                   <a href="#pendidikan" class="text-base text-secondry py-3 mx-6 flex hover:text-primary"

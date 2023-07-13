@@ -30,48 +30,22 @@
             <span class="mx-2"><div class="w-7 lg:w-10 h-[1px] bg-secondry"></div></span>
           </div>
           <div class="hover-group flex flex-wrap justify-center mt-4 w-full">
+            @foreach ($berita as $item)  
             <div class="mb-8 sm:p-4 sm:w-1/2 lg:w-1/3">
               <div class="relative rounded-md overflow-hidden bg-slate-200">
-                <a href="/berita" class="hover-solo relative group">
-                  <img src="img/berita/ber1.jpg" width="w-full" alt="" />
+                <a href="/berita/{{ $item['slug'] }}" class="hover-solo relative group">
+                  <img src="img/berita/{{ $item['image'] }}" width="w-full" alt="" />
                   <div class="w-0 h-0 group-hover:w-full group-hover:h-full absolute bg-black opacity-60 top-0 right-30 group">
                     <div class="hover-berita transition ease-in-out duration-500 py-8 sm:py-3 md:py-8 xl:py-10 mx-auto">
                       <img src="img/logo/logo_yayasan.svg" alt="" />
                     </div>
                   </div>
                 </a>
-                <p class="text-primary font-['Poppins']">20-03-2023</p>
-                <h4 class=" text-lg font-semibold text-secondry">Lorem Ipsum</h4>
+                <p class="text-primary font-['Poppins']">{{ $item['tanggal'] }}</p>
+                <h4 class=" text-lg font-semibold text-secondry">{{ $item['title'] }}</h4>
               </div>
             </div>
-            <div class="mb-8 sm:p-4 sm:w-1/2 lg:w-1/3">
-              <div class="relative rounded-md overflow-hidden bg-slate-200">
-                <a href="" class="hover-solo relative group">
-                  <img src="img/berita/ber1.jpg" width="w-full" alt="" />
-                  <div class="w-0 h-0 group-hover:w-full group-hover:h-full absolute bg-black opacity-60 top-0 right-30 group">
-                    <div class="hover-berita transition ease-in-out duration-500 py-8 sm:py-3 md:py-8 xl:py-10 mx-auto">
-                      <img src="img/logo/logo_yayasan.svg" alt="" />
-                    </div>
-                  </div>
-                </a>
-                <p class="text-primary font-['Poppins']">20-03-2023</p>
-                <h4 class=" text-lg font-semibold text-secondry">Lorem Ipsum</h4>
-              </div>
-            </div>
-            <div class="mb-8 sm:p-4 sm:w-1/2 lg:w-1/3">
-              <div class="relative rounded-md overflow-hidden bg-slate-200">
-                <a href="" class="hover-solo relative group">
-                  <img src="img/berita/ber1.jpg" width="w-full" alt="" />
-                  <div class="w-0 h-0 group-hover:w-full group-hover:h-full absolute bg-black opacity-60 top-0 right-30 group">
-                    <div class="hover-berita transition ease-in-out duration-500 py-8 sm:py-3 md:py-8 xl:py-10 mx-auto">
-                      <img src="img/logo/logo_yayasan.svg" alt="" />
-                    </div>
-                  </div>
-                </a>
-                <p class="text-primary font-['Poppins']">20-03-2023</p>
-                <h4 class=" text-lg font-semibold text-secondry">Lorem Ipsum</h4>
-              </div>
-            </div>
+            @endforeach
           </div>
         </div>
       </div>
@@ -105,8 +79,8 @@
     </section>
     <!-- logo section end -->
 
-    <!-- pendidikan section start -->
-    <section id="#pendidikan" class="w-full bg-slate-200 pt-10">
+    <!-- pendidikan formal section start -->
+    <section id="#pendidikan-formal" class="w-full bg-slate-200 pt-10">
       <div class="container">
         <div class="w-full p-10">
           <h4 class="text-center font-bold text-2xl lg:text-4xl lg:mt-5 font-['Viga'] text-secondry">Awwaliah Al-asiyah</h4>
@@ -136,6 +110,10 @@
       </div>
     </section>
     <!-- pendidikan section end -->
+    
+    {{-- pendidikan non formal section start --}}
+   
+    {{-- pendidikan non formal section end --}}
 
     <!-- Video section start -->
     <section id="#video" class=" bg-fixed w-full bg-cover bg-center h-60 md:h-80 lg:h-96 xl:h-[530px] relative" style="background-image: url('img/sekolah/school.jpg');">
@@ -152,7 +130,6 @@
     </section>
     <!-- Video section end -->
 
-    {{-- <script src="{{ @vite('js/script.js') }}" defer></script> --}}
 @endsection    
 
   
