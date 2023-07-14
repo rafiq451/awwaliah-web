@@ -21,7 +21,7 @@ Route::get('/', function () {
             'title-nav' => 'TK',
             'slug' => 'taman-anak',
             'logo' => 'pondok.svg',
-            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis placeat perferendis deleniti non similique recusandae?'
+            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
         ],
         
         [
@@ -29,22 +29,48 @@ Route::get('/', function () {
             'title-nav' => 'MA',
             'slug' => 'tingkat-ma',
             'logo' => 'maa.svg',
-            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis placeat perferendis deleniti non similique recusandae?'
+            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
         ],
         [
             'title' => 'Tingkat SMP Plus',
             'title-nav' => 'SMP Plus',
             'slug' => 'tingkat-smp-plus',
             'logo' => 'smp.svg',
-            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis placeat perferendis deleniti non similique recusandae?'
+            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
         ],
         [
             'title' => 'Tingkat SDIT',
             'title-nav' => 'SDIT',
             'slug' => 'tingkat-sdit',
             'logo' => 'sdit.svg',
-            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis placeat perferendis deleniti non similique recusandae?'
+            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
         ],
+    ];
+
+    $pnonFormal = [
+        [
+            'title' => 'Pondok Pesantren',
+            'title-nav' => 'Pondok Pesantren',
+            'slug' => 'pondok-pesantren',
+            'logo' => 'pondok.svg',
+            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
+        ],
+        
+        [
+            'title' => 'Asrama Anak Yatim',
+            'title-nav' => 'Asrama Anak Yatim',
+            'slug' => 'asrama-anak-yatim',
+            'logo' => 'maa.svg',
+            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
+        ],
+        [
+            'title' => 'Asrama Tahfidz',
+            'title-nav' => 'Asrama Tahfidz',
+            'slug' => 'asrama-tahfidz',
+            'logo' => 'smp.svg',
+            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
+        ],
+      
     ];
 
     $berita = [
@@ -73,7 +99,8 @@ Route::get('/', function () {
      ];
     return view('home', [
         'title' => 'Home',
-        'pendidikan' => $pFormal,
+        'pendidikanF' => $pFormal,
+        'pendidikanNF' => $pnonFormal,
         'berita' => $berita,
     ]);
 });
@@ -103,7 +130,7 @@ Route::get('/identitas', function () {
     return view('tentang/identitas');
 });
 
-// pendidikan
+// pendidikan formal
 Route::get('/pendidikan/{slug}', function ($slug) {
     $pFormal = [
         [
@@ -111,28 +138,28 @@ Route::get('/pendidikan/{slug}', function ($slug) {
             'title-nav' => 'TK',
             'slug' => 'taman-anak',
             'logo' => 'pondok.svg',
-            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis placeat perferendis deleniti non similique recusandae?'
+            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
         ],
         [
             'title' => 'Tingkat MA',
             'title-nav' => 'MA',
             'slug' => 'tingkat-ma',
             'logo' => 'maa.svg',
-            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis placeat perferendis deleniti non similique recusandae?'
+            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
         ],
         [
             'title' => 'Tingkat SMP Plus',
             'title-nav' => 'SMP Plus',
             'slug' => 'tingkat-smp-plus',
             'logo' => 'smp.svg',
-            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis placeat perferendis deleniti non similique recusandae?'
+            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
         ],
         [
             'title' => 'Tingkat SDIT',
             'title-nav' => 'SDIT',
             'slug' => 'tingkat-sdit',
             'logo' => 'sdit.svg',
-            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis placeat perferendis deleniti non similique recusandae?'
+            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
         ],
     ];
     $new_post = [];
@@ -146,6 +173,46 @@ Route::get('/pendidikan/{slug}', function ($slug) {
         'formal' => $new_post  
     ]);
 });
+
+// pendidikan non formal 
+Route::get('/pendidikan/{slug}', function ($slug) {
+    $pnonFormal = [
+        [
+            'title' => 'Pondok Pesantren',
+            'title-nav' => 'Pondok Pesantren',
+            'slug' => 'pondok-pesantren',
+            'logo' => 'pondok.svg',
+            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
+        ],
+        
+        [
+            'title' => 'Asrama Anak Yatim',
+            'title-nav' => 'Asrama Anak Yatim',
+            'slug' => 'asrama-anak-yatim',
+            'logo' => 'maa.svg',
+            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
+        ],
+        [
+            'title' => 'Asrama Tahfidz',
+            'title-nav' => 'Asrama Tahfidz',
+            'slug' => 'asrama-tahfidz',
+            'logo' => 'smp.svg',
+            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
+        ],
+      
+    ];
+    $new_post = [];
+    foreach($pnonFormal as $Nformal) {
+        if($Nformal["slug"] === $slug) {
+            $new_post = $Nformal;
+        }
+    }
+    return view('PnonFormal/pendidikan' , [
+        'title' => 'single',
+        'Nformal' => $new_post  
+    ]);
+});
+
 
 
 // berita terkini all

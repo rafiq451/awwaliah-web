@@ -25,7 +25,7 @@
     @vite('resources/css/app.css' )
     <title>Awwaliah Al-asiyah | {{$title}}</title>
   </head>
-  <body>
+  <body class=" bg-slate-100">
     <!-- Navbar section start -->
     @include('partials/navbar')
     <!-- Navbar section end -->
@@ -34,7 +34,7 @@
     </div>
     
     <!-- footer start -->
-    <footer class="w-full -my-6 pb-12 bg-bg text-white">
+    <footer class="w-full -my-6 pb-12    bg-gradient-to-r from-primary  to-kuns text-white">
       <div class="container">
         <div class="max-w-full">
           <div class="flex flex-wrap justify-center p-4 my-6">
@@ -64,7 +64,7 @@
           </div>
         </div>
 
-        <div class="w-full pt-10 border-t border-slate-700">
+        <div class="w-full pt-10 border-t border-white">
           <div class="flex items-center justify-center mb-5">
             <!-- Youtobe -->
             <a
