@@ -58,16 +58,6 @@
                   <path id="blob" d="M462.5,301Q444,352,413.5,397.5Q383,443,331,467Q279,491,232.5,454.5Q186,418,157,388Q128,358,85.5,329.5Q43,301,53.5,252.5Q64,204,95.5,172.5Q127,141,157,112Q187,83,231,62Q275,41,305.5,83Q336,125,391.5,135.5Q447,146,464,198Q481,250,462.5,301Z" fill="url(#gradient)" ></path>
                 </svg>
               </span>
-
-              <!-- <span class="absolute bottom-10 -z-10 scale-175 left-1/2 -translate-x-1/2 sm:scale-150 sm:bottom-16 md:scale-125 md:bottom-20 xl:scale-150 xl:bottom-24">
-                <svg widht="400" hight="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    fill="#14B8A6"
-                    d="M59.9,-46.7C75.8,-27.9,85.6,-3.1,80.1,17.2C74.6,37.5,53.9,53.3,32.6,61.1C11.2,68.8,-10.8,68.6,-29.3,60C-47.8,51.4,-62.7,34.6,-67.4,15C-72.2,-4.5,-66.7,-26.7,-53.8,-44.9C-40.9,-63,-20.4,-77.1,0.8,-77.7C22,-78.3,44,-65.5,59.9,-46.7Z"
-                    transform="translate(100 100) scale(1.1)"
-                  />
-                </svg>
-              </span> -->
             </div>
           </div>
         </div>
@@ -77,7 +67,7 @@
     {{-- sambuatan ketua yayasan section end --}}
 
     <!-- berita section start -->
-    <section id="#berita" class="p-8 bg-slate-100 ">
+    <section id="#berita" class="p-8 bg-slate-50 ">
       <div class="container">
         <div class="w-full">
           <h1 class="text-base text-center font-semibold text-primary md:text-xl">Berita</h1>
@@ -174,8 +164,8 @@
     <!-- pendidikan section end -->
     
     {{-- pendidikan non formal section start --}}
-    <section id="#pendidikan-nonformal" class="bg-white pt-12">
-      <div class="container">
+    <section id="#pendidikan-nonformal" class="b bg-slate-50 pt-12">
+      <div class="container my-20">
         <h4 class="text-center font-bold text-2xl lg:text-4xl lg:mt-5 font-['Viga'] text-secondry">Awwaliah Al-asiyah</h4>
         <p class="text-base font-medium text-center text-primary my-2">Pendidikan Non Formal</p>
         <div class="flex justify-center mt-4 mx-6 items-center">
@@ -186,7 +176,7 @@
           <span class="mx-2"><div class="w-9 lg:w-10 h-[1px] bg-secondry"></div></span>
         </div>
         @foreach ($pendidikanNF as $index => $item)  
-        <div class="flex flex-wrap px-2 {{ $index % 2 == 0 ? 'flex-row' : 'flex-row-reverse' }} ">
+        <div class="flex flex-wrap px-2  {{ $index % 2 == 0 ? 'flex-row' : 'flex-row-reverse' }} ">
           <div class=" w-full self-end mt-16  lg:w-1/2">
             <div class="relative bg-cover mt-11 max-w-full lg:mt-5 lg:right-0 sm:p-10 md:p-20 lg:p-1 xl:p-16 {{  $index % 2 == 0 ? 'flex-row' : 'rotate-180' }}" style="background-image: url({{ asset('img/bg.svg') }})">
               <div class="group">
@@ -211,14 +201,44 @@
     
     
     <!-- Video section start -->
-    <section id="#video" class=" bg-fixed w-full bg-cover bg-center h-60 md:h-80 lg:h-96 xl:h-[530px] relative" style="background-image: url('img/sekolah/school.jpg');">
+    <section id="#video" class=" bg-fixed w-full bg-cover bg-center h-[900px] md:h-[950px] lg:h-[600px] xl:h-[620px] relative" style="background-image: url('img/sekolah/school.jpg');">
       <div class="bg-black w-full h-full bg-opacity-60">
         <div class="container">
           <div class="w-full py-8">
             <h4 class="text-center font-bold mb-6 text-2xl lg:text-4xl lg:mt-7 font-['Viga'] text-white">Video Awwaliah Al-Asiyah</h4>
-            <h2 class="text-white hover:text-primary transition-all duration-200 text-7xl md:text-[100px] lg:text-[130px] xl:text-[150px] text-center">
-              <a href=""><i class="fa-brands fa-youtube"></i></a>
-            </h2>
+            <div class="flex flex-wrap px-2">
+              <div class="w-full self-center px-2 lg:w-1/2 my-10">
+                <h1 class="text-base font-semibold text-primary md:text-xl">Video Singkat<span class="block font-bold text-white text-3xl sm:text-4xl mt-1 lg:text-3xl xl:text-5xl">Tentukan Masa depan mulai dari sekarang</span></h1>
+                <p class="font-normal  text-white my-5 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque in saepe, inventore ex illo odio tenetur distinctio consequatur quam quo necessitatibus quia pariatur impedit perferendis consequuntur natus, neque voluptatibus tempore!</p>
+                <a href="/pendidikan/" class="text-sm font-medium font-['Poppins'] duration-200 transition-all hover:bg-yellow-300  hover:text-slate-200 text-white bg-gradient-to-r from-primary  to-kuns px-4 py-2 rounded-lg">Lihat Selengkapnya</a>
+              </div>
+              <div class=" w-full self-end mt-16  lg:w-1/2">
+                <div class="group md:hidden  relative">
+                  <div class="animasi-pingvideo ping"></div>
+                  <div class=" video-conten">
+                    <span class="text-white mx-auto text-4xl ">
+                      <i class="bi bi-caret-right-fill"></i>
+                    </span>
+                  </div>
+                <div class=" z-10 bottom-5 translate-x-8 scale-110 overflow-hidden rounded-lg relative w-80 md:w-96 md:left-3 md:bottom-0  ">
+                <img src="{{ asset('img/berita/ber1.jpg') }}" alt=""  />
+               </div>
+              </div>
+                <div class="relative bg-cover mt-11  hidden md:block lg:mt-5  lg:right-0 sm:p-10 md:p-20 lg:p-1 xl:p-16 " style="background-image: url({{ asset('img/b.svg') }})">
+                  <div class="group relative">
+                    <div class="animasi-pingvideo ping "></div>
+                    <div class="video-conten">
+                      <span class="text-white mx-auto text-4xl ">
+                        <i class="bi bi-caret-right-fill"></i>
+                      </span>
+                    </div>
+                  <div class=" z-10 bottom-5 translate-x-8 scale-110 overflow-hidden rounded-lg relative w-80 md:w-96 md:left-3 md:bottom-0  ">
+                  <img src="{{ asset('img/berita/ber1.jpg') }}" alt=""  />
+                 </div>
+                </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

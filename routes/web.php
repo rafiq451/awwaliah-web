@@ -130,8 +130,51 @@ Route::get('/identitas', function () {
     return view('tentang/identitas');
 });
 
-// pendidikan formal
+
+
+// pendidikan non formal 
 Route::get('/pendidikan/{slug}', function ($slug) {
+    $pnonFormal = [
+        [
+            'title' => 'Pondok Pesantren',
+            'title-nav' => 'Pondok Pesantren',
+            'slug' => 'pondok-pesantren',
+            'logo' => 'pondok.svg',
+            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
+        ],
+        
+        [
+            'title' => 'Asrama Anak Yatim',
+            'title-nav' => 'Asrama Anak Yatim',
+            'slug' => 'asrama-anak-yatim',
+            'logo' => 'maa.svg',
+            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
+        ],
+        [
+            'title' => 'Asrama Tahfidz',
+            'title-nav' => 'Asrama Tahfidz',
+            'slug' => 'asrama-tahfidz',
+            'logo' => 'smp.svg',
+            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
+        ],
+      
+    ];
+    $new_nP = [];
+    foreach($pnonFormal as $Nformal) {
+        if($Nformal["slug"] === $slug) {
+            $new_nP = $Nformal;
+        }
+    }
+    return view('PnonFormal/pendidikan' , [
+        'title' => 'single',
+        'Nformal' => $new_nP  
+    ]);
+});
+
+
+
+// pendidikan formal
+Route::get('/pendidikan/{slug}', function ($slugF) {
     $pFormal = [
         [
             'title' => 'Tingkat TK',
@@ -164,54 +207,15 @@ Route::get('/pendidikan/{slug}', function ($slug) {
     ];
     $new_post = [];
     foreach($pFormal as $formal) {
-        if($formal["slug"] === $slug) {
+        if($formal["slug"] === $slugF) {
             $new_post = $formal;
         }
     }
-    return view('Pformal/pendidikan' , [
+    return view('Pformal/pendidikanf' , [
         'title' => 'single',
         'formal' => $new_post  
     ]);
-});
-
-// pendidikan non formal 
-Route::get('/pendidikan/{slug}', function ($slug) {
-    $pnonFormal = [
-        [
-            'title' => 'Pondok Pesantren',
-            'title-nav' => 'Pondok Pesantren',
-            'slug' => 'pondok-pesantren',
-            'logo' => 'pondok.svg',
-            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
-        ],
-        
-        [
-            'title' => 'Asrama Anak Yatim',
-            'title-nav' => 'Asrama Anak Yatim',
-            'slug' => 'asrama-anak-yatim',
-            'logo' => 'maa.svg',
-            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
-        ],
-        [
-            'title' => 'Asrama Tahfidz',
-            'title-nav' => 'Asrama Tahfidz',
-            'slug' => 'asrama-tahfidz',
-            'logo' => 'smp.svg',
-            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
-        ],
-      
-    ];
-    $new_post = [];
-    foreach($pnonFormal as $Nformal) {
-        if($Nformal["slug"] === $slug) {
-            $new_post = $Nformal;
-        }
-    }
-    return view('PnonFormal/pendidikan' , [
-        'title' => 'single',
-        'Nformal' => $new_post  
-    ]);
-});
+}); 
 
 
 

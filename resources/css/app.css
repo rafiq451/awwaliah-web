@@ -28,12 +28,33 @@
   .carousel-nav button:hover {
     opacity: 1;
   }
+  @keyframes ping {
+    0% {
+      transform: scale(0.2);
+      opacity: 1;
+    }
+    80%,
+    100% {
+      transform: scale(1.2);
+      opacity: 0;
+    }
+  }
+
+  .ping {
+    animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
 }
 
 .navbar-fixed {
   @apply fixed z-[9999] bg-primary bg-opacity-[35%];
   backdrop-filter: blur(5px);
   box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
+}
+.animasi-pingvideo {
+  @apply w-20 h-20 rounded-full cursor-pointer -top-12 -left-2 bg-gradient-to-r z-30 from-primary  to-kuns absolute;
+}
+.video-conten {
+  @apply w-16 h-16 flex cursor-pointer items-center rounded-full z-20 -top-10 bg-gradient-to-r from-primary  to-kuns absolute;
 }
 .span-color {
   @apply bg-white;
