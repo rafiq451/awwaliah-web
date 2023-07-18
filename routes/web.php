@@ -1,6 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\BeritaController;
+use App\Http\Controllers\Admin\SejarahController;
+use App\Http\Controllers\Admin\VisiMisiController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\IdentitasController;
+use App\Http\Controllers\Admin\KepengurusanController;
+use App\Http\Controllers\Admin\PendiriTokohController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +19,17 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/dashboard',[DashboardController::class, 'index']);
+Route::get('/dashboard/berita',[BeritaController::class, 'index']);
+Route::get('/dashboard/sejarah',[SejarahController::class, 'index']);
+Route::get('/dashboard/pendiri&tokoh',[PendiriTokohController::class, 'index']);
+Route::get('/dashboard/visi&misi',[VisiMisiController::class, 'index']);
+Route::get('/dashboard/kepengurusan',[KepengurusanController::class, 'index']);
+Route::get('/dashboard/identitas',[IdentitasController::class, 'index']);
+
+
+
 
 Route::get('/', function () {
     
