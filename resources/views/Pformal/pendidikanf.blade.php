@@ -1,18 +1,18 @@
-{{-- @dd($formal) --}}
+{{-- @dd($detail) --}}
 @extends('layout/main')
 
 @section('container')
  <!-- hero section start -->
     <section id="home" class=" h-[680px] w-full ">
-      <div class="carousel relative overflow-hidden md:h-128">
+      <div class="carousel relative overflow-hidden md:h-128 lg:h-[600px]">
         <div class="carousel-inner">
           <div class="carousel-item bg-cover bg-center hidden h-56 sm:h-72 md:h-full w-full transition-opacity duration-1000 ease-in-out" style="background-image: url('img/1.jpg');"></div>
         </div>
         <div class="carousel-nav absolute -top-[200px] sm:-top-[150px] md:-top-[20px] left-0 right-0 bottom-0 flex justify-between items-center p-2">
             <button id="prevBtn" class="hidden carousel-prev px-3 py-2 bg-gray-800 text-white rounded-full focus:outline-none"><i class="bi bi-arrow-left"></i></button>
             <button id="nextBtn" class=" hidden carousel-next px-3 py-2 bg-gray-800 text-white rounded-full focus:outline-none"><i class="bi bi-arrow-right"></i></button>
-          <div class="w-full">
-            <img src="{{ asset('img/sekolah/school.jpg') }}" alt="">          
+          <div class="w-full ">
+            <img src="{{ asset('img/sekolah/' . $formal['image']) }}" alt="">          
           </div>
         </div>
         </div>
@@ -21,12 +21,18 @@
     <!-- hero section end -->
 
     <!-- sejarah section start -->
-    <section id="#sejarah" class="p-8  -mt-[25rem] sm:-mt-[23rem] md:-mt-[13rem] lg:-mt-[10rem]">
-      <div class="container">
-        <div class="w-full">
-          <h4 class="text-2xl font-semibold -mt-2 md:mt-6 lg:text-4xl lg:mt-5 text-secondry">{{ $formal["title"] }}</h4>
-            <div class="w-[20%] md:w-[10%] my-4  h-1 rounded-sm bg-tex"></div>           
-          <div class="  my-10  w-full">
+    <section id="#sejarah" class="p-8  -mt-[29rem] sm:-mt-[23rem] md:-mt-[13rem] lg:-mt-[5rem]">
+        <h4 class="text-2xl font-semibold -mt-2 md:mt-6 lg:text-4xl lg:mt-5 text-secondry">{{ $formal["title"] }}</h4>
+        <div class="w-[20%] md:w-[10%] my-4  h-1 rounded-sm bg-tex"></div>   
+        <div class="flex flex-wrap  "> 
+          <div class=" card-profil block lg:hidden " style="background-image: url({{ asset('img/cardlog/1.webp') }})">
+            <div class="p-6 w-full text-center">
+              <div class="w-40 h-40 mx-auto mb-4"><img src="{{ asset( 'img/logo/'. $formal['logo']) }}" alt="" /></div>
+              <h2 class="text-2xl mb-5 my-4 font-semibold font-[Poppins] text-secondry ">{{ $formal['title'] }}</h2>
+              <a href="/detail/{{ $formal['slug'] }}" class="text-sm  font-medium font-['Poppins'] duration-200 transition-all hover:bg-yellow-300  hover:text-slate-200 text-white bg-gradient-to-r from-primary  to-kuns px-4 py-2 rounded-lg">Lihat Profil</a>
+            </div>
+          </div>        
+        <div class="w-full p-4 lg:w-[60%] border lg:mx-4 my-4 bg-white rounded-md shadow-lg ">
             <h2 class="sejarah">Sejarah</h2>
             <p> SMP Plus awwaliyah al-asiyah berdiri pada tahun 2004 ketika pondok pesantren Awwaliyah yang sudah lebih awal berdiri di tahun 1993. Dimana santri-santrinya pada waktu itu masih sekolah keluar, ada yang di SMP Negeri, SMA Negeri, Madrasah Aliyah Negeri (MAN), MTS Al-Asiyah dan ada juga yang di SMK selain yang bersekolah, ada juga yang bekerja.</p>
             <br>
@@ -49,8 +55,16 @@
                 </p>
                 <br>
                 <p>Disamping memang SMP Plus ini diharapkan dapat membantu pondok pesantren. SMP Plus Awwaliyah ini memiliki Visi dan Misi serta tekad agar SMP ini memiliki ciri khas dan keunggulan di bandingkan dengan SMP lain nya dengan berbagai kegiatan Extrakurikuler nya seperti Futsal, Marching Band, Paskibra, Pramuka, Silat, Hadroh, Marawis. Guru-guru yang profesional di bidangnya agar kedepannya menjadi SMP Plus yang selalu diminati oleh masyarakat.</p>   
-          </div>
+         
         </div>
+        <div class="card-profil hidden lg:block" style="background-image: url({{ asset('img/cardlog/1.webp') }})">
+          <div class="p-6 w-full text-center">
+            <div class="w-40 h-40 mx-auto mb-4"><img src="{{ asset( 'img/logo/'. $formal['logo']) }}" alt="" /></div>
+            <h2 class="text-2xl mb-5 my-4 font-semibold font-[Poppins] text-secondry ">{{ $formal['title'] }}</h2>
+            <a href="/detail/{{ $formal['slug'] }}" class="text-sm  font-medium font-['Poppins'] duration-200 transition-all hover:bg-yellow-300  hover:text-slate-200 text-white bg-gradient-to-r from-primary  to-kuns px-4 py-2 rounded-lg">Lihat Profil</a>
+          </div>
+        </div>    
+      </div>
         <div class="w-full">
             <h4 class="text-center text-xl lg:text-2xl font-semibold ">Visi & Misi</h4>
             <div class="my-10">
@@ -83,46 +97,44 @@
                       </li>
                     </ol>
                    </div>
-            </div>
-        </div>
-        <div class="w-full">
-            <h4 class="text-center text-xl lg:text-2xl font-semibold ">Tujuan</h4>
-            <div class="my-10">
-              <ol class="list-disc list-disc-lg  p-5 mr-3">
-                <li>
-                  <p>Peningkatan kemampuan siswa dalam bidang keagamaan, olahraga, seni, dan peningkatan kemampuan dalam bidang teknologi ilmu pengetahuan dan teknolodi (IPTEK)</p>
-                  <br/>
-                </li>
-                <li>
-                  <p>Peningkatan mutu akademik dan peningkatan rata-rata nilai rapot.</p>
-                  <br/>
-                </li>
-                <li>
-                  <p>Terwujudnya kehidupan sekolah yang lebih agamis dan berakhlakul karimah.</p>
-                  <br>
-                </li>
-                <li>
-                  <p>Terwujudnya lingkungan sekolah yang bersih, aman, nyaman dan kondusif untuk belajar.</p>
-                  <br>
-                </li>
-                <li>
-                  <p>Peningkatan kelengkapan saran dan prasarana mewujudkan keadaan sekolah yang memadai.</p>
-                  <br>
-                </li>
-                <li>
-                  <p>Peningkatan kegiatan ekstrakulikuler yang efektif, efesien, dan berguna untuk menumbuhkembangkan potensi diri siswa.</p>
-                  <br>
-                </li>
-                <li>
-                  <p>Terwujudnya hubungan yang harmonis dan dinamis antar warga sekolah dan masyarakat</p>
-                  <br>
-                </li>
-              </ol>
-             </div>
-            </div>
-        </div>
-      </div>
-    </section>
+              </div>
+              <div class="w-full">
+                  <h4 class="text-center text-xl lg:text-2xl font-semibold ">Tujuan</h4>
+                  <div class="my-10">
+                    <ol class="list-disc list-disc-lg  p-5 mr-3">
+                      <li>
+                        <p>Peningkatan kemampuan siswa dalam bidang keagamaan, olahraga, seni, dan peningkatan kemampuan dalam bidang teknologi ilmu pengetahuan dan teknolodi (IPTEK)</p>
+                        <br/>
+                      </li>
+                      <li>
+                        <p>Peningkatan mutu akademik dan peningkatan rata-rata nilai rapot.</p>
+                        <br/>
+                      </li>
+                      <li>
+                        <p>Terwujudnya kehidupan sekolah yang lebih agamis dan berakhlakul karimah.</p>
+                        <br>
+                      </li>
+                      <li>
+                        <p>Terwujudnya lingkungan sekolah yang bersih, aman, nyaman dan kondusif untuk belajar.</p>
+                        <br>
+                      </li>
+                      <li>
+                        <p>Peningkatan kelengkapan saran dan prasarana mewujudkan keadaan sekolah yang memadai.</p>
+                        <br>
+                      </li>
+                      <li>
+                        <p>Peningkatan kegiatan ekstrakulikuler yang efektif, efesien, dan berguna untuk menumbuhkembangkan potensi diri siswa.</p>
+                        <br>
+                      </li>
+                      <li>
+                        <p>Terwujudnya hubungan yang harmonis dan dinamis antar warga sekolah dan masyarakat</p>
+                        <br>
+                      </li>
+                    </ol>
+                  </div>
+                  </div>
+              </div>
+          </section>
     <!-- sejarah section end -->
     {{-- dewan guru section start --}}
     <section id="dewan-guru" class="p-8">

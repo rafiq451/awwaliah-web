@@ -34,37 +34,71 @@
     </div>
     
     <!-- footer start -->
-    <footer class="w-full -my-6 pb-12  bg-gradient-to-r from-primary  to-kuns text-white">
-      <div class="container">
-        <div class="max-w-full">
-          <div class="flex flex-wrap justify-center p-4 my-6">
-            <div class="w-full lg:w-[50%]">
+    <footer class="w-full -my-6 pb-12 bg-zinc-900 text-white">
+          <div class="flex flex-wrap justify-center p-10 my-6 ">
+            <div class="w-full lg:w-[40%] my-6 ">
               <div class="w-40 h-40 mx-auto mb-4"><img src="{{ asset( 'img/logo/logo_yayasan.svg') }}" alt="" /></div>
-              <h2 class="text-center font-['Viga'] text-xl font-bold">Awwaliah Al-Asiyah</h2>
+              <h2 class="text-center text-xl ">Awwaliah Al-Asiyah</h2>
               <div class="font-['Poppins'] font-normal">
-              <div class="flex text-center mt-6 mb-2">
+              <div class="flex text-center mt-6 my-5">
                 <span class="mx-3"><i class="fa-solid fa-envelope-circle-check"></i></span>
-                <a href=""><p>Awwaliah Al-asiyah</p></a>
+                <a href=""><p class="catagory-footer">Awwaliah Al-asiyah</p></a>
               </div>
-              <div class="flex text-center mb-2">
+              <div class="flex text-center my-5">
                 <span class="mx-3"><i class="bi bi-geo-alt-fill"></i></span>
-                <a href=""><p>Lorem ipsum dolor sit amet.</p></a>
+                <a href=""><p class="catagory-footer">Lorem ipsum dolor sit amet.</p></a>
               </div>
-              <div class="flex text-center mb-2">
+              <div class="flex text-center my-5">
                 <span class="mx-3"><i class="bi bi-telephone-fill"></i></span>
-                <a href=""><p>-0187198279287</p></a>
+                <a href=""><p class="catagory-footer">-0187198279287</p></a>
               </div>
             </div>
             </div>
-            <div class="w-full lg:w-[50%] my-5">
-              <div class="max-w-full overflow-hidden rounded-md">
-                <img src="{{ asset('img/berita/ber1.jpg') }}" alt="" />
-              </div>
+            <div class="w-full lg:w-[20%] my-5 ">
+              <div class="p-2">
+              <h4 class="text-2xl">Catagory Berita</h4>
+             <ul>
+              <li class="my-4">
+                <h2 class="catagory-footer"><a href="">Kejuaraan</a></h2>
+              </li>
+              <li class="my-4">
+                <h2 class="catagory-footer"><a href="">Santunan Anak Yatim</a></h2>
+              </li>
+              <li class="my-4">
+                <h2 class="catagory-footer"><a href="">Teknologi</a></h2>
+              </li>
+              <li class="my-4">
+                <h2 class="catagory-footer"><a href="">Relasi Sekolah</a></h2>
+              </li>
+             </ul>
+            </div>
+            </div>
+            <div class="w-full sm:w-[90%] lg:w-[40%] md:w-[70%]  my-5 ">
+              <div class="p-2 font-inter grid grid-cols-2 gap-2  md:grid-cols-3 ">
+                <div class="h-15 bg-blue-500 aspect-[4/3] overflow-hidden hover:scale-95 transition-all duration-500  rounded-lg  group relative">
+                  <div class="w-full h-full bg-cover bg-center" style="background-image: url({{ asset('img/2.jpg') }})"></div>
+                </div>
+                <div class="h-15 bg-blue-500 aspect-[4/3] overflow-hidden hover:scale-95 transition-all duration-500  rounded-lg  group relative">
+                  <div class="w-full h-full bg-cover bg-center" style="background-image: url({{ asset('img/2.jpg') }})"></div>
+                </div>
+                <div class="h-15 bg-blue-500 aspect-[4/3] overflow-hidden hover:scale-95 transition-all duration-500  rounded-lg  group relative">
+                  <div class="w-full h-full bg-cover bg-center" style="background-image: url({{ asset('img/2.jpg') }})"></div>
+                </div>
+                <div class="h-15 bg-blue-500 aspect-[4/3] overflow-hidden hover:scale-95 transition-all duration-500  rounded-lg  group relative">
+                  <div class="w-full h-full bg-cover bg-center" style="background-image: url({{ asset('img/2.jpg') }})"></div>
+                </div>
+                <div class="h-15 bg-blue-500 aspect-[4/3] overflow-hidden hover:scale-95 transition-all duration-500  rounded-lg  group relative">
+                  <div class="w-full h-full bg-cover bg-center" style="background-image: url({{ asset('img/2.jpg') }})"></div>
+                </div>
+                <div class="h-15 bg-blue-500 aspect-[4/3] overflow-hidden hover:scale-95 transition-all duration-500  rounded-lg  group relative">
+                  <div class="w-full h-full bg-cover bg-center" style="background-image: url({{ asset('img/2.jpg') }})"></div>
+                </div>
+            </div>
             </div>
           </div>
         </div>
 
-        <div class="w-full pt-10 border-t border-white">
+        <div class="w-full pt-10 border-t border-slate-400">
           <div class="flex items-center justify-center mb-5">
             <!-- Youtobe -->
             <a
@@ -107,8 +141,6 @@
             </a>
           </div>
           <p class="text-sm font-medium text-slate-500 text-center">Copyright &#169; <a href="https://www.instagram.com/console.lografiq/" class="text-primary" target="_blank"> Awwaliah Al-asiyah</a>, All rights reserved.</p>
-        </div>
-      </div>
     </footer>
     <!-- footer end -->
 

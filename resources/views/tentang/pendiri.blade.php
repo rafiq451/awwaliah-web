@@ -66,7 +66,7 @@
                     </tbody>
                </table>
             </div>
-            <div class="grid grid-cols-1 gap-4 h-96 md:hidden overflow-y-auto shadow-md ">
+            <div class="grid grid-cols-1 gap-4 h-[420px] md:hidden overflow-y-auto shadow-md ">
                 <div class=" bg-gray-50 p-4 rounded-lg shadow-lg flex items-center space-x-4">
                     <div>
                         <div class="overflow-auto rounded-full w-[100px] h-[100px]"><img src="img/rfiq.png" alt=""></div>

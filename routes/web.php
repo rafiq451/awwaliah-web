@@ -181,6 +181,14 @@ Route::get('/pendidikan/{slug}', function ($slugF) {
             'title-nav' => 'TK',
             'slug' => 'taman-anak',
             'logo' => 'pondok.svg',
+            'image' => 'school.jpg',
+            'alamat' => 'LINGKUNGAN 04 KRANJI BARAT',
+            'kelurahan' => 'CIRIUNG',
+            'kecamatan' => 'CIBINONG',
+            'kabupaten' => 'BOGOR',
+            'posisiGeografis' => 'peta',
+            'notlp' => '02187911069',
+            'email' => 'smpplusawwaliyahalasiyah@gmail.com',
             'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
         ],
         [
@@ -188,6 +196,14 @@ Route::get('/pendidikan/{slug}', function ($slugF) {
             'title-nav' => 'MA',
             'slug' => 'tingkat-ma',
             'logo' => 'maa.svg',
+            'image' => '1sch.jpg',
+            'alamat' => 'LINGKUNGAN 04 KRANJI BARAT',
+            'kelurahan' => 'CIRIUNG',
+            'kecamatan' => 'CIBINONG',
+            'kabupaten' => 'BOGOR',
+            'posisiGeografis' => 'peta',
+            'notlp' => '02187911069',
+            'email' => 'smpplusawwaliyahalasiyah@gmail.com',
             'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
         ],
         [
@@ -195,6 +211,14 @@ Route::get('/pendidikan/{slug}', function ($slugF) {
             'title-nav' => 'SMP Plus',
             'slug' => 'tingkat-smp-plus',
             'logo' => 'smp.svg',
+            'image' => '2sch.jpg',
+            'alamat' => 'LINGKUNGAN 04 KRANJI BARAT',
+            'kelurahan' => 'CIRIUNG',
+            'kecamatan' => 'CIBINONG',
+            'kabupaten' => 'BOGOR',
+            'posisiGeografis' => 'peta',
+            'notlp' => '02187911069',
+            'email' => 'smpplusawwaliyahalasiyah@gmail.com',
             'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
         ],
         [
@@ -202,9 +226,20 @@ Route::get('/pendidikan/{slug}', function ($slugF) {
             'title-nav' => 'SDIT',
             'slug' => 'tingkat-sdit',
             'logo' => 'sdit.svg',
+            'image' => '3sch.jpg',
+            'alamat' => 'LINGKUNGAN 04 KRANJI BARAT',
+            'kelurahan' => 'CIRIUNG',
+            'kecamatan' => 'CIBINONG',
+            'kabupaten' => 'BOGOR',
+            'posisiGeografis' => 'peta',
+            'notlp' => '02187911069',
+            'email' => 'smpplusawwaliyahalasiyah@gmail.com',
             'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
         ],
+
     ];
+
+    
     $new_post = [];
     foreach($pFormal as $formal) {
         if($formal["slug"] === $slugF) {
@@ -213,9 +248,97 @@ Route::get('/pendidikan/{slug}', function ($slugF) {
     }
     return view('Pformal/pendidikanf' , [
         'title' => 'single',
-        'formal' => $new_post  
+        'formal' => $new_post,
+        // 'detail' => $data
     ]);
 }); 
+
+// detail profil pendidikan formal
+Route::get('/detail/{slug}', function($slug) {
+    $pFormal = [
+        [
+            'title' => 'Tingkat TK',
+            'title-nav' => 'TK',
+            'slug' => 'taman-anak',
+            'logo' => 'pondok.svg',
+            'image' => 'school.jpg',
+            'alamat' => 'LINGKUNGAN 04 KRANJI BARAT',
+            'kelurahan' => 'CIRIUNG',
+            'kecamatan' => 'CIBINONG',
+            'kabupaten' => 'BOGOR',
+            'posisiGeografis' => 'peta',
+            'notlp' => '02187911069',
+            'email' => 'smpplusawwaliyahalasiyah@gmail.com',
+            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
+        ],
+        [
+            'title' => 'Tingkat MA',
+            'title-nav' => 'MA',
+            'slug' => 'tingkat-ma',
+            'logo' => 'maa.svg',
+            'image' => '1sch.jpg',
+            'alamat' => 'LINGKUNGAN 04 KRANJI BARAT',
+            'kelurahan' => 'CIRIUNG',
+            'kecamatan' => 'CIBINONG',
+            'kabupaten' => 'BOGOR',
+            'posisiGeografis' => 'peta',
+            'notlp' => '02187911069',
+            'email' => 'smpplusawwaliyahalasiyah@gmail.com',
+            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
+        ],
+        [
+            'title' => 'Tingkat SMP Plus',
+            'title-nav' => 'SMP Plus',
+            'slug' => 'tingkat-smp-plus',
+            'logo' => 'smp.svg',
+            'image' => '2sch.jpg',
+            'alamat' => 'LINGKUNGAN 04 KRANJI BARAT',
+            'kelurahan' => 'CIRIUNG',
+            'kecamatan' => 'CIBINONG',
+            'kabupaten' => 'BOGOR',
+            'posisiGeografis' => 'peta',
+            'notlp' => '02187911069',
+            'email' => 'smpplusawwaliyahalasiyah@gmail.com',
+            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
+        ],
+        [
+            'title' => 'Tingkat SDIT',
+            'title-nav' => 'SDIT',
+            'slug' => 'tingkat-sdit',
+            'logo' => 'sdit.svg',
+            'image' => '3sch.jpg',
+            'alamat' => 'LINGKUNGAN 04 KRANJI BARAT',
+            'kelurahan' => 'CIRIUNG',
+            'kecamatan' => 'CIBINONG',
+            'kabupaten' => 'BOGOR',
+            'posisiGeografis' => 'peta',
+            'notlp' => '02187911069',
+            'email' => 'smpplusawwaliyahalasiyah@gmail.com',
+            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
+        ],
+
+    ];
+
+    $detail_post = [];
+
+    foreach($pFormal as $detail) {
+        if($detail["slug"] === $slug) {
+            $detail_post = $detail;
+            // break; // Exit the loop if a matching slug is found
+        }
+    }
+
+    
+
+    return view('/Pformal/detail/detaildata', [
+        'title' => 'detail',
+        'detail' => $detail_post,
+    ]);
+});
+
+
+
+
 
 
 

@@ -77,6 +77,14 @@
   @apply text-base text-secondry py-3 mx-6 flex hover:text-primary;
 }
 
+.catagory-footer {
+  @apply text-slate-400 hover:text-primary;
+}
+
+.card-profil {
+  @apply w-full max-w-full my-4 mb-10 lg:w-[30%] lg:h-80 border shadow-lg rounded-md  bg-white;
+}
+
 .hamburger-line {
   @apply w-[30px] h-[2px] my-2 block;
 }

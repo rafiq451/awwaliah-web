@@ -18,9 +18,9 @@
     <!-- hero section end -->
 
     {{-- sambuatan ketua yayasan section start --}}
-    <section id="#sambutan" class="bg-white  -mt-[29rem] sm:-mt-[24rem] md:-mt-[11rem]">
-      <div class="container ">
-        <div class="flex flex-wrap px-2 lg:-mt-20 -mt-5">
+    <section id="#sambutan" class="bg-white h-[800px] sm:h-[1000px]  -mt-[27rem] sm:-mt-[24rem] md:-mt-[11rem] lg:h-[600px]">
+      <div class="container border border-white">
+        <div class="flex flex-wrap px-2 lg:-mt-20 -mt-5 ">
           <div class="relative w-full self-center px-2 lg:w-1/2 my-10">
             <span class="absolute md:w-[500px] -top-3 -left-1/2">
               <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
@@ -35,19 +35,14 @@
             </span>
             <div class="absolute">
             <h1 class="text-base font-semibold text-primary md:text-xl">Sambutan Singkat<span class="block font-bold text-secondry  text-3xl sm:text-4xl mt-1 lg:text-5xl">Ketua Yayasan</span></h1>
-            <p class="font-normal italic text-secondry my-5 leading-relaxed">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque in saepe, inventore ex illo odio tenetur distinctio consequatur quam quo necessitatibus quia pariatur impedit perferendis consequuntur natus, neque voluptatibus tempore!"</p>
+            <p class="font-normal italic text-secondry my-5 leading-relaxed">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque in saepe, inventore ex illo odio tenetur distinctio consequatur quam quo necessitatibus quia pariatur impedit perferendis consequuntur natus, neque voluptatibus tempore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque in saepe, inventore ex illo odio tenetur distinctio consequatur quam quo necessitatibus quia pariatur impedit perferendis consequuntur natus, neque voluptatibus tempore! "</p>
           </div>
           </div>
-          <div class=" mb-32 lg:my-0 relative top-36 w-full self-end px-2 lg:w-1/2">
+          <div class=" mb-32 lg:my-0 relative top-80 md:top-72 lg:top-44 w-full self-end px-2 lg:w-1/2">
             <div class="relative mt-11 lg:mt-5 lg:right-0 sm:p-10 md:p-20 lg:p-1 xl:p-16">
               <img src="{{ asset('img/rafiq_dosen1.png') }}" alt="" class="max-w-full relative z-10" />
               <span class="absolute bottom-10 scale-150 sca left-1/2 -translate-x-1/2 sm:scale-[2.7] sm:bottom-28 md:scale-[2.5] md:bottom-60 lg:scale-[2.5] lg:bottom-32 xl:scale-[2.5] xl:bottom-48">
-                {{-- <svg widht="200" class="" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                  <path fill="#14B8A6" d="M58.5,-2.7C58.5,26.8,29.3,53.6,-0.3,53.6C-29.8,53.6,-59.7,26.8,-59.7,-2.7C-59.7,-32.3,-29.8,-64.6,-0.3,-64.6C29.3,-64.6,58.5,-32.3,58.5,-2.7Z" transform="translate(100 100) scale(1.1)" />
-                </svg> --}}
-                {{-- <svg widht="160" class="" height="160" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                  <path fill="#00933F" d="M56.5,-45C70.8,-27.1,78.3,-3.8,74.3,18.3C70.4,40.4,55,61.3,34,71.8C13.1,82.3,-13.3,82.4,-35.1,72.2C-56.9,62,-74.1,41.4,-76,20.9C-77.8,0.4,-64.3,-20,-49.1,-38.1C-33.8,-56.2,-16.9,-71.9,2.1,-73.6C21.1,-75.2,42.2,-62.9,56.5,-45Z" transform="translate(100 100) scale(1.1)" />
-                </svg> --}}
+              
                 <svg widht="200" class="" height="200" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
                   <defs>
                     <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -85,9 +80,9 @@
               <div class="relative rounded-md overflow-hidden ">
                 <a href="/berita/{{ $item['slug'] }}" class="hover-solo relative group">
                   <img src="img/berita/{{ $item['image'] }}" width="w-full" alt="" />
-                  <div class="w-0 h-0 group-hover:w-full group-hover:h-full absolute bg-black opacity-60 top-0 right-30 group">
+                  <div class="w-0 h-0 group-hover:w-full group-hover:h-full  absolute bg-black opacity-60 top-0 group">
                     <div class="hover-berita transition ease-in-out duration-500 py-8 sm:py-3 md:py-8 xl:py-10 mx-auto">
-                      <img src="img/logo/logo_yayasan.svg" alt="" />
+                      <img src="img/logo/logo_yayasan.svg" alt="" class="w-32 h-32 translate-x-4 md:translate-x-0" />
                     </div>
                   </div>
                 </a>
@@ -201,15 +196,14 @@
     
     
     <!-- Video section start -->
-    <section id="#video" class=" bg-fixed w-full bg-cover bg-center h-[900px] md:h-[950px] lg:h-[600px] xl:h-[620px] relative" style="background-image: url('img/sekolah/school.jpg');">
+    <section id="#video" class=" bg-fixed w-full bg-cover bg-center h-[800px] md:h-[950px] lg:h-[600px] xl:h-[620px] relative" style="background-image: url('img/sekolah/school.jpg');">
       <div class="bg-black w-full h-full bg-opacity-60">
         <div class="container">
           <div class="w-full py-8">
-            <h4 class="text-center font-bold mb-6 text-2xl lg:text-4xl lg:mt-7 font-['Viga'] text-white">Video Awwaliah Al-Asiyah</h4>
             <div class="flex flex-wrap px-2">
               <div class="w-full self-center px-2 lg:w-1/2 my-10">
                 <h1 class="text-base font-semibold text-primary md:text-xl">Video Singkat<span class="block font-bold text-white text-3xl sm:text-4xl mt-1 lg:text-3xl xl:text-5xl">Tentukan Masa depan mulai dari sekarang</span></h1>
-                <p class="font-normal  text-white my-5 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque in saepe, inventore ex illo odio tenetur distinctio consequatur quam quo necessitatibus quia pariatur impedit perferendis consequuntur natus, neque voluptatibus tempore!</p>
+                <p class="font-normal  text-slate-400 my-5 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque in saepe, inventore ex illo odio tenetur distinctio consequatur quam quo necessitatibus quia pariatur impedit perferendis consequuntur natus, neque voluptatibus tempore!</p>
                 <a href="/pendidikan/" class="text-sm font-medium font-['Poppins'] duration-200 transition-all hover:bg-yellow-300  hover:text-slate-200 text-white bg-gradient-to-r from-primary  to-kuns px-4 py-2 rounded-lg">Lihat Selengkapnya</a>
               </div>
               <div class=" w-full self-end mt-16  lg:w-1/2">
@@ -220,7 +214,7 @@
                       <i class="bi bi-caret-right-fill"></i>
                     </span>
                   </div>
-                <div class=" z-10 bottom-5 translate-x-8 scale-110 overflow-hidden rounded-lg relative w-80 md:w-96 md:left-3 md:bottom-0  ">
+                <div class=" z-10 bottom-5  lg:translate-x-8 scale-110 overflow-hidden rounded-lg relative w-80 md:w-96 md:left-3 md:bottom-0  ">
                 <img src="{{ asset('img/berita/ber1.jpg') }}" alt=""  />
                </div>
               </div>
