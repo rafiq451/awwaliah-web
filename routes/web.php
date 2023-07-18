@@ -196,6 +196,7 @@ Route::get('/pendidikan/{slug}', function ($slugF) {
     $pFormal = [
         [
             'title' => 'Tingkat TK',
+            'nama-sekolah' => 'SMP PLUS AWWALIYAH AL-ASIYAH',
             'title-nav' => 'TK',
             'slug' => 'taman-anak',
             'logo' => 'pondok.svg',
@@ -211,11 +212,12 @@ Route::get('/pendidikan/{slug}', function ($slugF) {
         ],
         [
             'title' => 'Tingkat MA',
+            'nama-sekolah' => 'MAS AL ASIYAH',
             'title-nav' => 'MA',
             'slug' => 'tingkat-ma',
             'logo' => 'maa.svg',
             'image' => '1sch.jpg',
-            'alamat' => 'LINGKUNGAN 04 KRANJI BARAT',
+            'alamat' => 'Jalan Raya Jakarta Bogor KM 41, Lingkungan 04 Kranji Barat RT. 001/011',
             'kelurahan' => 'CIRIUNG',
             'kecamatan' => 'CIBINONG',
             'kabupaten' => 'BOGOR',
@@ -226,6 +228,7 @@ Route::get('/pendidikan/{slug}', function ($slugF) {
         ],
         [
             'title' => 'Tingkat SMP Plus',
+            'nama-sekolah' => 'SMP PLUS AWWALIYAH AL-ASIYAH',
             'title-nav' => 'SMP Plus',
             'slug' => 'tingkat-smp-plus',
             'logo' => 'smp.svg',
@@ -241,6 +244,7 @@ Route::get('/pendidikan/{slug}', function ($slugF) {
         ],
         [
             'title' => 'Tingkat SDIT',
+            'nama-sekolah' => 'SDIT AL ASIYAH',
             'title-nav' => 'SDIT',
             'slug' => 'tingkat-sdit',
             'logo' => 'sdit.svg',
@@ -276,6 +280,7 @@ Route::get('/detail/{slug}', function($slug) {
     $pFormal = [
         [
             'title' => 'Tingkat TK',
+            'nama-sekolah' => 'SMP PLUS AWWALIYAH AL-ASIYAH',
             'title-nav' => 'TK',
             'slug' => 'taman-anak',
             'logo' => 'pondok.svg',
@@ -291,11 +296,12 @@ Route::get('/detail/{slug}', function($slug) {
         ],
         [
             'title' => 'Tingkat MA',
+            'nama-sekolah' => 'MAS AL ASIYAH',
             'title-nav' => 'MA',
             'slug' => 'tingkat-ma',
             'logo' => 'maa.svg',
             'image' => '1sch.jpg',
-            'alamat' => 'LINGKUNGAN 04 KRANJI BARAT',
+            'alamat' => 'Jalan Raya Jakarta Bogor KM 41, Lingkungan 04 Kranji Barat RT. 001/011',
             'kelurahan' => 'CIRIUNG',
             'kecamatan' => 'CIBINONG',
             'kabupaten' => 'BOGOR',
@@ -306,6 +312,7 @@ Route::get('/detail/{slug}', function($slug) {
         ],
         [
             'title' => 'Tingkat SMP Plus',
+            'nama-sekolah' => 'SMP PLUS AWWALIYAH AL-ASIYAH',
             'title-nav' => 'SMP Plus',
             'slug' => 'tingkat-smp-plus',
             'logo' => 'smp.svg',
@@ -321,6 +328,7 @@ Route::get('/detail/{slug}', function($slug) {
         ],
         [
             'title' => 'Tingkat SDIT',
+            'nama-sekolah' => 'SDIT AL ASIYAH',
             'title-nav' => 'SDIT',
             'slug' => 'tingkat-sdit',
             'logo' => 'sdit.svg',
@@ -336,6 +344,7 @@ Route::get('/detail/{slug}', function($slug) {
         ],
 
     ];
+
 
     $detail_post = [];
 

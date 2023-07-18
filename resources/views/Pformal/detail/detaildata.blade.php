@@ -1,4 +1,4 @@
-{{-- @dd($route) --}}
+{{-- @dd($detail) --}}
 
 @extends('layout/main')
 
@@ -31,7 +31,60 @@
             </div>
         </div>    
         <div class="w-full p-4 lg:w-[60%] border lg:mx-4 my-4 bg-white rounded-md shadow-lg ">
-            <h2 class="sejarah">Sejarah</h2>
+            <div class="border my-4 border-slate-400 container"></div>
+            <h2 class="sejarah">Profile Details</h2>
+            <div class="flex items-center">
+                <div class="hidden md:block  md:w-[30%] md:p-2 text-slate-500 ">
+                    <ul>
+                        <li class="my-4">
+                            <h2>Nama Sekolah</h2>
+                        </li>
+                        <li class="my-4">
+                            <h2>Alamat</h2>
+                        </li>
+                        <li class="my-4">
+                            <h2>Kelurahan</h2>
+                        </li>
+                        <li class="my-4">
+                            <h2>Kecamatan</h2>
+                        </li>
+                        <li class="my-4">
+                            <h2>Kabupaten</h2>
+                        </li>
+                        <li class="my-4">
+                            <h2>No Tel</h2>
+                        </li>
+                        <li class="my-4">
+                            <h2>Email</h2>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-[80%]  text-secondry ">
+                    <ul>
+                        <li class="my-4">
+                            <h2>{{ $detail['nama-sekolah'] }}</h2>
+                        </li>
+                        <li class="my-4">
+                            <h2>{{ $detail['alamat'] }}</h2>
+                        </li>
+                        <li class="my-4">
+                            <h2>{{ $detail['kelurahan'] }}</h2>
+                        </li>
+                        <li class="my-4">
+                            <h2>{{ $detail['kecamatan'] }}</h2>
+                        </li>
+                        <li class="my-4">
+                            <h2>{{ $detail['kabupaten'] }}</h2>
+                        </li>
+                        <li class="my-4">
+                            <h2>{{ $detail['notlp'] }}</h2>
+                        </li>
+                        <li class="my-4">
+                            <h2>{{ $detail['email'] }}</h2>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
            
     </div>  
