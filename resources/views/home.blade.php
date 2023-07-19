@@ -82,7 +82,7 @@
                   <img src="img/berita/{{ $item['image'] }}" width="w-full" alt="" />
                   <div class="w-0 h-0 group-hover:w-full group-hover:h-full  absolute bg-black opacity-60 top-0 group">
                     <div class="hover-berita transition ease-in-out duration-500 py-8 sm:py-3 md:py-8 xl:py-10 mx-auto">
-                      <img src="img/logo/logo_yayasan.svg" alt="" class="w-32 h-32 translate-x-4 md:translate-x-0" />
+                      <img src="img/logo/logo_yayasan.svg" alt="" class="w-32 h-32 translate-x-4 md:translate-x-0 lg:translate-x-3" />
                     </div>
                   </div>
                 </a>
