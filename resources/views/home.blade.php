@@ -3,11 +3,17 @@
 
     <!-- hero section start -->
     <section id="home" class=" h-[680px] w-full ">
-      <div class="carousel relative overflow-hidden md:h-128">
+      <div class="carousel relative overflow-hidden md:h-128 xl:h-[600px] ">
         <div class="carousel-inner">
-          <div class="carousel-item bg-cover bg-center absolute h-56 sm:h-72 md:h-full w-full transition-opacity duration-1000 ease-in-out" style="background-image: url('img/1.jpg');"></div>
-          <div class="carousel-item bg-cover bg-center absolute h-56 sm:h-72 md:h-full w-full transition-opacity duration-1000 ease-in-out" style="background-image: url('img/2.jpg');"></div>
-          <div class="carousel-item bg-cover bg-center absolute h-56 sm:h-72 md:h-full w-full transition-opacity duration-1000 ease-in-out" style="background-image: url('img/3.jpg');"></div>
+          <div class="carousel-item bg-cover bg-center absolute h-56 sm:h-72 md:h-full w-full transition-opacity duration-1000 ease-in-out" style="background-image: url('img/1.jpg');">
+            <div class="w-full h-full bg-black opacity-40"></div>
+          </div>
+          <div class="carousel-item bg-cover bg-center absolute h-56 sm:h-72 md:h-full w-full transition-opacity duration-1000 ease-in-out" style="background-image: url('img/2.jpg');">
+            <div class="w-full h-full bg-black opacity-40"></div>
+          </div>
+          <div class="carousel-item bg-cover bg-center absolute h-56 sm:h-72 md:h-full w-full transition-opacity duration-1000 ease-in-out" style="background-image: url('img/3.jpg');">
+            <div class="w-full h-full bg-black opacity-40"></div>
+          </div>
         </div>
         <div class="carousel-nav absolute -top-[200px] sm:-top-[150px] md:-top-[20px] left-0 right-0 bottom-0 flex justify-between items-center p-2">
           <button id="prevBtn" class="carousel-prev px-3 py-2 bg-gray-800 text-white rounded-full focus:outline-none"><i class="bi bi-arrow-left"></i></button>
@@ -35,7 +41,7 @@
             </span>
             <div class="absolute">
             <h1 class="text-base font-semibold text-primary md:text-xl">Sambutan Singkat<span class="block font-bold text-secondry  text-3xl sm:text-4xl mt-1 lg:text-5xl">Ketua Yayasan</span></h1>
-            <p class="font-normal italic text-secondry my-5 leading-relaxed">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque in saepe, inventore ex illo odio tenetur distinctio consequatur quam quo necessitatibus quia pariatur impedit perferendis consequuntur natus, neque voluptatibus tempore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque in saepe, inventore ex illo odio tenetur distinctio consequatur quam quo necessitatibus quia pariatur impedit perferendis consequuntur natus, neque voluptatibus tempore! "</p>
+            <p class="font-normal italic text-secondry my-5 leading-relaxed">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque in saepe, inventore ex illo odio tenetur distinctio consequatur quam quo necessitatibus quia pariatur impedit perferendis consequuntur natus, neque voluptatibus tempore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque in saepe, inventore ex illo odio tenetur distinctio "</p>
           </div>
           </div>
           <div class=" mb-32 lg:my-0 relative top-80 md:top-72 lg:top-44 w-full self-end px-2 lg:w-1/2">

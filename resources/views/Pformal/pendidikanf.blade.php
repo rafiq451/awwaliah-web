@@ -17,10 +17,10 @@
             <div class="relative ">
             <a href="#" class="relative">
               <img src="{{ asset('img/sekolah/' . $formal['image']) }}" alt=""  class="" />
-              <div class="bg-black absolute top-0 opacity-60 w-full flex items-center h-full">
+              <div class=" absolute top-0 opacity-rgba w-full flex items-center h-full">
                 <div class="flex flex-wrap items-center w-full h-full md:h-60  ">
                   <div class="w-[100%] hidden md:block md:mx-10 ">
-                  <h1 class="text-white text-center text-2xl">MAS Aliyah Al-Asiyah</h1>
+                  <h1 class="text-white text-center uppercase text-2xl">MAS Aliyah Al-Asiyah</h1>
                   </div>
                     <div class="bg-cover mx-auto text-white bg-center h-20 w-20 md:w-40 md:h-40 "  style="background-image: url({{ asset('img/blobs.png') }})">
                     <h1 class=" text-center text-4xl my-6 md:my-16 md:text-5xl">A</h1>

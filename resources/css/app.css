@@ -8,6 +8,10 @@
     height: 400px; /* Sesuaikan tinggi carousel dengan kebutuhan Anda */
   }
 
+  .opacity-rgba {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
   .carousel-inner {
     display: flex;
   }

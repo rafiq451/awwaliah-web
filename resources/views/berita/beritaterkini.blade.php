@@ -2,18 +2,16 @@
 
 @section('container')
 
-<section id="home" class=" w-full ">
-  <div class="carousel relative overflow-hidden md:h-128">
+<section id="home" class=" h-[680px] w-full ">
+  <div class="carousel relative overflow-hidden md:h-128 lg:h-[600px]">
     <div class="carousel-inner">
       <div class="carousel-item bg-cover bg-center hidden h-56 sm:h-72 md:h-full w-full transition-opacity duration-1000 ease-in-out" style="background-image: url('img/1.jpg');"></div>
     </div>
-    <div class="carousel-nav  p-2">
+    <div class="carousel-nav absolute -top-[200px] sm:-top-[150px] md:-top-[20px] left-0 right-0 bottom-0 flex justify-between items-center p-2">
         <button id="prevBtn" class="hidden carousel-prev px-3 py-2 bg-gray-800 text-white rounded-full focus:outline-none"><i class="bi bi-arrow-left"></i></button>
         <button id="nextBtn" class=" hidden carousel-next px-3 py-2 bg-gray-800 text-white rounded-full focus:outline-none"><i class="bi bi-arrow-right"></i></button>
-      <div class="lg:max-w-full h-[612px]">
-        <div class="h-96 xl:h-full bg-cover bg-center bg-repeat-x " style="background-image: url({{ asset('img/berita/' . $dberita['image']) }})">
-          {{-- <img src="{{ asset('img/sekolah/school.jpg') }}" alt="">           --}}
-        </div>
+      <div class="w-full ">
+        <img src="{{ asset('img/berita/' . $dberita['image']) }}" alt="">          
       </div>
     </div>
     </div>
@@ -21,7 +19,7 @@
 </section>
 
     <!-- sejarah section start -->
-    <section id="#sejarah" class="p-6 ">
+    <section id="#sejarah" class="p-6  -mt-[27rem] sm:-mt-[22rem] md:-mt-[9rem] lg:-mt-[5rem]">
       <div class="flex -mt-3  max-w-full md:w-[50%] ">
         <div class="flex ">
           <span class="m-1"><i class="fa-regular fa-folder-open" style="color: #00933f;"></i></span>
