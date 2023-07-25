@@ -54,25 +54,7 @@
               </div>
             </div>
             </div>
-            <div class="w-full lg:w-[20%] my-5 ">
-              <div class="p-2">
-              <h4 class="text-2xl">Catagory Berita</h4>
-             <ul>
-              <li class="my-4">
-                <h2 class="catagory-footer"><a href="">Kejuaraan</a></h2>
-              </li>
-              <li class="my-4">
-                <h2 class="catagory-footer"><a href="">Santunan Anak Yatim</a></h2>
-              </li>
-              <li class="my-4">
-                <h2 class="catagory-footer"><a href="">Teknologi</a></h2>
-              </li>
-              <li class="my-4">
-                <h2 class="catagory-footer"><a href="">Relasi Sekolah</a></h2>
-              </li>
-             </ul>
-            </div>
-            </div>
+         
             <div class="w-full sm:w-[90%] lg:w-[40%] md:w-[70%]  my-5 ">
               <div class="p-2 font-inter grid grid-cols-2 gap-2  md:grid-cols-3 ">
                 <div class="h-15 bg-blue-500 aspect-[4/3] overflow-hidden hover:scale-95 transition-all duration-500  rounded-lg  group relative">

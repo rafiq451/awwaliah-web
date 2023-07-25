@@ -132,38 +132,6 @@
     </section>
     <!-- logo section end -->
 
-    <!-- pendidikan formal section start -->
-    <section id="#pendidikan-formal" class="w-full bg-slate-100 pt-10">
-      <div class="container">
-        <div class="w-full p-10">
-          <h4 class="text-center font-bold text-2xl lg:text-4xl lg:mt-5 font-['Viga'] text-secondry">Awwaliah Al-asiyah</h4>
-          <p class="text-base font-medium text-center text-primary my-2">Pendidikan Formal</p>
-          <div class="flex justify-center mt-4 mx-6 items-center">
-            <span class="mx-2"><div class="w-9 lg:w-10 h-[1px] bg-secondry"></div></span>
-            <h2 class="text-primary text-2xl">
-              <i class="fa-solid fa-school"></i>
-            </h2>
-            <span class="mx-2"><div class="w-9 lg:w-10 h-[1px] bg-secondry"></div></span>
-          </div>
-          <div class="flex flex-wrap justify-center my-10 w-full">
-            @foreach ($pendidikanF as $item)    
-            <div class="mb-8 sm:p-4 md:w-1/2 xl:w-1/3">
-              <div class="rounded-lg shadow-lg overflow-hidden bg-white bg-opacity-60 mb-4">
-                <img src="img/sekolah/school.jpg" alt="" />
-                <div class="mx-6 py-8">
-                  <h4 class="mb-3 text-xl font-semibold font-['Viga'] text-primary">{{ $item['title'] }}</h4>
-                  <p class="font-medium font-['Poppins'] text-tex mb-5">{{ $item['deskripsi'] }}</p>
-                  <a href="/pendidikan/{{ $item['slug'] }}" class="text-sm font-medium font-['Poppins'] duration-200 transition-all hover:bg-yellow-300 hover:text-slate-200 text-white bg-gradient-to-r from-primary  to-kuns px-4 py-2 rounded-lg">Lihat Selengkapnya</a>
-                </div>
-              </div>
-            </div>
-            @endforeach
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- pendidikan section end -->
-    
     {{-- pendidikan non formal section start --}}
     <section id="#pendidikan-nonformal" class="b bg-slate-50 pt-12">
       <div class="container my-20">
@@ -199,6 +167,38 @@
 
     </section>
     {{-- pendidikan non formal section end --}}
+
+    <!-- pendidikan formal section start -->
+    <section id="#pendidikan-formal" class="w-full bg-slate-100 pt-10">
+      <div class="container">
+        <div class="w-full p-10">
+          <h4 class="text-center font-bold text-2xl lg:text-4xl lg:mt-5 font-['Viga'] text-secondry">Awwaliah Al-asiyah</h4>
+          <p class="text-base font-medium text-center text-primary my-2">Pendidikan Formal</p>
+          <div class="flex justify-center mt-4 mx-6 items-center">
+            <span class="mx-2"><div class="w-9 lg:w-10 h-[1px] bg-secondry"></div></span>
+            <h2 class="text-primary text-2xl">
+              <i class="fa-solid fa-school"></i>
+            </h2>
+            <span class="mx-2"><div class="w-9 lg:w-10 h-[1px] bg-secondry"></div></span>
+          </div>
+          <div class="flex flex-wrap justify-center my-10 w-full">
+            @foreach ($pendidikanF as $item)    
+            <div class="mb-8 sm:p-4 md:w-1/2 xl:w-1/3">
+              <div class="rounded-lg shadow-lg overflow-hidden bg-white bg-opacity-60 mb-4">
+                <img src="img/sekolah/school.jpg" alt="" />
+                <div class="mx-6 py-8">
+                  <h4 class="mb-3 text-xl font-semibold font-['Viga'] text-primary">{{ $item['title'] }}</h4>
+                  <p class="font-medium font-['Poppins'] text-tex mb-5">{{ $item['deskripsi'] }}</p>
+                  <a href="/pendidikan/{{ $item['slug'] }}" class="text-sm font-medium font-['Poppins'] duration-200 transition-all hover:bg-yellow-300 hover:text-slate-200 text-white bg-gradient-to-r from-primary  to-kuns px-4 py-2 rounded-lg">Lihat Selengkapnya</a>
+                </div>
+              </div>
+            </div>
+            @endforeach
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- pendidikan section end -->
     
     
     <!-- Video section start -->

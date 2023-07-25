@@ -88,6 +88,13 @@ Route::get('/', function () {
             'logo' => 'smp.svg',
             'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
         ],
+        [
+            'title' => 'Majlis Ta`lim',
+            'title-nav' => 'Majlis Ta`lalim',
+            'slug' => 'majlis-ta`lim',
+            'logo' => 'smp.svg',
+            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
+        ],
       
     ];
 
@@ -172,6 +179,13 @@ Route::get('/pendidikan/{slug}', function ($slug) {
             'title' => 'Asrama Tahfidz',
             'title-nav' => 'Asrama Tahfidz',
             'slug' => 'asrama-tahfidz',
+            'logo' => 'smp.svg',
+            'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
+        ],
+        [
+            'title' => 'Majlis Ta`lim',
+            'title-nav' => 'Majlis Ta`lalim',
+            'slug' => 'majlis-ta`lim',
             'logo' => 'smp.svg',
             'deskripsi' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi veniam, soluta tempora officiis '
         ],
