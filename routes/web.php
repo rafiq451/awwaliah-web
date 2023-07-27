@@ -472,7 +472,7 @@ Route::get('/berita', function () {
             'slug' => 'juara-lomba',
             'image' => 'ber1.jpg',
             'tanggal' => '21-10-2023',
-            'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsa culpa fuga molestias quas, laborum sequi sed itaque totam deserunt.'
+            'deskripsi' => 'Lorem ipsum dolor sit amet consectet      ur adipisicing elit. In ipsa culpa fuga molestias quas, laborum sequi sed itaque totam deserunt.'
         ],
             
      ];

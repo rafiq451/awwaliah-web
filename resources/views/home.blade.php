@@ -44,7 +44,7 @@
               <h1 class="text-base font-semibold text-primary md:text-xl">{{ $item['title'] }}<span class="block font-bold text-secondry  text-3xl sm:text-4xl mt-1 lg:text-5xl">Ketua Yayasan</span></h1>
             <p class="font-normal italic text-secondry my-5 leading-relaxed">{{ $item['mukodimah'] }}</p>
             <p class="font-normal italic text-secondry my-5 leading-relaxed">"{{ $item['sambutan-singkat'] }}"</p>
-            <a href="#" class="text-sm font-medium font-['Poppins'] duration-200 transition-all hover:bg-yellow-300  hover:text-slate-200 text-white bg-gradient-to-r from-primary  to-kuns px-4 py-2 rounded-lg">Lihat Selengkapnya</a>
+            <a href="sambutan/{{ $item['slug'] }}" class="text-sm font-medium font-['Poppins'] duration-200 transition-all hover:bg-yellow-300  hover:text-slate-200 text-white bg-gradient-to-r from-primary  to-kuns px-4 py-2 rounded-lg">Lihat Selengkapnya</a>
           </div>
           </div>
           <div class=" mb-32 lg:my-0 relative top-[640px] sm:top-52 md:top-72 lg:top-44 w-full self-end px-2 lg:w-1/2">
@@ -89,9 +89,9 @@
             <div class="item">
               <ul id="slider" class="hover-group flex justify-center mt-4 max-w-full ">
                 <li class="mb-8 sm:p-4  ">
-                  <div class="relative rounded-md shadow-lg ">
+                  <div class="relative  shadow-lg ">
                     <a href="/berita/{{ $item['slug'] }}" class="hover-solo relative group">
-                      <img src="img/berita/{{ $item['image'] }}" width="w-full" alt="" class="rounded-md" />
+                      <img src="img/berita/{{ $item['image'] }}" width="w-full" alt=""  />
                       <div class="w-0 h-0 group-hover:w-full group-hover:h-full  absolute bg-black opacity-60 top-0 group">
                         <div class="hover-berita transition ease-in-out duration-500 py-8 sm:py-3 md:py-8 xl:py-10 mx-auto">
                           <img src="img/logo/logo_yayasan.svg" alt="" class="w-32 h-32 translate-x-0 md:translate-x-0 lg:translate-x-0" />
