@@ -156,3 +156,17 @@ list[5].addEventListener('mouseout', function () {
     listNonFormal.classList.remove('dropdown');
   });
 });
+
+const sliderContainer = document.getElementById('sliderContainer');
+const slider = document.getElementById('slider');
+const cards = slider.getElementsByTagName('li');
+
+const elementsToShow = 3;
+const sliderContainerWidth = sliderContainer.clientWidth;
+const cardWidth = sliderContainerWidth / elementsToShow;
+
+slider.style.width = cards.length * cardWidth + 'px';
+for (let index = 0; index < array.length; index++) {
+  const element = cards[index];
+  element.style.width = cardWidth + 'px';
+}

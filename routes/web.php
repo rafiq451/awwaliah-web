@@ -122,11 +122,33 @@ Route::get('/', function () {
         ],
 
      ];
+     $sambutan = [
+        [
+            'title' => 'Sambutan Singkat',
+            'slug' => 'sambutan-ketua-yayasan',
+            'mukodimah' => ' Bismillahirrahmanirrahiim..
+            Assalamualaikum warrahmatullahi wabarokatuh
+            Alhamdulillahi bini matihi tattimusholihaat
+            Segala Puji hanya milik Allah Ta ala Atas segala nikmat dan karuniaNya yang tak terhitung kepada kita. Sholawat serta salam tak lupa selalu kita sanjungkan kepada Nabi kita Nabi Muhammad Sholallohu alaihi wassalam beserta keluarga dan para sahabatnya..dan semoga kita termasuk ke dalam umatnya yang akan menerima syafaat di Yaumul Akhir kelak..Aamiin Yaa Robbal Alamiin.',
+            'sambutan-singkat' => 'Dengan berpedoman pada Visi dan Misi Yayasan yaitu menghasilkan lembaga pendidikan yang berkualitas, profesional, berintegritas dan bermanfaat untuk umat maka kami terus berbenah dari segala arah, menjawab tantangan masa depan dengan bergandengan tangan dan berpegang teguh pada ajaran Islam.',
+            'sambutan-lengkap' => ' Bismillahirrahmanirrahiim..
+            Assalamualaikum warrahmatullahi wabarokatuh
+            Alhamdulillahi bini matihi tattimusholihaat
+            Segala Puji hanya milik Allah Ta ala Atas segala nikmat dan karuniaNya yang tak terhitung kepada kita. Sholawat serta salam tak lupa selalu kita sanjungkan kepada Nabi kita Nabi Muhammad Sholallohu alaihi wassalam beserta keluarga dan para sahabatnya..dan semoga kita termasuk ke dalam umatnya yang akan menerima syafaat di Yaumul Akhir kelak..Aamiin Yaa Robbal Alamiin.
+            Di tengah kemajuan tehnologi dan informasi saat ini Yayasan Awwaliyah Al-Asiyah  yang bergerak di bidang pendidikan berupaya terus mendorong dan mengupdate  organisasi ini agar mampu menghasilkan lembaga pendidikan formal ataupun non formal yang berkualitas dan mampu bersaing dengan lembaga lain.
+            Dengan berpedoman pada Visi dan Misi Yayasan yaitu menghasilkan lembaga pendidikan yang berkualitas, profesional, berintegritas dan bermanfaat untuk umat maka kami terus berbenah dari segala arah, menjawab tantangan masa depan dengan bergandengan tangan dan berpegang teguh pada ajaran Islam.
+            Kami terus mendorong upaya positif kepada seluruh pengelola  Lembaga sekolah, tenaga pendidik dan  satuan kependidikan Sekolah dibawah naungan  Awwaliyah Al-Asiyah  terus berkembang dan berkontribusi dalam dunia pendidikan khususnya kabupaten Bogor. Kami sangat mengapresiasi adanya website ini. Dengan adanya website ini kami harap masyarakat luas lebih mengenal dekat dengan Lembaga Pendidikan Yayasan Awwaliyah Al-Asiyah, baik Pendidikan formal atau informal serta  para peserta didik juga mampu mengakses informasi akademik melalui website ini dan para guru serta seluruh civitas akademika sekolah di bawah naungan Yayasan Awwaliyah-Al-Asiyah mampu mendapatkan informasi yang uptodate dalam dunia pendidikan.
+            Terakhir kami ucapkan Barokallohufiikum atas semua perjuangan dan pengabdian seluruh guru, pengelola sekolah dan komite sekolah atas kerjasama yang baik selama ini. Perjuangan tak pernah berhenti sampai disini.,karena tantangan masa depan akan silih berganti.
+            Semoga apa yang kita lakukan mendapat ridho dari Allah Taala
+            Wassalamualaikum warrohamtullahi wabarokatuh'
+        ]
+        ];
     return view('home', [
         'title' => 'Home',
         'pendidikanF' => $pFormal,
         'pendidikanNF' => $pnonFormal,
         'berita' => $berita,
+        'sambutan' => $sambutan
     ]);
 });
 
@@ -153,6 +175,37 @@ Route::get('/kepengurusan', function () {
 });
 Route::get('/identitas', function () {
     return view('tentang/identitas');
+});
+
+// sambutan ketua yayasan
+Route::get('/sambutan/{slug}', function($slug) {
+    $sambutan = [
+        [
+            'title' => 'Sambutan ketua yayasan',
+            'slug' => 'sambutan-ketua-yayasan',
+            'sambutan-singkat' => 'Dengan berpedoman pada Visi dan Misi Yayasan yaitu menghasilkan lembaga pendidikan yang berkualitas, profesional, berintegritas dan bermanfaat untuk umat maka kami terus berbenah dari segala arah, menjawab tantangan masa depan dengan bergandengan tangan dan berpegang teguh pada ajaran Islam.',
+            'sambutan-lengkap' => ' Bismillahirrahmanirrahiim..
+            Assalamualaikum warrahmatullahi wabarokatuh
+            Alhamdulillahi bini matihi tattimusholihaat
+            Segala Puji hanya milik Allah Ta ala Atas segala nikmat dan karuniaNya yang tak terhitung kepada kita. Sholawat serta salam tak lupa selalu kita sanjungkan kepada Nabi kita Nabi Muhammad Sholallohu alaihi wassalam beserta keluarga dan para sahabatnya..dan semoga kita termasuk ke dalam umatnya yang akan menerima syafaat di Yaumul Akhir kelak..Aamiin Yaa Robbal Alamiin.
+            Di tengah kemajuan tehnologi dan informasi saat ini Yayasan Awwaliyah Al-Asiyah  yang bergerak di bidang pendidikan berupaya terus mendorong dan mengupdate  organisasi ini agar mampu menghasilkan lembaga pendidikan formal ataupun non formal yang berkualitas dan mampu bersaing dengan lembaga lain.
+            Dengan berpedoman pada Visi dan Misi Yayasan yaitu menghasilkan lembaga pendidikan yang berkualitas, profesional, berintegritas dan bermanfaat untuk umat maka kami terus berbenah dari segala arah, menjawab tantangan masa depan dengan bergandengan tangan dan berpegang teguh pada ajaran Islam.
+            Kami terus mendorong upaya positif kepada seluruh pengelola  Lembaga sekolah, tenaga pendidik dan  satuan kependidikan Sekolah dibawah naungan  Awwaliyah Al-Asiyah  terus berkembang dan berkontribusi dalam dunia pendidikan khususnya kabupaten Bogor. Kami sangat mengapresiasi adanya website ini. Dengan adanya website ini kami harap masyarakat luas lebih mengenal dekat dengan Lembaga Pendidikan Yayasan Awwaliyah Al-Asiyah, baik Pendidikan formal atau informal serta  para peserta didik juga mampu mengakses informasi akademik melalui website ini dan para guru serta seluruh civitas akademika sekolah di bawah naungan Yayasan Awwaliyah-Al-Asiyah mampu mendapatkan informasi yang uptodate dalam dunia pendidikan.
+            Terakhir kami ucapkan Barokallohufiikum atas semua perjuangan dan pengabdian seluruh guru, pengelola sekolah dan komite sekolah atas kerjasama yang baik selama ini. Perjuangan tak pernah berhenti sampai disini.,karena tantangan masa depan akan silih berganti.
+            Semoga apa yang kita lakukan mendapat ridho dari Allah Taala
+            Wassalamualaikum warrohamtullahi wabarokatuh'
+        ]
+        ];
+        $new_sambutan = [];
+        foreach($sambutan as $sketuyayasan) {
+            if($sketuyayasan["slug"] === $slug) {
+                $new_sambutan = $sketuyayasan;
+            }
+        }
+        return view('sambutan/sambutan' , [
+            'title' => 'sambutan',
+            'sketuyayasan' => $new_sambutan  
+        ]);
 });
 
 

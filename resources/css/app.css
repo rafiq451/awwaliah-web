@@ -32,6 +32,7 @@
   .carousel-nav button:hover {
     opacity: 1;
   }
+
   @keyframes ping {
     0% {
       transform: scale(0.2);
@@ -65,7 +66,11 @@
 }
 
 .sejarah {
-  @apply text-primary font-semibold text-lg lg:text-2xl mt-10 mb-2;
+  @apply text-primary font-semibold text-lg lg:text-2xl mt-5 mb-2;
+}
+
+.catagories {
+  @apply text-primary my-2 text-lg font-light;
 }
 
 .text-color {

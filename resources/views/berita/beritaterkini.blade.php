@@ -20,7 +20,7 @@
 
     <!-- sejarah section start -->
     <section id="#sejarah" class="p-6  -mt-[27rem] sm:-mt-[22rem] md:-mt-[9rem] lg:-mt-[5rem]">
-      <div class="flex -mt-3  max-w-full md:w-[50%] ">
+      <div class="flex -mt-3   max-w-full md:w-[50%] ">
         <div class="flex ">
           <span class="m-1"><i class="fa-regular fa-folder-open" style="color: #00933f;"></i></span>
           <h2 class="m-1 font-thin">Berita Terkini</h2>
@@ -35,7 +35,7 @@
           <h4 class="text-2xl font-medium font-['Poppins']  md:mt-6 lg:text-4xl lg:mt-5 text-secondry">{{ $dberita['title'] }}</h4>
           <div class="w-[20%] md:w-[10%] my-2  h-1 rounded-sm bg-tex "></div>
           <div class="flex flex-wrap  ">          
-          <div class=" lg:basis-4/6 my-5  w-full shadow-lg rounded-md border  border-primary">
+          <div class=" lg:basis-4/6 my-5  w-full shadow-lg rounded-sm ">
             <div class="p-4">
             <h2 class="sejarah">Sejarah</h2>
             <p> SMP Plus awwaliyah al-asiyah berdiri pada tahun 2004 ketika pondok pesantren Awwaliyah yang sudah lebih awal berdiri di tahun 1993. Dimana santri-santrinya pada waktu itu masih sekolah keluar, ada yang di SMP Negeri, SMA Negeri, Madrasah Aliyah Negeri (MAN), MTS Al-Asiyah dan ada juga yang di SMK selain yang bersekolah, ada juga yang bekerja.</p>
@@ -61,8 +61,65 @@
                 <p>Disamping memang SMP Plus ini diharapkan dapat membantu pondok pesantren. SMP Plus Awwaliyah ini memiliki Visi dan Misi serta tekad agar SMP ini memiliki ciri khas dan keunggulan di bandingkan dengan SMP lain nya dengan berbagai kegiatan Extrakurikuler nya seperti Futsal, Marching Band, Paskibra, Pramuka, Silat, Hadroh, Marawis. Guru-guru yang profesional di bidangnya agar kedepannya menjadi SMP Plus yang selalu diminati oleh masyarakat.</p>   
               </div>
             </div>
-            <div class="lg:basis-1/4 my-5 lg:mx-6   shadow-lg rounded-md border  border-primary">
-              <div>halo</div>
+            <div class="lg:basis-1/4 my-5 lg:mx-6 w-full lg:h-[50%] md:w-[80%] md:mx-auto shadow-lg rounded-sm">
+              <div class="p-4">
+                <h4 class="sejarah">Catagories</h4>
+                <div class="my-5">
+                  <p class="catagories">kejuaraan <span class="text-secondry">(1)</span></p>
+                  <p class="catagories">Bencana <span class="text-secondry">(1)</span></p>
+                  <p class="catagories">Sekolah <span class="text-secondry">(1)</span></p>
+                </div>
+                <div class="my-5">
+                  <h4 class="sejarah">Recent Post</h4>
+                  <div class="my-5 flex w-full ">
+                    <div class="w-[30%] ">
+                      <img src="{{ asset('img/1.jpg') }}" alt="">
+                    </div>
+                    <div class="w-[70%] mx-2">
+                      <h2 class="font-semibold text-md text-primary">Kejuaraan Olimpiade</h2>
+                      <p class=" font-light">20 januari, 2023</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="my-5">
+                  <h4 class="sejarah">Tags</h4>
+                  <div class="my-5 flex flex-wrap ">
+                    <div class="border border-primary mx-1 my-1 p-2">Kejuaraan</div>
+                    <div class="border border-primary mx-1 my-1 p-2">Bencana</div>
+                    <div class="border border-primary mx-1 my-1 p-2">creative</div>
+                    <div class="border border-primary mx-1 my-1 p-2">sedekah berasama</div>
+                    <div class="border border-primary mx-1 my-1 p-2">sans</div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="lg:basis-4/6 my-5  w-full shadow-lg rounded-sm">
+                <div class="flex p-5">
+                  <div class="basis-2/6  border border-red-400">
+                    <img src="" alt="">
+                  </div>
+                  <div>
+                    <div class="basis-5/6 mx-3">
+                      <h2 class="sejarah">sans santuy</h2>
+                      <div class="flex">
+                        <span>    <!-- Facebook -->
+                          <a
+                            href="https://www.facebook.com/profile.php?id=100079187185509"
+                            target="_blank"
+                            class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border text-slate-400 border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                          >
+                            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                              <title>Facebook</title>
+                              <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                              />
+                            </svg>
+                          </a></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div>
             </div>
           </div>
