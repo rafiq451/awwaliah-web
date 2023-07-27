@@ -120,6 +120,13 @@ Route::get('/', function () {
             'tanggal' => '21-10-2023',
             'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsa culpa fuga molestias quas, laborum sequi sed itaque totam deserunt.'
         ],
+        [
+            'title' => 'Juara Lomba',
+            'slug' => 'juara-lomba',
+            'image' => 'ber1.jpg',
+            'tanggal' => '21-10-2023',
+            'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsa culpa fuga molestias quas, laborum sequi sed itaque totam deserunt.'
+        ],
 
      ];
      $sambutan = [
@@ -451,6 +458,13 @@ Route::get('/berita', function () {
             'slug' => 'bencana-alam',
             'image' => 'ber1.jpg',
             'tanggal' => '18-12-2023',
+            'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsa culpa fuga molestias quas, laborum sequi sed itaque totam deserunt.'
+        ],
+        [
+            'title' => 'Juara Lomba',
+            'slug' => 'juara-lomba',
+            'image' => 'ber1.jpg',
+            'tanggal' => '21-10-2023',
             'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsa culpa fuga molestias quas, laborum sequi sed itaque totam deserunt.'
         ],
         [

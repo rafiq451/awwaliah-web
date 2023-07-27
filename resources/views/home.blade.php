@@ -84,26 +84,31 @@
             </h2>
             <span class="mx-2"><div class="w-7 lg:w-10 h-[1px] bg-secondry"></div></span>
           </div>
-          <div id="sliderContainer" class="w-full overflow-hidden">
-          <ul id="slider" class="hover-group flex justify-center mt-4 max-w-full  border">
+          <div class="owl-carousel owl-theme">
             @foreach ($berita as $item)  
-            <li class="mb-8 sm:p-4  ">
-              <div class="relative rounded-md  ">
-                <a href="/berita/{{ $item['slug'] }}" class="hover-solo relative group">
-                  <img src="img/berita/{{ $item['image'] }}" width="w-full" alt="" />
-                  <div class="w-0 h-0 group-hover:w-full group-hover:h-full  absolute bg-black opacity-60 top-0 group">
-                    <div class="hover-berita transition ease-in-out duration-500 py-8 sm:py-3 md:py-8 xl:py-10 mx-auto">
-                      <img src="img/logo/logo_yayasan.svg" alt="" class="w-32 h-32 translate-x-4 md:translate-x-0 lg:translate-x-3" />
-                    </div>
+            <div class="item">
+              <ul id="slider" class="hover-group flex justify-center mt-4 max-w-full ">
+                <li class="mb-8 sm:p-4  ">
+                  <div class="relative rounded-md shadow-lg ">
+                    <a href="/berita/{{ $item['slug'] }}" class="hover-solo relative group">
+                      <img src="img/berita/{{ $item['image'] }}" width="w-full" alt="" class="rounded-md" />
+                      <div class="w-0 h-0 group-hover:w-full group-hover:h-full  absolute bg-black opacity-60 top-0 group">
+                        <div class="hover-berita transition ease-in-out duration-500 py-8 sm:py-3 md:py-8 xl:py-10 mx-auto">
+                          <img src="img/logo/logo_yayasan.svg" alt="" class="w-32 h-32 translate-x-0 md:translate-x-0 lg:translate-x-0" />
+                        </div>
+                      </div>
+                    </a>
+                    <div class="p-2">
+                    <p class="text-primary font-['Poppins']">{{ $item['tanggal'] }}</p>
+                    <h4 class=" text-lg font-semibold text-secondry">{{ $item['title'] }}</h4>
                   </div>
-                </a>
-                <p class="text-primary font-['Poppins']">{{ $item['tanggal'] }}</p>
-                <h4 class=" text-lg font-semibold text-secondry">{{ $item['title'] }}</h4>
-              </div>
-            </li>
+                  </div>
+                </li>
+              </ul>
+            </div>
             @endforeach
-          </ul>
         </div>
+        
       </div>
       </div>
     </section>
@@ -252,6 +257,27 @@
     <!-- Video section end -->
 
 @endsection 
+
+{{-- <div id="sliderContainer" class="w-full overflow-hidden">
+  <ul id="slider" class="hover-group flex justify-center mt-4 max-w-full  border">
+    @foreach ($berita as $item)  
+    <li class="mb-8 sm:p-4  ">
+      <div class="relative rounded-md  ">
+        <a href="/berita/{{ $item['slug'] }}" class="hover-solo relative group">
+          <img src="img/berita/{{ $item['image'] }}" width="w-full" alt="" />
+          <div class="w-0 h-0 group-hover:w-full group-hover:h-full  absolute bg-black opacity-60 top-0 group">
+            <div class="hover-berita transition ease-in-out duration-500 py-8 sm:py-3 md:py-8 xl:py-10 mx-auto">
+              <img src="img/logo/logo_yayasan.svg" alt="" class="w-32 h-32 translate-x-4 md:translate-x-0 lg:translate-x-3" />
+            </div>
+          </div>
+        </a>
+        <p class="text-primary font-['Poppins']">{{ $item['tanggal'] }}</p>
+        <h4 class=" text-lg font-semibold text-secondry">{{ $item['title'] }}</h4>
+      </div>
+    </li>
+    @endforeach
+  </ul>
+</div> --}}
 
 
 
