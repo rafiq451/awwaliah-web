@@ -24,9 +24,10 @@
     <!-- hero section end -->
 
     {{-- sambuatan ketua yayasan section start --}}
-    <section id="#sambutan" class="bg-white h-[800px] sm:h-[1000px]  -mt-[27rem] sm:-mt-[24rem] md:-mt-[11rem] lg:h-[600px]">
+    <section id="#sambutan" class="bg-white h-[1080px] sm:h-[1000px]  -mt-[27rem] sm:-mt-[24rem] md:-mt-[11rem] lg:h-[600px]">
       <div class="container border border-white">
-        <div class="flex flex-wrap px-2 lg:-mt-20 -mt-5 ">
+        @foreach ($sambutan as $item)   
+        <div class="flex flex-wrap px-2 lg:-mt-20 -mt-5 relative ">
           <div class="relative w-full self-center px-2 lg:w-1/2 my-10">
             <span class="absolute md:w-[500px] -top-3 -left-1/2">
               <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
@@ -40,15 +41,17 @@
               </svg>
             </span>
             <div class="absolute">
-            <h1 class="text-base font-semibold text-primary md:text-xl">Sambutan Singkat<span class="block font-bold text-secondry  text-3xl sm:text-4xl mt-1 lg:text-5xl">Ketua Yayasan</span></h1>
-            <p class="font-normal italic text-secondry my-5 leading-relaxed">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque in saepe, inventore ex illo odio tenetur distinctio consequatur quam quo necessitatibus quia pariatur impedit perferendis consequuntur natus, neque voluptatibus tempore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque in saepe, inventore ex illo odio tenetur distinctio "</p>
+              <h1 class="text-base font-semibold text-primary md:text-xl">{{ $item['title'] }}<span class="block font-bold text-secondry  text-3xl sm:text-4xl mt-1 lg:text-5xl">Ketua Yayasan</span></h1>
+            <p class="font-normal italic text-secondry my-5 leading-relaxed">{{ $item['mukodimah'] }}</p>
+            <p class="font-normal italic text-secondry my-5 leading-relaxed">"{{ $item['sambutan-singkat'] }}"</p>
+            <a href="sambutan/{{ $item['slug'] }}" class="text-sm font-medium font-['Poppins'] duration-200 transition-all hover:bg-yellow-300  hover:text-slate-200 text-white bg-gradient-to-r from-primary  to-kuns px-4 py-2 rounded-lg">Lihat Selengkapnya</a>
           </div>
           </div>
-          <div class=" mb-32 lg:my-0 relative top-80 md:top-72 lg:top-44 w-full self-end px-2 lg:w-1/2">
+          <div class=" mb-32 lg:my-0 relative top-[640px] sm:top-52 md:top-72 lg:top-44 w-full self-end px-2 lg:w-1/2">
             <div class="relative mt-11 lg:mt-5 lg:right-0 sm:p-10 md:p-20 lg:p-1 xl:p-16">
               <img src="{{ asset('img/rafiq_dosen1.png') }}" alt="" class="max-w-full relative z-10" />
               <span class="absolute bottom-10 scale-150 sca left-1/2 -translate-x-1/2 sm:scale-[2.7] sm:bottom-28 md:scale-[2.5] md:bottom-60 lg:scale-[2.5] lg:bottom-32 xl:scale-[2.5] xl:bottom-48">
-              
+                
                 <svg widht="200" class="" height="200" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
                   <defs>
                     <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -62,6 +65,7 @@
             </div>
           </div>
         </div>
+        @endforeach
       </div>
     </section>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,160L18.5,154.7C36.9,149,74,139,111,138.7C147.7,139,185,149,222,176C258.5,203,295,245,332,229.3C369.2,213,406,139,443,101.3C480,64,517,64,554,80C590.8,96,628,128,665,144C701.5,160,738,160,775,160C812.3,160,849,160,886,181.3C923.1,203,960,245,997,250.7C1033.8,256,1071,224,1108,186.7C1144.6,149,1182,107,1218,96C1255.4,85,1292,107,1329,122.7C1366.2,139,1403,149,1422,154.7L1440,160L1440,0L1421.5,0C1403.1,0,1366,0,1329,0C1292.3,0,1255,0,1218,0C1181.5,0,1145,0,1108,0C1070.8,0,1034,0,997,0C960,0,923,0,886,0C849.2,0,812,0,775,0C738.5,0,702,0,665,0C627.7,0,591,0,554,0C516.9,0,480,0,443,0C406.2,0,369,0,332,0C295.4,0,258,0,222,0C184.6,0,148,0,111,0C73.8,0,37,0,18,0L0,0Z"></path></svg>
@@ -80,27 +84,40 @@
             </h2>
             <span class="mx-2"><div class="w-7 lg:w-10 h-[1px] bg-secondry"></div></span>
           </div>
-          <div class="hover-group flex flex-wrap justify-center mt-4 w-full">
+          <div class="swiper mySwiper ">
+            <div class="swiper-wrapper">
             @foreach ($berita as $item)  
-            <div class="mb-8 sm:p-4 sm:w-1/2 lg:w-1/3">
-              <div class="relative rounded-md overflow-hidden ">
-                <a href="/berita/{{ $item['slug'] }}" class="hover-solo relative group">
-                  <img src="img/berita/{{ $item['image'] }}" width="w-full" alt="" />
-                  <div class="w-0 h-0 group-hover:w-full group-hover:h-full  absolute bg-black opacity-60 top-0 group">
-                    <div class="hover-berita transition ease-in-out duration-500 py-8 sm:py-3 md:py-8 xl:py-10 mx-auto">
-                      <img src="img/logo/logo_yayasan.svg" alt="" class="w-32 h-32 translate-x-4 md:translate-x-0 lg:translate-x-3" />
-                    </div>
+            <div class="swiper-slide w-full md:w-[50%] md:p-6">
+              <ul id="slider" class=" hover-group   mt-4 max-w-full ">
+                <li class="mb-8   ">
+                  <div class="relative  shadow-lg ">
+                    <a href="/berita/{{ $item['slug'] }}" class="hover-solo relative group">
+                      <img src="img/berita/{{ $item['image'] }}" width="w-full" alt=""  />
+                      <div class="w-0 h-0 group-hover:w-full group-hover:h-full  absolute bg-black opacity-60 top-0 group">
+                        <div class="hover-berita transition ease-in-out duration-500 py-8 sm:py-3 md:py-8 xl:py-10 mx-auto">
+                          <img src="img/logo/logo_yayasan.svg" alt="" class="w-32 h-32 translate-x-4 md:translate-x-0  xl:translate-x-5" />
+                        </div>
+                      </div>
+                    </a>
+                    <div class="p-2">
+                    <p class="text-primary font-['Poppins']">{{ $item['tanggal'] }}</p>
+                    <h4 class=" text-lg font-semibold text-secondry">{{ $item['title'] }}</h4>
                   </div>
-                </a>
-                <p class="text-primary font-['Poppins']">{{ $item['tanggal'] }}</p>
-                <h4 class=" text-lg font-semibold text-secondry">{{ $item['title'] }}</h4>
-              </div>
+                  </div>
+                </li>
+              </ul>
             </div>
             @endforeach
           </div>
+          <div class="swiper-button-next NButton"></div>
+          <div class="swiper-button-prev NButton"></div>
+          <div class="swiper-pagination "></div>
         </div>
+        
+      </div>
       </div>
     </section>
+    
     <!-- berita section end -->
 
     <!-- logo section start -->
@@ -170,7 +187,6 @@
 
     <!-- pendidikan formal section start -->
     <section id="#pendidikan-formal" class="w-full bg-slate-100 pt-10">
-      <div class="container">
         <div class="w-full p-10">
           <h4 class="text-center font-bold text-2xl lg:text-4xl lg:mt-5 font-['Viga'] text-secondry">Awwaliah Al-asiyah</h4>
           <p class="text-base font-medium text-center text-primary my-2">Pendidikan Formal</p>
@@ -181,9 +197,9 @@
             </h2>
             <span class="mx-2"><div class="w-9 lg:w-10 h-[1px] bg-secondry"></div></span>
           </div>
-          <div class="flex flex-wrap justify-center my-10 w-full">
+          <div class="flex flex-wrap xl:flex-nowrap  xl:w-full justify-center my-10 w-full  mx-auto">
             @foreach ($pendidikanF as $item)    
-            <div class="mb-8 sm:p-4 md:w-1/2 xl:w-1/3">
+            <div class="mb-8 sm:p-4 md:w-1/2 xl:w-1/3 hover:scale-110 transition-all duration-300">
               <div class="rounded-lg shadow-lg overflow-hidden bg-white bg-opacity-60 mb-4">
                 <img src="img/sekolah/school.jpg" alt="" />
                 <div class="mx-6 py-8">
@@ -196,7 +212,6 @@
             @endforeach
           </div>
         </div>
-      </div>
     </section>
     <!-- pendidikan section end -->
     
@@ -246,6 +261,27 @@
     <!-- Video section end -->
 
 @endsection 
+
+{{-- <div id="sliderContainer" class="w-full overflow-hidden">
+  <ul id="slider" class="hover-group flex justify-center mt-4 max-w-full  border">
+    @foreach ($berita as $item)  
+    <li class="mb-8 sm:p-4  ">
+      <div class="relative rounded-md  ">
+        <a href="/berita/{{ $item['slug'] }}" class="hover-solo relative group">
+          <img src="img/berita/{{ $item['image'] }}" width="w-full" alt="" />
+          <div class="w-0 h-0 group-hover:w-full group-hover:h-full  absolute bg-black opacity-60 top-0 group">
+            <div class="hover-berita transition ease-in-out duration-500 py-8 sm:py-3 md:py-8 xl:py-10 mx-auto">
+              <img src="img/logo/logo_yayasan.svg" alt="" class="w-32 h-32 translate-x-4 md:translate-x-0 lg:translate-x-3" />
+            </div>
+          </div>
+        </a>
+        <p class="text-primary font-['Poppins']">{{ $item['tanggal'] }}</p>
+        <h4 class=" text-lg font-semibold text-secondry">{{ $item['title'] }}</h4>
+      </div>
+    </li>
+    @endforeach
+  </ul>
+</div> --}}
 
 
 

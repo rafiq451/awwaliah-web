@@ -18,10 +18,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600&family=Viga&display=swap" rel="stylesheet">
 
+    {{-- <link href="https://cdn.jsdelivr.net/npm/swiper@10.0.4/swiper-bundle.min.css" rel="stylesheet"> --}}
+
+    {{-- swiper css --}}
+    @vite('public/css/swiper-bundle.min.css')
+
     <link rel="stylesheet" href="css/style.css">
 
-    <!--  -->
-    <!-- <link rel="stylesheet" href="css/custome.css"> -->
+    {{-- custom css --}}
     @vite('resources/css/app.css' )
     <title>Awwaliah Al-asiyah | {{$title}}</title>
   </head>
@@ -128,5 +132,21 @@
 
     {{-- <script src="{{ @vite('js/script.js') }}" defer></script> --}}
     @vite('public/js/script.js')
+    
+    {{-- swiper js --}}
+    {{-- @vite('public/js/swiper-bundle.min.js') --}}
+    
+    
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10.0.4/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+
+
+  </script>
+
   </body>
 </html>
