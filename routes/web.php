@@ -6,8 +6,11 @@ use App\Http\Controllers\Admin\SejarahController;
 use App\Http\Controllers\Admin\VisiMisiController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\IdentitasController;
+use App\Http\Controllers\Admin\PendidikanController;
 use App\Http\Controllers\Admin\KepengurusanController;
 use App\Http\Controllers\Admin\PendiriTokohController;
+use App\Http\Controllers\Admin\VisiMisiControllerYayasan;
+use App\Http\Controllers\Admin\KontenPendidikanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,12 +24,34 @@ use App\Http\Controllers\Admin\PendiriTokohController;
 */
 
 Route::get('/dashboard',[DashboardController::class, 'index']);
+
+
 Route::get('/dashboard/berita',[BeritaController::class, 'index']);
+Route::get('/dashboard/berita/tambah',[BeritaController::class, 'create']);
+
+
 Route::get('/dashboard/sejarah',[SejarahController::class, 'index']);
+Route::get('/dashboard/sejarah/edit',[SejarahController::class, 'edit']);
+Route::post('/dashboard/sejarah/update-sejarah',[SejarahController::class, 'update']);
+Route::put('/dashboard/sejarah/update-sejarah', [SejarahController::class, 'update'])->name('sejarah.update');
+
+Route::get('/dashboard/visi&misi',[VisiMisiControllerYayasan::class, 'index']);
+Route::get('/dashboard/visi&misi/edit',[VisiMisiControllerYayasan::class, 'edit']);
+Route::post('/dashboard/visi&misi/update-visi&misi',[VisiMisiControllerYayasan::class, 'update']);
+
 Route::get('/dashboard/pendiri&tokoh',[PendiriTokohController::class, 'index']);
-Route::get('/dashboard/visi&misi',[VisiMisiController::class, 'index']);
+Route::get('/dashboard/pendiri&tokoh/tambah',[PendiriTokohController::class, 'create']);
+Route::post('/dashboard/pendiri&tokoh/store',[PendiriTokohController::class, 'store'])->name('tokoh.store');
+Route::get('/dashboard/pendiri&tokoh/{id}', [PendiriTokohController::class, 'destroy'])->name('tokoh.destroy');
+
+
 Route::get('/dashboard/kepengurusan',[KepengurusanController::class, 'index']);
 Route::get('/dashboard/identitas',[IdentitasController::class, 'index']);
+
+Route::get('/dashboard/pendidikan',[PendidikanController::class, 'index']);
+Route::get('/dashboard/kontenpendidikan',[KontenPendidikanController::class, 'index']);
+Route::get('/dashboard/kontenpendidikan/edit',[KontenPendidikanController::class, 'edit']);
+
 
 
 
@@ -141,7 +166,7 @@ Route::get('/visi&misi', function () {
         'title' => 'Visi & Misi'
     ]);
 });
-Route::get('/pendiri&tokoh', function () {
+Route::get('/pendiri-tokoh', function () {
     return view('tentang/pendiri', [
         'title' => 'Pendiri & Tokoh'
     ]);

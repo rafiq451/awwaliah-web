@@ -37,15 +37,15 @@
                   </div>
                 </div>
                 <div class="row mb-3">
-                  <label for="inputPassword" class="col-sm-2 col-form-label">Artikel</label>
-                  <div class="col-sm-10">
-                    <textarea class="form-control" style="height: 100px" placeholder="Masukan artikel"></textarea>
-                  </div>
-                </div>
-                <div class="row mb-3">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Gambar</label>
                   <div class="col-sm-10">
                     <input class="form-control" type="file" id="formFile">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputPassword" class="col-sm-2 col-form-label">Artikel</label>
+                  <div class="col-sm-10">
+                    <textarea id="task-texarea" placeholder="Masukan artikel"></textarea>
                   </div>
                 </div>
                 <div class="row mb-3">
@@ -78,6 +78,23 @@
     </section>
 
   </main><!-- End #main -->
+
+  @section('scripts')
+  <script>
+    ClassicEditor
+                .create(document.querySelector( '#task-texarea' ), {
+                    toolbar: [
+                        'ckbox', 'imageUpload', '|', 'heading', '|', 'undo', 'redo', '|', 'bold', 'italic', '|',
+                        'blockQuote', 'indent', 'link', '|', 'bulletedList', 'numberedList'
+                    ],
+                } )
+                .catch( error => {
+                    console.error( error );
+                } );
+  </script>
+  @endsection
+
+
 
 
 

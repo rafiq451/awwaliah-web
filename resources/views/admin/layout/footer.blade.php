@@ -23,10 +23,9 @@
   <script src="{{asset('/')}}assets/vendor/simple-datatables/simple-datatables.js"></script>
   <script src="{{asset('/')}}assets/vendor/tinymce/tinymce.min.js"></script>
   <script src="{{asset('/')}}assets/vendor/php-email-form/validate.js"></script>
-
+  <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
+  @yield('scripts')
   <!-- Template Main JS File -->
   <script src="{{asset('/')}}assets/js/main.js"></script>
-
 </body>
-
 </html>

@@ -11,13 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('konten_pendidikans', function (Blueprint $table) {
+        Schema::create('visi_misi_yayasans', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_pendidikan')->constrained('pendidikans');
-            $table->string('sejarah');
-            $table->string('visi');
-            $table->string('misi');
-            $table->string('tujuan');
+            $table->text("visi");
+            $table->text("misi");
             $table->timestamps();
         });
     }
@@ -27,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('konten_pendidikans');
+        Schema::dropIfExists('visi_misi_yayasans');
     }
 };

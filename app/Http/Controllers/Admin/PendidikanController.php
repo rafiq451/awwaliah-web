@@ -1,21 +1,20 @@
 <?php
 
-namespace App\Http\Controllers\User;
+namespace App\Http\Controllers\Admin;
 
+use App\Models\Pendidikan;
 use Illuminate\Http\Request;
-use App\Models\SejarahYayasan;
 use App\Http\Controllers\Controller;
 
-class SejarahYayasanController extends Controller
+class PendidikanController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $result = SejarahYayasan::all();
-        $title = "Sejarah";
-        return view('tentang.sejarah', ['sejarah' => $result]);
+        $result = Pendidikan::all();
+        return view('admin.pendidikan.index',['pendidikan' => $result]);
     }
 
     /**

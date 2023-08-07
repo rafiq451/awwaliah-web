@@ -23,7 +23,7 @@
                     <ul class="block">
                       <li><a href="/sejarah" class="dropdown-menu">Sejarah Berdirinya yayasan</a></li>
                       <li><a href="/visi&misi" class="dropdown-menu">Visi Misi Yayasan</a></li>
-                      <li><a href="/pendiri&tokoh" class="dropdown-menu">Pendiri dan Tokoh</a></li>
+                      <li><a href="/pendiri-tokoh" class="dropdown-menu">Pendiri dan Tokoh</a></li>
                       <li><a href="/kepengurusan" class="dropdown-menu">Kepengurusan Yayasan</a></li>
                       <li><a href="" class="dropdown-menu">Identitas</a></li>
                     </ul>
@@ -46,8 +46,8 @@
                           ></a>
                         <div class="absolute hidden border border-primary bg-slate-50 shadow-lg rounded-lg max-w-[250px] w-full top-19 left-4 lg:left-10">
                           <ul class="block">
-                            <li><a href="#" class="dropdown-menu">TK</a></li>
-                            <li><a href="#" class="dropdown-menu">SDIT</a></li>
+                            <li><a href="" class="dropdown-menu">TK</a></li>
+                            <li><a href="/pendidikan/tingkat-sdit" class="dropdown-menu">SDIT</a></li>
                             <li><a href="/pendidikan/" class="dropdown-menu">SMP PLUS</a></li>
                             <li><a href="" class="dropdown-menu">MA</a></li>
                           </ul>

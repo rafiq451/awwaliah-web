@@ -2,17 +2,20 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\KontenPendidikan;
+use App\Http\Controllers\Controller;
 
-class VisiMisiController extends Controller
+class KontenPendidikanController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('admin.visi_misi.index');
+
+        $result = KontenPendidikan::all();
+        return view('admin.kontenPendidikan.index',['kontenPendidikans' => $result]);
     }
 
     /**
@@ -42,9 +45,9 @@ class VisiMisiController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit()
     {
-        //
+        return view('admin.kontenPendidikan.edit');
     }
 
     /**

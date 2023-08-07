@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Models\Tokoh;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class PendiriTokohController extends Controller
 {
@@ -12,7 +13,8 @@ class PendiriTokohController extends Controller
      */
     public function index()
     {
-        return view('admin.pendiri&tokoh.index');
+        $result = Tokoh::all();
+        return view('admin.pendiri&tokoh.index',['tokoh' => $result]);
     }
 
     /**
@@ -20,7 +22,7 @@ class PendiriTokohController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pendiri&tokoh.tambah');
     }
 
     /**
@@ -28,7 +30,26 @@ class PendiriTokohController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'nama' => 'required',
+            'jabatan' => 'required',
+            'gambar' => 'image|mimes:jpeg,png,jpg', // Contoh validasi untuk gambar
+        ]);
+
+        // Simpan data
+        $tokoh = new Tokoh;
+        $tokoh->nama = $request->nama;
+        $tokoh->jabatan = $request->jabatan;
+
+        if ($request->hasFile('gambar')) {
+            // Pindahkan gambar baru ke direktori
+            $imageName = time().'.'.$request->gambar->extension();
+            $request->gambar->move(public_path('pendiri&tokoh'), $imageName);
+            $tokoh->gambar = $imageName;
+        }
+
+        $tokoh->save();
+        return redirect('dashboard/pendiri&tokoh')->with('success', 'Data Pendiri & Tokoh berhasil disimpan.');
     }
 
     /**
@@ -58,8 +79,22 @@ class PendiriTokohController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        //
+        try {
+            $tokoh = Tokoh::findOrFail($id);
+
+            // Hapus gambar dari penyimpanan (jika perlu)
+            $gambarPath = public_path("pendiri_tokoh/{$tokoh->gambar}");
+            if (file_exists($gambarPath)) {
+                unlink($gambarPath);
+            }
+
+            $tokoh->delete();
+
+            return redirect('dashboard/pendiri&tokoh')->with('success', 'Pendiri & Tokoh berhasil dihapus.');
+        } catch (\Exception $e) {
+            return redirect('dashboard/pendiri&tokoh')->with('error', 'Terjadi kesalahan saat menghapus Pendiri & Tokoh.');
+        }
     }
 }

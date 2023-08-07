@@ -34,25 +34,15 @@
           </div>
           <div class="  my-10  w-full">
             <h2 class="sejarah">Sejarah</h2>
-            <p> Yayasan Pendidikan Islam Pondok Pesantren Awwaliyah Al-Asiyah mulai berdiri pada tahun 1993, 
-              didirikan oleh bapak Drs. KH. Anwar Husaeni, M.Pd dan ibu Dra. Hj, Siti Hapipah HZ dengan jumlah murid
-              300 santri. Pondok pesantren ini pada awalnya berada di bawah naungan Yayasan Islam Al-Asiyah yang
-              berdiri pada tahun 1976. Yang didirikan oleh Bapak KH. Muhammad Hamzah (Alm) dan ibu Hj. Ratu Asiyah
-              (Alm). Yang mana beliau ini adalah orang tua kandung dari ibu Hj. Siti Hapipah HZ.</p>
+            <p> </p>
             <h2 class="sejarah">Kurikulum</h2>
-            <p>Kurikulum Pondok Pesantren Awwaliyah Al-Asiyah berbasis Salafi yang didalamnya hanya mempelajari 
-              kitab-kitab kuning seperti Al-Qur’an, Hadist, Aqidah, Fiqh, Akhlak, Nahwu, dan Sharaf. Namun sejak tahun
-              2009 Ponpes Awwaliyah mengirimkan beberapa santrinya untuk mempelajari Bahasa (Arab, Inggris) dan
-              metode-metode cara cepat membaca kitab kuning seperti metode Amsilati dan Tamyiz, agar hasilnya
-              dapat diterapkan di Ponpes Awwaliyah walaupun pada kenyataannya menerapkan bahasa di pondok salafi
-              tidak semudah yang diharapkan.</p>
+            {{-- @foreach ($sejarah as $item) --}}
+            {{-- <p>{{$item->sejarah}}</p> --}}
               <br>
-              <p>Namun demikian pendiri pondok pesantren tidak pernah berputus asa untuk memberikan materi
-                pembelajaran kepada santrinya dengan harapan alumninya tidak hanya mampu dalam bidang agama tetapi
-                juga memiliki ketrampilan yang dapat dimanfaatkan dalam kehidupan setelah terjun di daerah masing
-                masing.</p>
-          </div>
-        </div>
+              {{-- <p>{{$item->kurikulum}}</p> --}}
+            {{-- @endforeach --}}
+              </div>
+            </div>
       </div>
     </section>
     <!-- sejarah section end -->

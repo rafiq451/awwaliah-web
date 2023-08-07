@@ -11,7 +11,7 @@
       </li><!-- End Dashboard Nav -->
       <li class="nav-item">
         <a class="nav-link " href="/dashboard">
-          <i class="bi bi-grid"></i>
+          <i class="bi bi-image"></i>
           <span>Gambar Slide</span>
         </a>
       </li><!-- End Dashboard Nav -->
@@ -55,13 +55,13 @@
         </a>
         <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="icons-bootstrap.html">
-              <i class="bi bi-circle"></i><span>Formal</span>
+            <a href="/dashboard/pendidikan">
+              <i class="bi bi-circle"></i><span>Data Pendidikan</span>
             </a>
           </li>
           <li>
-            <a href="icons-remix.html">
-              <i class="bi bi-circle"></i><span>Non Formal</span>
+            <a href="/dashboard/kontenpendidikan">
+              <i class="bi bi-circle"></i><span>Konten Pendidikan</span>
             </a>
           </li>
         </ul>
@@ -74,7 +74,14 @@
           <span>Profile</span>
         </a>
       </li><!-- End Profile Page Nav -->
-
+      
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-error-404.html">
+          <i class="bi bi-dash-circle"></i>
+          <span>Dewan Guru</span>
+        </a>
+      </li><!-- End Error 404 Page Nav -->
+      
       <li class="nav-item">
         <a class="nav-link collapsed" href="/dashboard/berita">
           <i class="bi bi-question-circle"></i>
@@ -88,32 +95,12 @@
           <span>Contact</span>
         </a>
       </li><!-- End Contact Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-register.html">
-          <i class="bi bi-card-list"></i>
-          <span>Register</span>
-        </a>
-      </li><!-- End Register Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-login.html">
-          <i class="bi bi-box-arrow-in-right"></i>
-          <span>Login</span>
-        </a>
-      </li><!-- End Login Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-error-404.html">
-          <i class="bi bi-dash-circle"></i>
-          <span>Error 404</span>
-        </a>
-      </li><!-- End Error 404 Page Nav -->
+      
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-blank.html">
           <i class="bi bi-file-earmark"></i>
-          <span>Blank</span>
+          <span>Logout</span>
         </a>
       </li><!-- End Blank Page Nav -->
 
