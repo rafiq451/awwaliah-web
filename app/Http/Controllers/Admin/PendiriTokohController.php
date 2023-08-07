@@ -83,13 +83,12 @@ class PendiriTokohController extends Controller
     {
         try {
             $tokoh = Tokoh::findOrFail($id);
-
+//jfv
             // Hapus gambar dari penyimpanan (jika perlu)
             $gambarPath = public_path("pendiri_tokoh/{$tokoh->gambar}");
             if (file_exists($gambarPath)) {
                 unlink($gambarPath);
             }
-
             $tokoh->delete();
 
             return redirect('dashboard/pendiri&tokoh')->with('success', 'Pendiri & Tokoh berhasil dihapus.');
