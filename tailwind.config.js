@@ -7,6 +7,12 @@ export default {
       padding: '16px',
     },
     extend: {
+      objectFit: {
+        contain: 'contain',
+        cover: 'cover',
+        fill: 'fill',
+        none: 'none',
+      },
       colors: {
         primary: '#00933F',
         secondry: '#111827',

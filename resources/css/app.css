@@ -11,17 +11,103 @@
   .opacity-rgba {
     background-color: rgba(0, 0, 0, 0.5);
   }
+  .opacity-white {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .slide-content {
+    margin: 0 40px;
+    padding: 45px 20px;
+    /* background-color: red; */
+    overflow: hidden;
+  }
 
   .carousel-inner {
     display: flex;
+  }
+
+  .img-content,
+  .card-content {
+    display: flex;
+    padding: 10px 14px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    border-radius: 25px;
+    background-color: #fff;
+  }
+
+  .card-image {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 3px;
+    background: #fff;
+  }
+
+  .card-image .card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #00933f;
   }
 
   .carousel-item {
     opacity: 0;
   }
 
+  .slide-container {
+    max-width: 1120px;
+    width: 100%;
+    padding: 40px 0;
+  }
+
+  .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 55%;
+    width: 100%;
+    background-color: #00933f;
+    border-radius: 25px 25px 0 25px;
+  }
+
+  .overlay::before,
+  .overlay::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: #00933f;
+  }
+
+  .overlay::after {
+    border-radius: 0 25px 0 0;
+    background-color: #fff;
+  }
+
   .carousel-item.active {
     opacity: 1;
+  }
+
+  .NButton {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .NButton::before,
+  .NButton::after {
+    font-size: 18px;
+    color: #00933f;
   }
 
   .carousel-nav button {
@@ -66,7 +152,7 @@
 }
 
 .sejarah {
-  @apply text-primary font-semibold text-lg lg:text-2xl mt-5 mb-2;
+  @apply text-primary font-semibold text-2xl  mt-5 mb-2;
 }
 
 .catagories {

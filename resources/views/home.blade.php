@@ -84,17 +84,18 @@
             </h2>
             <span class="mx-2"><div class="w-7 lg:w-10 h-[1px] bg-secondry"></div></span>
           </div>
-          <div class="owl-carousel owl-theme">
+          <div class="swiper mySwiper ">
+            <div class="swiper-wrapper">
             @foreach ($berita as $item)  
-            <div class="item">
-              <ul id="slider" class="hover-group flex justify-center mt-4 max-w-full ">
-                <li class="mb-8 sm:p-4  ">
+            <div class="swiper-slide w-full md:w-[50%] md:p-6">
+              <ul id="slider" class=" hover-group   mt-4 max-w-full ">
+                <li class="mb-8   ">
                   <div class="relative  shadow-lg ">
                     <a href="/berita/{{ $item['slug'] }}" class="hover-solo relative group">
                       <img src="img/berita/{{ $item['image'] }}" width="w-full" alt=""  />
                       <div class="w-0 h-0 group-hover:w-full group-hover:h-full  absolute bg-black opacity-60 top-0 group">
                         <div class="hover-berita transition ease-in-out duration-500 py-8 sm:py-3 md:py-8 xl:py-10 mx-auto">
-                          <img src="img/logo/logo_yayasan.svg" alt="" class="w-32 h-32 translate-x-0 md:translate-x-0 lg:translate-x-0" />
+                          <img src="img/logo/logo_yayasan.svg" alt="" class="w-32 h-32 translate-x-4 md:translate-x-0  xl:translate-x-5" />
                         </div>
                       </div>
                     </a>
@@ -107,11 +108,16 @@
               </ul>
             </div>
             @endforeach
+          </div>
+          <div class="swiper-button-next NButton"></div>
+          <div class="swiper-button-prev NButton"></div>
+          <div class="swiper-pagination "></div>
         </div>
         
       </div>
       </div>
     </section>
+    
     <!-- berita section end -->
 
     <!-- logo section start -->
@@ -181,7 +187,6 @@
 
     <!-- pendidikan formal section start -->
     <section id="#pendidikan-formal" class="w-full bg-slate-100 pt-10">
-      <div class="container">
         <div class="w-full p-10">
           <h4 class="text-center font-bold text-2xl lg:text-4xl lg:mt-5 font-['Viga'] text-secondry">Awwaliah Al-asiyah</h4>
           <p class="text-base font-medium text-center text-primary my-2">Pendidikan Formal</p>
@@ -192,9 +197,9 @@
             </h2>
             <span class="mx-2"><div class="w-9 lg:w-10 h-[1px] bg-secondry"></div></span>
           </div>
-          <div class="flex flex-wrap justify-center my-10 w-full">
+          <div class="flex flex-wrap xl:flex-nowrap  xl:w-full justify-center my-10 w-full  mx-auto">
             @foreach ($pendidikanF as $item)    
-            <div class="mb-8 sm:p-4 md:w-1/2 xl:w-1/3">
+            <div class="mb-8 sm:p-4 md:w-1/2 xl:w-1/3 hover:scale-110 transition-all duration-300">
               <div class="rounded-lg shadow-lg overflow-hidden bg-white bg-opacity-60 mb-4">
                 <img src="img/sekolah/school.jpg" alt="" />
                 <div class="mx-6 py-8">
@@ -207,7 +212,6 @@
             @endforeach
           </div>
         </div>
-      </div>
     </section>
     <!-- pendidikan section end -->
     

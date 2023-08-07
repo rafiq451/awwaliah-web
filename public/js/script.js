@@ -157,16 +157,74 @@ list[5].addEventListener('mouseout', function () {
   });
 });
 
-const sliderContainer = document.getElementById('sliderContainer');
-const slider = document.getElementById('slider');
-const cards = slider.getElementsByTagName('li');
+var swiper1 = new Swiper('.mySwiper', {
+  slidesPerView: 1,
+  centeredSlides: false,
+  slidesPerGroupSkip: 1,
+  grabCursor: true,
+  keyboard: {
+    enabled: true,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+    },
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+  },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
 
-const elementsToShow = 3;
-const sliderContainerWidth = sliderContainer.clientWidth;
-const cardWidth = sliderContainerWidth / elementsToShow;
-
-slider.style.width = cards.length * cardWidth + 'px';
-for (let index = 0; index < array.length; index++) {
-  const element = cards[index];
-  element.style.width = cardWidth + 'px';
-}
+var swiper2 = new Swiper('.slide-content', {
+  slidesPerView: 1,
+  centeredSlides: false,
+  fade: true,
+  spaceBetween: 25,
+  slidesPerGroupSkip: 1,
+  grabCursor: true,
+  keyboard: {
+    enabled: true,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+    },
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+  },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});

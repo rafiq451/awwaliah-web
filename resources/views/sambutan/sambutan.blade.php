@@ -49,5 +49,6 @@
     </section>
     <section class="bg-white h-[1800px] sm:h-[1000px]  lg:h-[700px] "></section>
     <!-- visi&misi section end -->
+    
 
 @endsection
