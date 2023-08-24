@@ -25,18 +25,18 @@
                       <li><a href="/visi&misi" class="dropdown-menu">Visi Misi Yayasan</a></li>
                       <li><a href="/pendiri-tokoh" class="dropdown-menu">Pendiri dan Tokoh</a></li>
                       <li><a href="/kepengurusan" class="dropdown-menu">Kepengurusan Yayasan</a></li>
-                      <li><a href="" class="dropdown-menu">Identitas</a></li>
+                      <li><a href="/identitas" class="dropdown-menu">Identitas</a></li>
                     </ul>
                   </div>
                 </li>
                 <li class="color">
-                  <a href="#usaha" class="text-base text-secondry py-3 mx-6 flex hover:text-primary">Usaha</a>
+                  <a href="/usaha" class="text-base text-secondry py-3 mx-6 flex hover:text-primary">Usaha</a>
                 </li>
                 <li class="color">
                   <a href="/berita" class="text-base text-secondry py-3 mx-6 flex hover:text-primary">Berita</a>
                 </li>
                 <li class="color">
-                  <a href="#pendidikan" class="text-base text-secondry py-3 mx-6 flex hover:text-primary"
+                  <a href="#" class="text-base text-secondry py-3 mx-6 flex hover:text-primary"
                     >Pendidikan <span class="mx-2"><i class="bi bi-chevron-down"></i></span
                   ></a>
                   <div class="absolute hidden bg-slate-50 shadow-lg rounded-lg max-w-[250px] w-full top-19 left-4 lg:left-auto">

@@ -35,7 +35,7 @@
           <h4 class="text-2xl font-medium font-['Poppins']  md:mt-6 lg:text-4xl lg:mt-5 text-secondry">{{ $dberita['title'] }}</h4>
           <div class="w-[20%] md:w-[10%] my-2  h-1 rounded-sm bg-tex "></div>
           <div class="flex flex-wrap  ">          
-          <div class=" lg:basis-4/6 my-5  w-full shadow-lg rounded-sm ">
+          <div class=" lg:basis-4/6 my-5  w-full shadow-berita rounded-sm ">
             <div class="p-4">
             <h2 class="sejarah">Sejarah</h2>
             <p> SMP Plus awwaliyah al-asiyah berdiri pada tahun 2004 ketika pondok pesantren Awwaliyah yang sudah lebih awal berdiri di tahun 1993. Dimana santri-santrinya pada waktu itu masih sekolah keluar, ada yang di SMP Negeri, SMA Negeri, Madrasah Aliyah Negeri (MAN), MTS Al-Asiyah dan ada juga yang di SMK selain yang bersekolah, ada juga yang bekerja.</p>
@@ -61,7 +61,7 @@
                 <p>Disamping memang SMP Plus ini diharapkan dapat membantu pondok pesantren. SMP Plus Awwaliyah ini memiliki Visi dan Misi serta tekad agar SMP ini memiliki ciri khas dan keunggulan di bandingkan dengan SMP lain nya dengan berbagai kegiatan Extrakurikuler nya seperti Futsal, Marching Band, Paskibra, Pramuka, Silat, Hadroh, Marawis. Guru-guru yang profesional di bidangnya agar kedepannya menjadi SMP Plus yang selalu diminati oleh masyarakat.</p>   
               </div>
             </div>
-            <div class="lg:basis-1/4 my-5 lg:mx-6 w-full lg:h-[50%] md:w-[80%] md:mx-auto shadow-lg rounded-sm">
+            <div class="lg:basis-1/4 my-5 lg:mx-6 w-full lg:h-[50%] md:w-[80%] md:mx-auto shadow-berita rounded-sm">
               <div class="p-4">
                 <h4 class="sejarah">Catagories</h4>
                 <div class="my-5">
@@ -94,7 +94,7 @@
                 </div>
               </div>
             </div>
-            <div class="lg:basis-4/6 my-5  w-full shadow-lg rounded-sm">
+            <div class="lg:basis-4/6 my-5  w-full shadow-berita rounded-sm">
                 <div class="md:flex p-5">
                   <div class=" md:basis-3/6 rounded-md border border-slate-300">
                     <img src="{{ asset('img/ketua yayasan.png') }}" alt="">

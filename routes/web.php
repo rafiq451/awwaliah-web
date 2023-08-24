@@ -224,7 +224,16 @@ Route::get('/pendiri-tokoh', function () {
 });
 Route::get('/kepengurusan', [KepengurusanUserController::class, 'index'])->name('kepengurusanUser.index');
 Route::get('/identitas', function () {
-    return view('tentang/identitas');
+    return view('tentang/identitas', [
+        'title' => 'Identitas'
+    ]);
+});
+
+// identitas
+Route::get('/usaha', function() {
+    return view('usaha/usaha', [
+        'title' => 'Usaha'
+    ]);
 });
 
 // sambutan ketua yayasan
@@ -257,7 +266,6 @@ Route::get('/sambutan/{slug}', function($slug) {
             'sketuyayasan' => $new_sambutan  
         ]);
 });
-
 
 
 // pendidikan non formal 
@@ -306,8 +314,6 @@ Route::get('/pendidikan/{slug}', function ($slug) {
     ]);
 });
 
-
-
 // pendidikan formal
 Route::get('/pendidikan/{slug}', function ($slugF) {
     $pFormal = [
@@ -317,7 +323,7 @@ Route::get('/pendidikan/{slug}', function ($slugF) {
             'title-nav' => 'TK',
             'slug' => 'taman-anak',
             'logo' => 'pondok.svg',
-            'image' => 'school.jpg',
+            'image' => '1sch.jpg',
             'alamat' => 'LINGKUNGAN 04 KRANJI BARAT',
             'kelurahan' => 'CIRIUNG',
             'kecamatan' => 'CIBINONG',
@@ -401,7 +407,7 @@ Route::get('/detail/{slug}', function($slug) {
             'title-nav' => 'TK',
             'slug' => 'taman-anak',
             'logo' => 'pondok.svg',
-            'image' => 'school.jpg',
+            'image' => '1sch.jpg',
             'alamat' => 'LINGKUNGAN 04 KRANJI BARAT',
             'kelurahan' => 'CIRIUNG',
             'kecamatan' => 'CIBINONG',
@@ -479,11 +485,6 @@ Route::get('/detail/{slug}', function($slug) {
         'detail' => $detail_post,
     ]);
 });
-
-
-
-
-
 
 
 // berita terkini all
@@ -564,4 +565,7 @@ Route::get('/berita/{slug}', function($slug){
         'dberita' => $detail_berita
     ]);
 });
+
+
+
 

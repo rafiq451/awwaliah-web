@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en" class="scroll-smooth md:scroll-auto lg:scroll-auto sm:scroll-auto">
+=======
+<html lang="en" class="scroll-smooth">
+>>>>>>> cb3797970aa24d138829087ab09ca04b858e55a8
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -23,7 +27,8 @@
     {{-- swiper css --}}
     @vite('public/css/swiper-bundle.min.css')
 
-    <link rel="stylesheet" href="css/style.css">
+    {{-- <link rel="stylesheet" href="css/style.css"> --}}
+    
 
     {{-- custom css --}}
     @vite('resources/css/app.css' )
@@ -143,10 +148,5 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@10.0.4/swiper-bundle.min.js"></script>
 
   <!-- Initialize Swiper -->
-  <script>
-
-
-  </script>
-
   </body>
 </html>

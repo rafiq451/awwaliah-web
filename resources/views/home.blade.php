@@ -3,15 +3,15 @@
 
     <!-- hero section start -->
     <section id="home" class=" h-[680px] w-full ">
-      <div class="carousel relative overflow-hidden md:h-128 xl:h-[600px] ">
+      <div class="carousel relative overflow-hidden md:h-128 xl:h-[650px] ">
         <div class="carousel-inner">
-          <div class="carousel-item bg-cover bg-center absolute h-56 sm:h-72 md:h-full w-full transition-opacity duration-1000 ease-in-out" style="background-image: url('img/1.jpg');">
+          <div class="carousel-item bg-cover bg-center absolute h-56 sm:h-72 md:h-full w-full transition-opacity duration-1000 ease-in-out" style="background-image: url('img/4.jpg');">
             <div class="w-full h-full bg-black opacity-40"></div>
           </div>
-          <div class="carousel-item bg-cover bg-center absolute h-56 sm:h-72 md:h-full w-full transition-opacity duration-1000 ease-in-out" style="background-image: url('img/2.jpg');">
+          <div class="carousel-item bg-cover bg-center absolute h-56 sm:h-72 md:h-full w-full transition-opacity duration-1000 ease-in-out" style="background-image: url('img/6.jpg');">
             <div class="w-full h-full bg-black opacity-40"></div>
           </div>
-          <div class="carousel-item bg-cover bg-center absolute h-56 sm:h-72 md:h-full w-full transition-opacity duration-1000 ease-in-out" style="background-image: url('img/3.jpg');">
+          <div class="carousel-item bg-cover bg-center absolute h-56 sm:h-72 md:h-full w-full transition-opacity duration-1000 ease-in-out" style="background-image: url('img/7.jpg');">
             <div class="w-full h-full bg-black opacity-40"></div>
           </div>
         </div>
@@ -84,13 +84,13 @@
             </h2>
             <span class="mx-2"><div class="w-7 lg:w-10 h-[1px] bg-secondry"></div></span>
           </div>
-          <div class="swiper mySwiper ">
+          <div class="swiper mySwiper">
             <div class="swiper-wrapper">
             @foreach ($berita as $item)  
             <div class="swiper-slide w-full md:w-[50%] md:p-6">
-              <ul id="slider" class=" hover-group   mt-4 max-w-full ">
+              <ul id="slider" class=" hover-group  mt-4 max-w-full ">
                 <li class="mb-8   ">
-                  <div class="relative  shadow-lg ">
+                  <div class="relative card-berita shadoww rounded-md overflow-hidden bg-white">
                     <a href="/berita/{{ $item['slug'] }}" class="hover-solo relative group">
                       <img src="img/berita/{{ $item['image'] }}" width="w-full" alt=""  />
                       <div class="w-0 h-0 group-hover:w-full group-hover:h-full  absolute bg-black opacity-60 top-0 group">
@@ -100,7 +100,10 @@
                       </div>
                     </a>
                     <div class="p-2">
-                    <p class="text-primary font-['Poppins']">{{ $item['tanggal'] }}</p>
+                      <div class="flex items-center gap-x-px">
+                        <span class="m-1"><i class="bi bi-calendar-check" style="color: #00933f;"></i></span>
+                        <p class="text-primary font-['Poppins']">{{ $item['tanggal'] }}</p>
+                      </div>
                     <h4 class=" text-lg font-semibold text-secondry">{{ $item['title'] }}</h4>
                   </div>
                   </div>
@@ -111,7 +114,7 @@
           </div>
           <div class="swiper-button-next NButton"></div>
           <div class="swiper-button-prev NButton"></div>
-          <div class="swiper-pagination "></div>
+          <div class="swiper-pagination overflow-hidden "></div>
         </div>
         
       </div>
@@ -124,7 +127,7 @@
     <section id="#logo" class="w-full bg-gradient-to-r from-primary pt-10">
       <div class="container">
         <div class="w-full p-10">
-          <h4 class="text-center font-bold text-2xl lg:text-4xl lg:mt-5 font-['Viga'] text-white">Logo Pendidikan</h4>
+          <h4 class="text-center font-bold text-2xl lg:text-4xl lg:mt-5 font-['Viga'] text-white">Menaungi Lembaga</h4>
           <p class="text-base font-medium text-center text-slate-200 my-2">Logo disetiap instansi</p>
           <div class="flex justify-center mt-4 mx-6 items-center">
             <span class="mx-2"><div class="w-9 lg:w-10 h-[1px] bg-white"></div></span>
@@ -261,27 +264,6 @@
     <!-- Video section end -->
 
 @endsection 
-
-{{-- <div id="sliderContainer" class="w-full overflow-hidden">
-  <ul id="slider" class="hover-group flex justify-center mt-4 max-w-full  border">
-    @foreach ($berita as $item)  
-    <li class="mb-8 sm:p-4  ">
-      <div class="relative rounded-md  ">
-        <a href="/berita/{{ $item['slug'] }}" class="hover-solo relative group">
-          <img src="img/berita/{{ $item['image'] }}" width="w-full" alt="" />
-          <div class="w-0 h-0 group-hover:w-full group-hover:h-full  absolute bg-black opacity-60 top-0 group">
-            <div class="hover-berita transition ease-in-out duration-500 py-8 sm:py-3 md:py-8 xl:py-10 mx-auto">
-              <img src="img/logo/logo_yayasan.svg" alt="" class="w-32 h-32 translate-x-4 md:translate-x-0 lg:translate-x-3" />
-            </div>
-          </div>
-        </a>
-        <p class="text-primary font-['Poppins']">{{ $item['tanggal'] }}</p>
-        <h4 class=" text-lg font-semibold text-secondry">{{ $item['title'] }}</h4>
-      </div>
-    </li>
-    @endforeach
-  </ul>
-</div> --}}
 
 
 
