@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -23,7 +23,8 @@
     {{-- swiper css --}}
     @vite('public/css/swiper-bundle.min.css')
 
-    <link rel="stylesheet" href="css/style.css">
+    {{-- <link rel="stylesheet" href="css/style.css"> --}}
+    
 
     {{-- custom css --}}
     @vite('resources/css/app.css' )
@@ -143,10 +144,5 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@10.0.4/swiper-bundle.min.js"></script>
 
   <!-- Initialize Swiper -->
-  <script>
-
-
-  </script>
-
   </body>
 </html>

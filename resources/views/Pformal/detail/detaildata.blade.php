@@ -23,7 +23,7 @@
     <h4 class="text-2xl font-semibold -mt-2 md:mt-6 lg:text-4xl lg:mt-5 text-secondry">{{ $detail["title"] }}</h4>
     <div class="w-[20%] md:w-[10%] my-4  h-1 rounded-sm bg-tex"></div>   
     <div class="flex flex-wrap  "> 
-        <div class="card-profil " style="background-image: url({{ asset('img/cardlog/1.webp') }})">
+        <div class="card-profil lg:w-[30%]" style="background-image: url({{ asset('img/cardlog/1.webp') }})">
             <div class="p-6 w-full text-center">
                 <div class="w-40 h-40 mx-auto mb-4"><img src="{{ asset( 'img/logo/'. $detail['logo']) }}" alt="" /></div>
                 <h2 class="text-2xl mb-5 my-4 font-semibold font-[Poppins] text-secondry ">{{ $detail['title'] }}</h2>

@@ -15,7 +15,7 @@ export default {
       },
       colors: {
         primary: '#00933F',
-        secondry: '#111827',
+        secondry: '#18181b',
         kuns: '#FFF500',
         tex: '#475569',
         bg: '#0f172a',

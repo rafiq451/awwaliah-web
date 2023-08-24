@@ -9,7 +9,7 @@
   }
 
   .opacity-rgba {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
   }
   .opacity-white {
     background-color: rgba(255, 255, 255, 0.5);
@@ -17,7 +17,7 @@
 
   .slide-content {
     margin: 0 40px;
-    padding: 45px 20px;
+    padding: 20px;
     /* background-color: red; */
     overflow: hidden;
   }
@@ -56,14 +56,24 @@
     border: 4px solid #00933f;
   }
 
+  .card-pendiri {
+    border-radius: 30px;
+    background: #e0e0e0;
+    box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  }
+
   .carousel-item {
     opacity: 0;
   }
 
   .slide-container {
-    max-width: 1120px;
+    max-width: 1400px;
     width: 100%;
     padding: 40px 0;
+  }
+
+  .d-flex {
+    display: flex;
   }
 
   .overlay {
@@ -74,6 +84,7 @@
     width: 100%;
     background-color: #00933f;
     border-radius: 25px 25px 0 25px;
+    z-index: -10;
   }
 
   .overlay::before,
@@ -117,6 +128,14 @@
 
   .carousel-nav button:hover {
     opacity: 1;
+  }
+
+  .shadow-berita {
+    box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.3);
+  }
+
+  .shadoww {
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(190, 190, 190), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
   }
 
   @keyframes ping {
@@ -176,8 +195,15 @@
   @apply text-slate-400 hover:text-primary;
 }
 
+.card-travel {
+  @apply text-center overflow-hidden  relative border flex flex-col  w-full bg-white p-4;
+}
+
 .card-profil {
-  @apply w-full max-w-full my-4 mb-10 lg:w-[30%] lg:h-80 border shadow-lg rounded-md  bg-white;
+  @apply w-full max-w-full my-4 mb-10  lg:h-80 border shadow-lg rounded-md  bg-white;
+}
+.card-makna {
+  @apply w-full max-w-full my-4 mb-10   border shadow-lg rounded-md  bg-white;
 }
 
 .hamburger-line {

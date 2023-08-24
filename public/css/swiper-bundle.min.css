@@ -355,8 +355,8 @@
   transform: scale(0.33);
 }
 .swiper-pagination-bullet {
-  width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 26px));
-  height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 7px));
+  width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 9px));
+  height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 9px));
   display: inline-block;
   border-radius: var(--swiper-pagination-bullet-border-radius, 25px);
   background: var(--swiper-pagination-bullet-inactive-color, #000);
