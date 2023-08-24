@@ -11,12 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ekstrakurikulers', function (Blueprint $table) {
+        Schema::create('profiles', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_pendidikan')->constrained('pendidikans');
-            $table->string("nama");
-            $table->string("deskripsi");
-            $table->string("gambar");
+            $table->string('nama_sekolah');
+            $table->integer('npsn');
+            $table->string('status_sekolah');
+            $table->string('akreditasi');
+            $table->string('alamat_sekolah');
+            $table->string('no_telepon');
+            $table->string('no_fax');
+            $table->string('email');
             $table->timestamps();
         });
     }
@@ -26,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('ekstrakurikulers');
+        Schema::dropIfExists('profiles');
     }
 };

@@ -34,7 +34,7 @@
                   </div>
                 </div>
 
-                 @if ($sejarah->gambar)
+              @if ($sejarah->gambar)
                 <div class="row mb-3">
                     <label for="gambar" class="form-label">Gambar Saat Ini</label>
                     <img src="{{ asset('images/' . $sejarah->gambar) }}" alt="Gambar Sejarah" class="img-fluid">

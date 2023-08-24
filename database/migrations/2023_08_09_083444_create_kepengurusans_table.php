@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ekstrakurikulers', function (Blueprint $table) {
+        Schema::create('kepengurusans', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_pendidikan')->constrained('pendidikans');
-            $table->string("nama");
-            $table->string("deskripsi");
-            $table->string("gambar");
             $table->timestamps();
+            $table->string('peran');
+            $table->string('nama');
+            $table->string('jabatan');
         });
     }
 
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('ekstrakurikulers');
+        Schema::dropIfExists('kepengurusans');
     }
 };

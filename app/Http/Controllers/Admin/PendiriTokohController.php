@@ -33,7 +33,7 @@ class PendiriTokohController extends Controller
         $validatedData = $request->validate([
             'nama' => 'required',
             'jabatan' => 'required',
-            'gambar' => 'image|mimes:jpeg,png,jpg', // Contoh validasi untuk gambar
+            'gambar' => 'required|image|mimes:jpeg,png,jpg', // Contoh validasi untuk gambar
         ]);
 
         // Simpan data

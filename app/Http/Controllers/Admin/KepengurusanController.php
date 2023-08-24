@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Models\Kepengurusan;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class KepengurusanController extends Controller
 {
@@ -12,7 +13,9 @@ class KepengurusanController extends Controller
      */
     public function index()
     {
-        return view('admin.kepengurusan.index');
+        $result = Kepengurusan::all();
+        $peranOptions = ['Pembina', 'Pengurus', 'Pengawas'];
+        return view('admin.kepengurusan.index',['kepengurusan' => $result, 'peranOptions' => $peranOptions]);
     }
 
     /**
@@ -20,7 +23,7 @@ class KepengurusanController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.kepengurusan.tambah');
     }
 
     /**
@@ -28,38 +31,41 @@ class KepengurusanController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $validatedData = $request->validate([
+            'peran' => 'required',
+            'nama' => 'required',
+            'jabatan' => 'required',
+        ]);
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
+        Kepengurusan::create($validatedData);
+        return redirect('dashboard/kepengurusan')
+            ->with('success', 'Data kepengurusan berhasil ditambahkan.');
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request,Kepengurusan $kepengurusan)
     {
-        //
+        $validatedData = $request->validate([
+            'peran' => 'string',
+            'nama' => 'string',
+            'jabatan' => 'string'
+        ]);
+
+        $kepengurusan->update($validatedData);
+
+        return redirect()->route('kepengurusan.index')
+            ->with('success', 'Data kepengurusan berhasil diperbarui.');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Kepengurusan $kepengurusan)
     {
-        //
+        $kepengurusan->delete();
+
+        return redirect('/dashboard/kepengurusan')
+            ->with('success', 'Data kepengurusan berhasil dihapus.');
     }
 }

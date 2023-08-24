@@ -5,11 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Ekstrakurikuler extends Model
+class Profile extends Model
 {
     use HasFactory;
-
-    protected $fillable = ['id_pendidikan','nama','deskripsi','gambar'];
+    protected $fillable = ['id_pendidikan',
+        'nama_sekolah',
+        'npsn',
+        'status_sekolah',
+        'akreditasi',
+        'alamat_sekolah',
+        'no_telepon',
+        'no_fax',
+        'email',
+    ];
 
     public function pendidikan()
     {

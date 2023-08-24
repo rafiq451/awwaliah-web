@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('konten_pendidikans', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_pendidikan')->constrained('pendidikans');
+            $table->string('gambar');
             $table->string('sejarah');
             $table->string('visi');
             $table->string('misi');

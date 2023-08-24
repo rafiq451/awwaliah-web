@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Pendidikan extends Model
 {
     // use HasFactory;
-    protected $fillable = ["nama","logo","jenis_pendidikan"];
+    protected $fillable = ["nama","gambar","logo","jenis_pendidikan"];
 
     // Define the hasMany relationship to the KontenPendidikan model
     public function kontenPendidikans()

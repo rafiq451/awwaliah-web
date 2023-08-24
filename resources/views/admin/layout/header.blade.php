@@ -27,6 +27,8 @@
   <link href="{{asset('/')}}assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="{{asset('/')}}assets/vendor/simple-datatables/style.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+
   <!-- Template Main CSS File -->
   <link href="{{asset('/')}}assets/css/style.css" rel="stylesheet">
 

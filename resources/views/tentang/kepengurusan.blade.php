@@ -33,8 +33,9 @@
           <div class="  my-10  w-full">
             <div class="mb-5">
             <h2 class="sejarah">Pembina</h2>
-            <div class=" overflow-auto rounded-lg shadow-lg  ">    
-                 <table class="w-full bg-white ">
+            <div class=" overflow-auto rounded-lg shadow-lg  ">   
+            @foreach ($kepengurusan as $item)
+                <table class="w-full bg-white ">
                     <thead class="bg-gray-50 border-b-2 border-gray-200">
                         <tr>
                         <th class="p-3 text-sm font-semibold tracking-wide text-left ">Nama</th>
@@ -43,32 +44,12 @@
                     </thead>
                     <tbody>
                         <tr class="bg-white">
-                        <td class="p-3 text-sm text-gray-700">Prof. Dr. Jimly Asshiddiqie, SH</td>
-                        <td class="p-3 text-sm text-gray-700">Indianapoli</td>
+                        <td class="p-3 text-sm text-gray-700">{{$item->nama}}</td>
+                        <td class="p-3 text-sm text-gray-700">{{$item->jabatan}}</td>
                         </tr>
-                        <tr class="bg-gray-50">
-                        <td class="p-3 text-sm text-gray-700">Muhammad Suhadi, S.Kom</td>
-                        <td class="p-3 text-sm text-gray-700">Columbus</td>
-                        </tr>
-                        <tr class="bg-white">
-                        <td class="p-3 text-sm text-gray-700">Drs. Mas’adi Sulthani, MA</td>
-                        <td class="p-3 text-sm text-gray-700">Detroit</td>
-                        </tr>
-                        <tr class="bg-gray-50">
-                        <td class="p-3 text-sm text-gray-700">Drs. Rostian Syamsuddin</td>
-                        <td class="p-3 text-sm text-gray-700">Detroit</td>
-                        </tr>
-                        <tr class="bg-white">
-                        <td class="p-3 text-sm text-gray-700">Drs. Muhammad Nazif, SE, MBA.</td>
-                        <td class="p-3 text-sm text-gray-700">Detroit</td>
-                        </tr>
-                        <tr class="bg-gray-50">
-                        <td class="p-3 text-sm text-gray-700"> Dr. Muhammad Anwar Ratnaprawira, MA</td>
-                        <td class="p-3 text-sm text-gray-700">Detroit</td>
-                        </tr>
-                    
                     </tbody>
-               </table>
+              </table>
+            @endforeach 
             </div>
             </div>
             <div class="mb-5">

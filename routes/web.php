@@ -2,15 +2,20 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\BeritaController;
+use App\Http\Controllers\Admin\ProfilePendidikan;
 use App\Http\Controllers\Admin\SejarahController;
 use App\Http\Controllers\Admin\VisiMisiController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\DewanGuruController;
 use App\Http\Controllers\Admin\IdentitasController;
 use App\Http\Controllers\Admin\PendidikanController;
 use App\Http\Controllers\Admin\KepengurusanController;
 use App\Http\Controllers\Admin\PendiriTokohController;
+use App\Http\Controllers\Admin\ExtrakurikulerController;
 use App\Http\Controllers\Admin\VisiMisiControllerYayasan;
+use App\Http\Controllers\User\KepengurusanUserController;
 use App\Http\Controllers\Admin\KontenPendidikanController;
+use App\Http\Controllers\User\SejarahYayasanUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,13 +50,32 @@ Route::post('/dashboard/pendiri&tokoh/store',[PendiriTokohController::class, 'st
 Route::get('/dashboard/pendiri&tokoh/{id}', [PendiriTokohController::class, 'destroy'])->name('tokoh.destroy');
 
 
-Route::get('/dashboard/kepengurusan',[KepengurusanController::class, 'index']);
+Route::get('/dashboard/kepengurusan',[KepengurusanController::class, 'index'])->name('kepengurusan.index');
+Route::post('/dashboard/kepengurusan',[KepengurusanController::class, 'store'])->name('kepengurusan.store');
+// Route::post('/dashboard/kepengurusan/{$id}',[KepengurusanController::class, 'destroy'])->name('kepengurusan.destroy');
+Route::resource('kepengurusan', KepengurusanController::class);
+
 Route::get('/dashboard/identitas',[IdentitasController::class, 'index']);
 
 Route::get('/dashboard/pendidikan',[PendidikanController::class, 'index']);
-Route::get('/dashboard/kontenpendidikan',[KontenPendidikanController::class, 'index']);
-Route::get('/dashboard/kontenpendidikan/edit',[KontenPendidikanController::class, 'edit']);
 
+
+Route::get('/dashboard/kontenpendidikan',[KontenPendidikanController::class, 'index']);
+Route::get('/dashboard/kontenpendidikan/{id}/detail',[KontenPendidikanController::class, 'show']);
+Route::get('/dashboard/kontenpendidikan/{id}/edit',[KontenPendidikanController::class, 'edit']);
+Route::put('/dashboard/kontenpendidikan/{id}/update-konten',[KontenPendidikanController::class, 'update'])->name('konten.update');
+
+Route::get('/dashboard/dewan-guru', [DewanGuruController::class, 'index']);
+Route::post('/dashboard/dewan-guru/store',[DewanGuruController::class, 'store'])->name('dewan-guru.store');
+Route::put('/dashboard/dewan-guru/{id}/update-dewan-guru',[DewanGuruController::class, 'update'])->name('dewanguru.update');
+Route::delete('/dashboard/dewan-guru/{guru}',[DewanGuruController::class, 'destroy'])->name('dewan-guru.destroy');
+
+Route::get('/dashboard/profile', [ProfilePendidikan::class, 'index'])->name('profile.index');
+Route::get('/dashboard/profile/{id}/detail', [ProfilePendidikan::class, 'show'])->name('profile.show');
+Route::resource('profile', ProfilePendidikan::class);
+
+Route::get('/dashboard/extrakurikuler', [ExtrakurikulerController::class, 'index'])->name('extrakurikuler.index');
+Route::post('/dashboard/extrakurikuler/store',[ExtrakurikulerController::class, 'store'])->name('exrakurikuler.store');
 
 
 
@@ -185,11 +209,9 @@ Route::get('/', function () {
 });
 
 // tentang
-Route::get('/sejarah', function () {
-    return view('tentang/sejarah', [
-        'title' => 'Sejarah'
-    ]);
-});
+Route::get('/sejarah',[SejarahYayasanUserController::class, 'index']);
+
+
 Route::get('/visi&misi', function () {
     return view('tentang/visi&misi', [
         'title' => 'Visi & Misi'
@@ -200,11 +222,7 @@ Route::get('/pendiri-tokoh', function () {
         'title' => 'Pendiri & Tokoh'
     ]);
 });
-Route::get('/kepengurusan', function () {
-    return view('tentang/kepengurusan', [
-        'title' => 'Kepengurusan'
-    ]);
-});
+Route::get('/kepengurusan', [KepengurusanUserController::class, 'index'])->name('kepengurusanUser.index');
 Route::get('/identitas', function () {
     return view('tentang/identitas');
 });

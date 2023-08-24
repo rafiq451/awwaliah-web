@@ -9,12 +9,21 @@
           <span>Dashboard</span>
         </a>
       </li><!-- End Dashboard Nav -->
-      <li class="nav-item">
-        <a class="nav-link " href="/dashboard">
-          <i class="bi bi-image"></i>
-          <span>Gambar Slide</span>
+      
+       <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-contact.html">
+          <i class="bi bi-envelope"></i>
+          <span>Gambar Slider</span>
         </a>
-      </li><!-- End Dashboard Nav -->
+      </li><!-- End Contact Page Nav -->
+
+       <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-contact.html">
+          <i class="bi bi-person"></i>
+          <span>Sambutan Kepala Sekolah</span>
+        </a>
+      </li><!-- End Contact Page Nav -->
+
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-journal-text"></i><span>Tentang Yayasan</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -64,42 +73,38 @@
               <i class="bi bi-circle"></i><span>Konten Pendidikan</span>
             </a>
           </li>
+          <li>
+            <a href="/dashboard/dewan-guru">
+              <i class="bi bi-circle"></i><span>Dewan Guru</span>
+            </a>
+          </li>
+          <li>
+            <a href="{{route('profile.index')}}">
+              <i class="bi bi-circle"></i><span>Profile Pendidikan</span>
+            </a>
+          </li>
+          <li>
+            <a href="/dashboard/extrakurikuler">
+              <i class="bi bi-circle"></i><span>Extrakurikuler</span>
+            </a>
+          </li>
         </ul>
       </li><!-- End Icons Nav -->
-
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="users-profile.html">
-          <i class="bi bi-person"></i>
-          <span>Profile</span>
-        </a>
-      </li><!-- End Profile Page Nav -->
-      
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-error-404.html">
-          <i class="bi bi-dash-circle"></i>
-          <span>Dewan Guru</span>
-        </a>
-      </li><!-- End Error 404 Page Nav -->
-      
       <li class="nav-item">
         <a class="nav-link collapsed" href="/dashboard/berita">
           <i class="bi bi-question-circle"></i>
           <span>Berita</span>
         </a>
       </li><!-- End F.A.Q Page Nav -->
-
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-contact.html">
           <i class="bi bi-envelope"></i>
           <span>Contact</span>
         </a>
       </li><!-- End Contact Page Nav -->
-      
-
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-blank.html">
-          <i class="bi bi-file-earmark"></i>
+        <i class="bi bi-box-arrow-right"></i>
           <span>Logout</span>
         </a>
       </li><!-- End Blank Page Nav -->

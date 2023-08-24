@@ -14,6 +14,7 @@
         </ol>
       </nav>
     </div><!-- End Page Title -->
+   
 
     <section class="section">
       <div class="row">
@@ -23,46 +24,52 @@
             <div class="card-body">
               <h5 class="card-title">Form Konten Pendidikan</h5>
               <!-- General Form Konten Pendidikan -->
-              <form>
+              <form action="{{ route('konten.update', ['id' => $konten->id])}}" method="post" enctype="multipart/form-data">
+                @csrf
+                @method('PUT')
                 <div class="row mb-3">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Gambar</label>
                   <div class="col-sm-10">
-                    <input class="form-control" type="file" id="formFile">
+                      <input class="form-control" type="file" name="gambar" id="formFile">
                   </div>
                 </div>
+                @if ($konten->gambar)
+                  <div class="row mb-3">
+                      <label for="gambar" class="form-label">Gambar Saat Ini</label>
+                      <img src="{{ asset('kontenPendidikan/'.$konten->gambar) }}" alt="{{$konten->gambar}}" class="img-fluid">
+                  </div>
+                @endif
                 <div class="row mb-3">
                   <label for="inputPassword" class="col-sm-2 col-form-label">Sejarah</label>
                   <div class="col-sm-10">
-                    <textarea id="sejarah" placeholder="Masukan Sejarah"></textarea>
+                    <textarea id="sejarah" name="sejarah"  placeholder="Masukan Sejarah">{{$konten->sejarah}}</textarea>
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputPassword" class="col-sm-2 col-form-label">Visi</label>
                   <div class="col-sm-10">
-                    <textarea id="visi" placeholder="Masukan Visi"></textarea>
+                    <textarea id="visi" name="visi" placeholder="Masukan Visi">{{$konten->visi}}</textarea>
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputPassword" class="col-sm-2 col-form-label">Misi</label>
                   <div class="col-sm-10">
-                    <textarea id="misi" placeholder="Masukan Misi"></textarea>
+                    <textarea id="misi" name="misi" placeholder="Masukan Misi">{{$konten->misi}}</textarea>
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputPassword" class="col-sm-2 col-form-label">Tujuan</label>
                   <div class="col-sm-10">
-                    <textarea id="tujuan" placeholder="Masukan Tujuan"></textarea>
+                    <textarea id="tujuan" name="tujuan" placeholder="Masukan Tujuan">{{$konten->tujuan}}</textarea>
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label class="col-sm-2 col-form-label"></label>
                   <div class="col-sm-10">
-                    <button type="submit" class="btn btn-success">Tambah</button>
+                    <button type="submit" class="btn btn-success">Ubah</button>
                   </div>
                 </div>
-
               </form><!-- End General Form Konten Pendidikan -->
-
             </div>
           </div>
 

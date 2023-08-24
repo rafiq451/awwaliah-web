@@ -11,6 +11,11 @@
         </ol>
       </nav>
     </div><!-- End Page Title -->
+     @if(session('success'))
+        <div class="alert alert-success">
+          {{ session('success') }}
+        </div>
+    @endif
         <section class="section">
       <div class="row">
         <div class="col-lg-12">
@@ -25,11 +30,7 @@
                     <tr>
                         <th>No</th>
                         <th>Nama Lembaga</th>
-                        <th>Sejarah</th>
-                        <th>Visi</th>
-                        <th>Misi</th>
-                        <th>Tujuan</th>
-                        <th>Actions</th>
+                        <th>Aksi</th>
                     </tr>
                   </thead>
                   @php
@@ -40,14 +41,9 @@
                     <tr>
                       <td>{{$no}}</td>
                       <td>{{$item->pendidikan->nama}}</td>
-                      <td>{{$item->sejarah}}</td>
-                      <td>{{$item->visi}}</td>
-                      <td>{{$item->misi}}</td>
-                      <td>{{$item->tujuan}}</td>
                       <td>
-                        <button class="btn btn-primary">Detail</button>
-                        <a href="/dashboard/kontenpendidikan/edit" class="btn btn-warning">Edit</a>
-                        <button class="btn btn-danger">Hapus</button>
+                        <a href="/dashboard/kontenpendidikan/{{$item->id}}/detail" class="btn btn-primary">Detail</a>
+                        <a href="/dashboard/kontenpendidikan/{{$item->id}}/edit" class="btn btn-warning">Edit</a>
                       </td>
                     </tr>
                     @php

@@ -26,9 +26,9 @@ class SejarahController extends Controller
     public function update(Request $request){
         // Validasi data yang diterima
         $request->validate([
-            'gambar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'sejarah' => 'required|string',
-            'kurikulum' => 'required|string',
+            'gambar' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'sejarah' => 'string',
+            'kurikulum' => 'string',
         ]);
         // Proses update data sejarah di database
         $sejarah = SejarahYayasan::find(1); 
@@ -36,7 +36,13 @@ class SejarahController extends Controller
         if ($request->hasFile('gambar')) {
         // Hapus gambar lama (jika ada)
         if ($sejarah->gambar) {
-            Storage::delete('public/images/' . $sejarah->gambar);
+            $sejarah = SejarahYayasan::find(1);
+            // Hapus gambar dari penyimpanan (jika perlu)
+            $gambarPath = public_path("images/{$sejarah->gambar}");
+            if (file_exists($gambarPath)) {
+                unlink($gambarPath);
+            }
+            $sejarah->delete();
         }
 
         // Pindahkan gambar baru ke direktori

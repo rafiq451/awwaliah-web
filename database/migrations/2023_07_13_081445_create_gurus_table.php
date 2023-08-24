@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('gurus', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_pendidikan');
+            $table->foreignId('id_pendidikan')->constrained('pendidikans');
             $table->string('nama');
             $table->string('gender');
             $table->string('jabatan');
