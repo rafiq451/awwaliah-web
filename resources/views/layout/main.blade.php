@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
-<html lang="en" class="scroll-smooth md:scroll-auto lg:scroll-auto sm:scroll-auto">
-=======
 <html lang="en" class="scroll-smooth">
->>>>>>> cb3797970aa24d138829087ab09ca04b858e55a8
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
