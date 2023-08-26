@@ -103,6 +103,7 @@
             <div class="w-full h-full bg-cover bg-center group-hover:scale-125 transition-all duration-500" style="background-image: url({{ asset('img/2.jpg') }})">
               <div class="right-0 left-0 flex items-center justify-center absolute lg:scale-0 lg:group-hover:scale-105 transition-all duration-500 top-0 opacity-rgba w-full h-full">
                   <h2 class="text-white items-center font-bold font-[Poppins]">Haji sans</h2>
+                  <h2 class="text-white items-center font-bold font-[Poppins]">Haji sans</h2>
               </div>
             </div>
           </div>
