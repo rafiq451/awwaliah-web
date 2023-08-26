@@ -32,40 +32,35 @@
         <section id="#sejarah" class="p-8 bg-[#e8e8e8] ">
           <div class="container">
             <div class="w-full">
-            
-              <div class="  my-10  w-full">
-                <h2 class="sejarah uppercase">Visi</h2>
-                <div class="flex flex-wrap justify-start">
-                  <div class="max-w-[20%]">
-                  <h2 class="w-2 h-10 bg-primary mr-3"></h2>
-                  </div>  
-                <div class="max-w-[80%]"> 
-                <p class="uppercase text-secondry"> Mempersiapkan Generasi Muslim / Muslimah Yang Beriman Dan Bertaqwa, Berakhlak Mulia Serta Menguasai Ilmu Pengetahuan Dan Teknologi Sedini Mungkin Untuk Menyongsong Masa Depan Yang Gemilang</p>
+                @foreach ($visi_misi as $item)
+                <div class="  my-10  w-full">
+                  <h2 class="sejarah uppercase">Visi</h2>
+                  <div class="flex flex-wrap justify-start">
+                    <div class="max-w-[20%]">
+                    <h2 class="w-2 h-10 bg-primary mr-3"></h2>
+                    </div>  
+                  <div class="max-w-[80%]"> 
+                  <p class="uppercase text-secondry"> Mempersiapkan Generasi Muslim / Muslimah Yang Beriman Dan Bertaqwa, Berakhlak Mulia Serta Menguasai Ilmu Pengetahuan Dan Teknologi Sedini Mungkin Untuk Menyongsong Masa Depan Yang Gemilang</p>
+                  </div>
+                  </div>
+                  <h2 class="sejarah text-tex uppercase">Misi</h2>
+                  <div class="w-full">
+                      @php
+                        $missions = explode("<li>", $item->misi);
+                      @endphp
+
+                      @foreach ($missions as $index => $mission)
+                        @if ($index != 0 && $mission != "")
+                          <div class="flex items-start">
+                            <div class="w-6 mr-2">{{ $index }}.</div>
+                            <div>{!! substr($mission, 0, -5) !!}</div>
+                          </div>
+                        @endif
+                      @endforeach
+                    </div>
+
                 </div>
-                </div>
-                <h2 class="sejarah text-tex uppercase">Misi</h2>
-                 <div class="w-full">
-                  <ol class="list-decimal list-decimal-lg mr-2">
-                    <li>
-                      <p>Menyelenggarakan pendidikan pra sekolah berdasarkan al-Qur’an dan al-Hadits, dengan cara membantu anak tumbuh dan berkembang sesuai dengan potensi dan karakteristik perkembangan fisik dan sosial anak.</p>
-                      <br/>
-                    </li>
-                    <li>
-                      <p>Meningkatkan kemampuan guru pada anak usia dini, sehingga memiliki kompetensi profesional dan kepribadian yang matang dan mengembangkan kreatifitas pada anak sedini mungkin.</p>
-                      <br/>
-                    </li>
-                    <li>
-                      <p>Meningkatkan pengertian kepada masyarakat bahwa anak adalah individu yang memiliki keunikan tersendiri dalam proses tumbuh kembangnya.</p>
-                      <br>
-                    </li>
-                    <li>
-                      <p>Meningkatkan peran serta masyarakat dalam menciptakan lingkungan yang sehat, bersih dan nyaman dalam menunjang kegiatan belajar mengajar. meningkatkan kesadaran masyarakat mengenai pentingnya program wajib belajar.</p>
-                      <br>
-                    </li>
-                  </ol>
-                 </div>
-              </div>
-            </div>
+              @endforeach
           </div>
         </section>
       </div>

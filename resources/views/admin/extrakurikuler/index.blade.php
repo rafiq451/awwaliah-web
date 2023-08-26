@@ -70,42 +70,81 @@
                   </div>
                 </div>
               </div><!-- End Large Modal-->
-            <h2 class="card-title">Tingkat TK</h2>
+              <div class="mb-3">
+                <label for="filterLembaga" class="col-form-label">Filter Berdasarkan lembaga:</label>
+                <select class="form-select " id="filterLembaga">
+                    <option value="all">Semua Lembaga</option>
+                    <option value="4">Tingkat TK</option>
+                    <option value="5">Tingkat SDIT</option>
+                    <option value="6">Tingkat SMP Plus</option>
+                    <option value="7">Tingkat MA</option>
+                    <!-- Add more options for other levels -->
+                </select>
+            </div>
+            
               <!-- Default Table -->
               <div class="table-responsive">
-                <table class="table" id="guruTable">
-                  <thead>
+                <table class="table">
+                   <thead>
                     <tr>
                         <th>No</th>
+                        <th>Lembaga</th>
                         <th>Nama Ekstrakurikuler</th>
                         <th>Deskripsi</th>
                         <th>Gambar</th>
                         <th>Aksi</th>
                     </tr>
-                  </thead>
+                </thead>
                   @php
                       $no = 1;
                   @endphp
                   @foreach ($extrakurikuler as $item)
                   <tbody>
-                    <tr>
-                    <td>{{$no++}}</td>
+                    <tr class="data-row" data-lembaga="{{ $item->id_pendidikan }}">
+                    <td>{{$no}}</td>
+                    <td>{{ $item->pendidikan->nama }}</td>
                     <td>{{$item->nama}}</td>
-                    <td>{{$item->deskripsi}}</td>
+                    <td>{{Str::limit($item->deskripsi, 20)}}</td>
                     <td><img src="{{ asset('/') }}extrakurikuler/{{ $item->gambar }}" alt="{{ $item->gambar }}" style="width:20px;height:20px;" class="card-img-top img-fluid card-image"></td>
                         <td>
-                          <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editModal">
-                            Edit
+                          <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#showModal{{$item->id}}">
+                            Detail
                           </button>
-                          <div class="modal fade" id="editModal" tabindex="-1">
+                          <div class="modal fade" id="showModal{{$item->id}}" tabindex="-1">
                               <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
                                   <div class="modal-header">
-                                    <h5 class="modal-title">Ubah Data Kepengurusan</h5>
+                                    <h5 class="modal-title">Detail Data Extrakurikuler {{$item->pendidikan->nama}}</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                   </div>
                                   <div class="modal-body">
-                                    <form action="" method="post">
+                                        <div class="mb-3">
+                                            <img src="{{ asset('/') }}extrakurikuler/{{ $item->gambar }}" alt="{{ $item->gambar }}"  class="card-img-top img-fluid" style="border-radius:1%;">
+                                        </div>
+                                        <div class="mb-3">
+                                          <h4 class="card-text text-primary">{{$item->nama}}</h4>
+                                          <p class="card-text">{{$item->deskripsi}}</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="reset" class="btn btn-danger" data-bs-dismiss="modal">Kembali</button>
+                                        </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- End Large Modal-->
+                          <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editModal{{$item->id}}">
+                            Edit
+                          </button>
+                          <div class="modal fade" id="editModal{{$item->id}}" tabindex="-1">
+                              <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title">Form Ubah Data Extrakurikuler</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <form action="{{ route('extrakurikuler.update', ['id' => $item->id]) }}" method="post" enctype="multipart/form-data">
                                         @csrf
                                         @method('PUT')
                                       <div class="mb-3">
@@ -126,15 +165,15 @@
                                         </div>
                                         <div class="mb-3">
                                             <label for="recipient-name" class="col-form-label">Deskripsi</label>
-                                            <input type="text" class="form-control" value="{{$item->deskripsi}}" placeholder="Masukan Jabatan" name="deskripsi" id="deksipsi">
+                                            <textarea class="form-control" name="deskripsi" id="" cols="30" rows="10">{{$item->deskripsi}}</textarea>
                                         </div>
                                         <div class="mb-3">
                                             <label for="recipient-name" class="col-form-label">Gambar Saat Ini</label>
                                             <img src="{{ asset('/') }}extrakurikuler/{{ $item->gambar }}" alt="{{ $item->gambar }}"  class="form-control card-img-top img-fluid">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="recipient-name" class="col-form-label">Gambar BaruW</label>
-                                            <input type="file" class="form-control" value="{{$item->nama}}" name="nama" placeholder="Masukkan Nama" id="nama">
+                                            <label for="recipient-name" class="col-form-label">Upload Foto Baru</label>
+                                            <input type="file" class="form-control" name="gambar" placeholder="Masukkan gambar" id="gambar">
                                         </div>
                                         <div class="modal-footer">
                                             <button type="reset" class="btn btn-danger" data-bs-dismiss="modal">Kembali</button>
@@ -147,11 +186,11 @@
                             </div>
                             <!-- End Large Modal-->
                             {{-- Tombol Hapus --}}
-                          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal{{$item->id}}">
                             Hapus
                           </button>
                           <!-- Modal -->
-                          <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                          <div class="modal fade" id="deleteModal{{$item->id}}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
                               <div class="modal-dialog" role="document">
                                   <div class="modal-content">
                                       <div class="modal-header">
@@ -162,7 +201,7 @@
                                       </div>
                                       <div class="modal-footer">
                                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                                          <form action="" method="POST" style="display: inline-block;">
+                                          <form action="{{ route('extrakurikuler.destroy', ['id' => $item->id]) }}" method="POST" style="display: inline-block;">
                                               @csrf
                                               @method('DELETE')
                                               <button type="submit" class="btn btn-danger">Hapus</button>
@@ -185,7 +224,25 @@
         </div>
       </div>
     </section>
-
   </main><!-- End #main -->
+
+  @section('scripts')
+    <script>
+      const filterLembaga = document.getElementById('filterLembaga');
+      const rows = document.querySelectorAll('.data-row'); // Tambahkan class 'data-row' ke setiap baris tabel
+
+      filterLembaga.addEventListener('change', function () {
+          const selectedLembaga = filterLembaga.value;
+
+          rows.forEach(row => {
+              if (selectedLembaga === 'all' || row.dataset.lembaga === selectedLembaga) {
+                  row.style.display = 'table-row';
+              } else {
+                  row.style.display = 'none';
+              }
+          });
+      });
+    </script>
+  @endsection
 
 @include('admin.layout.footer');

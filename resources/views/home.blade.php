@@ -41,15 +41,18 @@
               </svg>
             </span>
             <div class="absolute">
-              <h1 class="text-base font-semibold text-primary md:text-xl">{{ $item['title'] }}<span class="block font-bold text-secondry  text-3xl sm:text-4xl mt-1 lg:text-5xl">Ketua Yayasan</span></h1>
-            <p class="font-normal italic text-secondry my-5 leading-relaxed">{{ $item['mukodimah'] }}</p>
-            <p class="font-normal italic text-secondry my-5 leading-relaxed">"{{ $item['sambutan-singkat'] }}"</p>
-            <a href="sambutan/{{ $item['slug'] }}" class="text-sm font-medium font-['Poppins'] duration-200 transition-all hover:bg-yellow-300  hover:text-slate-200 text-white bg-gradient-to-r from-primary  to-kuns px-4 py-2 rounded-lg">Lihat Selengkapnya</a>
+              <h1 class="text-base font-semibold text-primary md:text-xl">Sambutan Singkat<span class="block font-bold text-secondry  text-3xl sm:text-4xl mt-1 lg:text-5xl">Ketua Yayasan</span></h1>
+              {{-- <p class="font-normal italic text-secondry my-5 leading-relaxed">{!! Str::limit($item->sambutan, 1000, '...')  !!}</p> --}}
+              <div class="font-formal italic text-secondry my-5 leading-relaxed">
+                {!! Str::limit($item->sambutan, 700, '...')  !!}
+              </div>
+            {{-- <p class="font-normal italic text-secondry my-5 leading-relaxed">"{{ $item['sambutan-singkat'] }}"</p> --}}
+            <a href="sambutan/{{ $slug}}" class="text-sm font-medium font-['Poppins'] duration-200 transition-all hover:bg-yellow-300  hover:text-slate-200 text-white bg-gradient-to-r from-primary  to-kuns px-4 py-2 rounded-lg">Lihat Selengkapnya</a>
           </div>
           </div>
           <div class=" mb-32 lg:my-0 relative top-[640px] sm:top-52 md:top-72 lg:top-44 w-full self-end px-2 lg:w-1/2">
             <div class="relative mt-11 lg:mt-5 lg:right-0 sm:p-10 md:p-20 lg:p-1 xl:p-16">
-              <img src="{{ asset('img/rafiq_dosen1.png') }}" alt="" class="max-w-full relative z-10" />
+              <img src="{{ asset('/') }}sambutan/{{$item->gambar}}" alt="" class="max-w-full relative z-10" />
               <span class="absolute bottom-10 scale-150 sca left-1/2 -translate-x-1/2 sm:scale-[2.7] sm:bottom-28 md:scale-[2.5] md:bottom-60 lg:scale-[2.5] lg:bottom-32 xl:scale-[2.5] xl:bottom-48">
                 
                 <svg widht="200" class="" height="200" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
@@ -172,7 +175,7 @@
             </div>
           </div>
           <div class="w-full self-center px-2 lg:w-1/2 my-10">
-            <h1 class="text-base font-semibold text-primary md:text-xl">Sambutan Singkat<span class="block font-bold text-secondry  text-3xl sm:text-4xl mt-1 lg:text-5xl">{{ $item['title'] }}</span></h1>
+            <h1 class="text-base font-semibold text-primary md:text-xl">Non Formal<span class="block font-bold text-secondry  text-3xl sm:text-4xl mt-1 lg:text-5xl">{{ $item['title'] }}</span></h1>
             <p class="font-normal  text-secondry my-5 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque in saepe, inventore ex illo odio tenetur distinctio consequatur quam quo necessitatibus quia pariatur impedit perferendis consequuntur natus, neque voluptatibus tempore!</p>
             <a href="/pendidikan/{{ $item['slug'] }}" class="text-sm font-medium font-['Poppins'] duration-200 transition-all hover:bg-yellow-300  hover:text-slate-200 text-white bg-gradient-to-r from-primary  to-kuns px-4 py-2 rounded-lg">Lihat Selengkapnya</a>
           </div>
@@ -196,19 +199,28 @@
             </h2>
             <span class="mx-2"><div class="w-9 lg:w-10 h-[1px] bg-secondry"></div></span>
           </div>
-          <div class="flex flex-wrap xl:flex-nowrap  xl:w-full justify-center my-10 w-full  mx-auto">
-            @foreach ($pendidikanF as $item)    
-            <div class="mb-8 sm:p-4 md:w-1/2 xl:w-1/3 hover:scale-110 transition-all duration-300">
-              <div class="rounded-lg shadow-lg overflow-hidden bg-white bg-opacity-60 mb-4">
-                <img src="img/sekolah/school.jpg" alt="" />
-                <div class="mx-6 py-8">
-                  <h4 class="mb-3 text-xl font-semibold font-['Viga'] text-primary">{{ $item['title'] }}</h4>
-                  <p class="font-medium font-['Poppins'] text-tex mb-5">{{ $item['deskripsi'] }}</p>
-                  <a href="/pendidikan/{{ $item['slug'] }}" class="text-sm font-medium font-['Poppins'] duration-200 transition-all hover:bg-yellow-300 hover:text-slate-200 text-white bg-gradient-to-r from-primary  to-kuns px-4 py-2 rounded-lg">Lihat Selengkapnya</a>
-                </div>
-              </div>
-            </div>
-            @endforeach
+          <div class="flex flex-wrap xl:flex-nowrap  xl:w-full justify-center my-10 w-full  mx-auto"> 
+          @php
+              $sortedLevels = ['TK', 'SDIT', 'SMP', 'SMA'];
+          @endphp
+          {{-- @foreach ($sortedLevels as $level) --}}
+          @foreach ($konten as $item)
+            @if ($item->pendidikan->jenis_pendidikan == "formal")
+                  <div class="mb-8 sm:p-4 md:w-1/2 xl:w-1/3 hover:scale-110 transition-all duration-300">
+                    <div class="rounded-lg shadow-lg overflow-hidden bg-white bg-opacity-60 mb-4">
+                      <img src="kontenPendidikan/{{$item->gambar}}" alt="" />
+                      <div class="mx-6 py-8">
+                        <h4 class="mb-3 text-xl font-semibold font-['Viga'] text-primary">{{ $item->pendidikan->nama }}</h4>
+                        <div class="font-medium font-['Poppins'] text-tex mb-5">
+                        {!!Str::limit($item->sejarah, 120, '...') !!}
+                        </div>
+                        <a href="/pendidikan/{{ $item['slug'] }}" class="text-sm font-medium font-['Poppins'] duration-200 transition-all hover:bg-yellow-300 hover:text-slate-200 text-white bg-gradient-to-r from-primary  to-kuns px-4 py-2 rounded-lg">Lihat Selengkapnya</a>
+                      </div>
+                    </div>
+                  </div>
+            @endif    
+          {{-- @endforeach --}}
+          @endforeach
           </div>
         </div>
     </section>

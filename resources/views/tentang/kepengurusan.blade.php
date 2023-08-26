@@ -171,7 +171,6 @@
                     </tbody>
                </table>
             </div>
-=======
       <div class="relative">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="-mt-[90px] sm:-mt-[150px] lg:-mt-[200px] xl:-mt-[280px] "><path fill="#fff" fill-opacity="1" d="M0,256L40,256C80,256,160,256,240,224C320,192,400,128,480,117.3C560,107,640,149,720,176C800,203,880,213,960,186.7C1040,160,1120,96,1200,96C1280,96,1360,160,1400,192L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
         <section id="#pendiri" class="p-8 bg-white ">
@@ -339,7 +338,6 @@
                 </div>
                 </div>
               </div>
->>>>>>> cb3797970aa24d138829087ab09ca04b858e55a8
             </div>
           </div>
         </section>
@@ -347,15 +345,6 @@
    
     <!-- visi&misi section end -->
 
-
-
-
-
-
-
-
-
-    
     <!-- foto pendiri dan tokoh start -->
     <section id="#pendiri" class="p-5">
       <div class="container">

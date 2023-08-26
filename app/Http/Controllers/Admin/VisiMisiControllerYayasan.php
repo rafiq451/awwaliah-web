@@ -57,8 +57,8 @@ class VisiMisiControllerYayasan extends Controller
     {
          // Validasi data yang diterima
         $request->validate([
-            'visi' => 'required|string',
-            'misi' => 'required|string',
+            'visi' => 'string',
+            'misi' => 'string',
         ]);
         // Proses update data sejarah di database
         $visi_misi = VisiMisiYayasan::find(1); 
