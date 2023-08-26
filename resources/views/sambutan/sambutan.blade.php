@@ -26,24 +26,17 @@
       <div class="w-full md:w-[80%] mx-auto relative">
             <div class="my-5 text-center">
                 <h4 class="font-medium text-primary">Ketua Yayasan</h4>
-                <h1 class="text-3xl mt-5 md:text-4xl font-serif font-semibold">Aang Popo</h1>
+                @foreach ($sambutan as $item)
+                <h1 class="text-3xl mt-5 md:text-4xl font-serif font-semibold">{{$item->nama}}</h1>
             </div>
             <div class="absolute top-32 shadow-lg  rounded-md bg-white">
                 <div class="container">
                 <div class="p-1 sm:p-5 mb-10">      
                 <h1 class="font-semibold text-primary text-2xl mt-20 mb-5">Kata sambutan</h1>
-                <p> Bismillahirrahmanirrahiim..
-                    Assalamualaikum warrahmatullahi wabarokatuh
-                    Alhamdulillahi bini’matihi tattimusholihaat
-                    Segala Puji hanya milik Allah Ta’ala Atas segala nikmat dan karuniaNya yang tak terhitung kepada kita. Sholawat serta salam tak lupa selalu kita sanjungkan kepada Nabi kita Nabi Muhammad Sholallohu alaihi wassalam beserta keluarga dan para sahabatnya..dan semoga kita termasuk ke dalam umatnya yang akan menerima syafa’at di Yaumul Akhir kelak..Aamiin Yaa Robbal Alamiin.
-                    <p>    Di tengah kemajuan tehnologi dan informasi saat ini Yayasan Awwaliyah Al-Asiyah  yang bergerak di bidang pendidikan berupaya terus mendorong dan mengupdate  organisasi ini agar mampu menghasilkan lembaga pendidikan formal ataupun non formal yang berkualitas dan mampu bersaing dengan lembaga lain.
-                      Dengan berpedoman pada Visi dan Misi Yayasan yaitu menghasilkan lembaga pendidikan yang berkualitas, profesional, berintegritas dan bermanfaat untuk umat maka kami terus berbenah dari segala arah, menjawab tantangan masa depan dengan bergandengan tangan dan berpegang teguh pada ajaran Islam.</p>
-                    <p>  Kami terus mendorong upaya positif kepada seluruh pengelola  Lembaga sekolah, tenaga pendidik dan  satuan kependidikan Sekolah dibawah naungan  Awwaliyah Al-Asiyah  terus berkembang dan berkontribusi dalam dunia pendidikan khususnya kabupaten Bogor. Kami sangat mengapresiasi adanya website ini. Dengan adanya website ini kami harap masyarakat luas lebih mengenal dekat dengan Lembaga Pendidikan Yayasan Awwaliyah Al-Asiyah, baik Pendidikan formal atau informal serta  para peserta didik juga mampu mengakses informasi akademik melalui website ini dan para guru serta seluruh civitas akademika sekolah di bawah naungan Yayasan Awwaliyah-Al-Asiyah mampu mendapatkan informasi yang uptodate dalam dunia pendidikan.</p>
-                    Terakhir kami ucapkan Barokallohufiikum atas semua perjuangan dan pengabdian seluruh guru, pengelola sekolah dan komite sekolah atas kerjasama yang baik selama ini. Perjuangan tak pernah berhenti sampai disini.,karena tantangan masa depan akan silih berganti.
-                    Semoga apa yang kita lakukan mendapat ridho dari Allah Ta’ala
-                    Wassalamualaikum warrohamtullahi wabarokatuh</p>
+                {!! $item->sambutan !!}
                 </div>
             </div>
+                @endforeach
             </div>
     </div>
     </section>

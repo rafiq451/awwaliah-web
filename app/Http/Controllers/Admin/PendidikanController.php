@@ -54,7 +54,29 @@ class PendidikanController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $pendidikan = Pendidikan::findOrFail($id); // Ganti dengan model yang sesuai
+
+        $request->validate([
+            'nama' => 'string',
+            'jenis_pendidikan',
+            'logo' => 'image|mimes:jpeg,png,jpg,svg'
+        ]);
+        if ($request->hasFile('logo')) {
+             // Hapus logo lama sebelum mengganti dengan yang baru
+            if ($pendidikan->logo !== null) {
+                $oldImagePath = public_path('pendidikan').'/'.$pendidikan->logo;
+                if (file_exists($oldImagePath)) {
+                    unlink($oldImagePath);
+                }
+            }
+
+        // Pindahkan logo baru ke direktori
+        $imageName = time().'.'.$request->file('logo')->extension(); // Use file() method here
+        $request->logo->move(public_path('pendidikan'), $imageName);
+        $pendidikan->logo = $imageName;
+        }
+        $pendidikan->save();
+        return redirect('dashboard/pendidikan')->with('success-info', 'Gambar slider bergasil disimpan');
     }
 
     /**

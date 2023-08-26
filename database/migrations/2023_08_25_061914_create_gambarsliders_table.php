@@ -11,12 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ekstrakurikulers', function (Blueprint $table) {
+        Schema::create('gambarsliders', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_pendidikan')->constrained('pendidikans');
-            $table->string("nama");
-            $table->text("deskripsi");
-            $table->string("gambar");
+            $table->string('gambar');
             $table->timestamps();
         });
     }
@@ -26,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('ekstrakurikulers');
+        Schema::dropIfExists('gambarsliders');
     }
 };

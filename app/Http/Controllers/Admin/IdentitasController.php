@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\IdentitasYayasan;
+use App\Http\Controllers\Controller;
 
 class IdentitasController extends Controller
 {
@@ -12,25 +13,10 @@ class IdentitasController extends Controller
      */
     public function index()
     {
-        return view('admin.identitas.index');
-    }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
+        $result = IdentitasYayasan::all();
+        return view('admin.identitas.index',['identitas' => $result]);
     }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
     /**
      * Display the specified resource.
      */
@@ -42,17 +28,51 @@ class IdentitasController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit()
     {
-        //
+        $identitas = IdentitasYayasan::findorfail(1);
+        return view('admin.identitas.edit', ['identitas' => $identitas]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request)
     {
-        //
+          // Validasi data yang diterima
+        $request->validate([
+            'nama' => 'string',
+            'makna_bentuk' => 'string',
+            'makna_warna' => 'string',
+            'logo' => 'image|mimes:jpeg,png,jpg,svg',
+        ]);
+        // Proses update data sejarah di database
+        $identitas = IdentitasYayasan::find(1); 
+        $identitas->nama = $request->nama;
+        $identitas->makna_bentuk = $request->makna_bentuk;
+        $identitas->makna_warna = $request->makna_warna;
+
+        if ($request->hasFile('logo')) {
+        // Hapus gambar lama (jika ada)
+        if ($identitas->logo) {
+            $identitas = IdentitasYayasan::find(1);
+            // Hapus logo dari penyimpanan (jika perlu)
+            $logoPath = public_path("IdentitasYayasan/{$identitas->logo}");
+            if (file_exists($logoPath)) {
+                unlink($logoPath);
+            }
+            $identitas->delete();
+        }
+
+        // Pindahkan logo baru ke direktori
+        $imageName = time().'.'.$request->logo->extension();
+        $request->logo->move(public_path('IdentitasYayasan'), $imageName);
+        $identitas->logo = $imageName;
+        }
+
+
+        $identitas->save();
+            return redirect('/dashboard/identitas')->with('success', 'Sambutan berhasil diubah.');
     }
 
     /**

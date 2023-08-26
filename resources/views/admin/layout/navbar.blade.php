@@ -11,16 +11,16 @@
       </li><!-- End Dashboard Nav -->
       
        <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-contact.html">
-          <i class="bi bi-envelope"></i>
+        <a class="nav-link collapsed" href="/dashboard/gambarslide">
+          <i class="bi bi-image"></i>
           <span>Gambar Slider</span>
         </a>
       </li><!-- End Contact Page Nav -->
 
        <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-contact.html">
+        <a class="nav-link collapsed" href="/dashboard/sambutan">
           <i class="bi bi-person"></i>
-          <span>Sambutan Kepala Sekolah</span>
+          <span>Sambutan Ketua Sekolah</span>
         </a>
       </li><!-- End Contact Page Nav -->
 
@@ -88,11 +88,16 @@
               <i class="bi bi-circle"></i><span>Extrakurikuler</span>
             </a>
           </li>
+          <li>
+            <a href="/dashboard/makna-logo">
+              <i class="bi bi-circle"></i><span>Makna Logo</span>
+            </a>
+          </li>
         </ul>
       </li><!-- End Icons Nav -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="/dashboard/berita">
-          <i class="bi bi-question-circle"></i>
+          <i class="bi bi-newspaper"></i>
           <span>Berita</span>
         </a>
       </li><!-- End F.A.Q Page Nav -->

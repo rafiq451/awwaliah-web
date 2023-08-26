@@ -27,20 +27,18 @@
     <!-- sejarah section start -->
     <div class="relative">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="-mt-[90px] sm:-mt-[150px] lg:-mt-[200px] xl:-mt-[280px] "><path fill="#fff" fill-opacity="1" d="M0,256L40,256C80,256,160,256,240,224C320,192,400,128,480,117.3C560,107,640,149,720,176C800,203,880,213,960,186.7C1040,160,1120,96,1200,96C1280,96,1360,160,1400,192L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+      {{-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="-mt-[90px] sm:-mt-[150px] lg:-mt-[200px] xl:-mt-[280px] "><path fill="#fff" fill-opacity="1" d="M0,256L40,256C80,256,160,256,240,224C320,192,400,128,480,117.3C560,107,640,149,720,176C800,203,880,213,960,186.7C1040,160,1120,96,1200,96C1280,96,1360,160,1400,192L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg> --}}
       <section id="#sejarah" class="p-8 bg-white ">
         <div class="container">
           <div class="w-full">
             
+              @foreach ($sejarah as $item)
             <div class="  my-10  w-full">
               <h2 class="sejarah">Sejarah</h2>
-              <p> </p>
+              <p>{!!$item->sejarah!!}</p>
               <h2 class="sejarah">Kurikulum</h2>
-              {{-- @foreach ($sejarah as $item) --}}
-              {{-- <p>{{$item->sejarah}}</p> --}}
-                <br>
-                {{-- <p>{{$item->kurikulum}}</p> --}}
-              {{-- @endforeach --}}
+                <p>{!!$item->kurikulum!!}</p>
+              @endforeach
                 </div>
               </div>
         </div>
