@@ -9,7 +9,7 @@
   }
 
   .opacity-rgba {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.4);
   }
   .opacity-white {
     background-color: rgba(255, 255, 255, 0.5);
@@ -150,6 +150,17 @@
     }
   }
 
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   .ping {
     animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
@@ -187,6 +198,10 @@
 .dropdown {
   @apply block;
 }
+.opacty {
+  @apply opacity-100;
+}
+
 .dropdown-menu {
   @apply text-base text-secondry py-3 mx-6 flex hover:text-primary;
 }

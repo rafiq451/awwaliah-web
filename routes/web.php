@@ -486,6 +486,76 @@ Route::get('/detail/{slug}', function($slug) {
     ]);
 });
 
+// usaha
+Route::get('/travel', function() {
+    
+    
+    $travel = [
+        [
+            'title' => 'Haji & Umroh',
+            'gambar' => '1.jpg',
+            'slug' => 'haji-umroh',
+            'deskripsi' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum hic excepturi exercitationem, nisi doloribus quibusdam delectus, commodi, officiis porro facilis cupiditate! Sapiente nostrum possimus, delectus totam modi fugit unde corrupti magni dicta nobis! Dicta aliquid consectetur eius optio dignissimos totam aspernatur, velit libero explicabo nisi veniam fuga eveniet porro deserunt accusantium illum alias repudiandae esse veritatis. Quas ad nesciunt facilis, neque ut temporibus debitis, autem eos aspernatur nam quod ratione impedit. Magnam nulla debitis quos et cum a mollitia optio. Voluptatum, pariatur? Unde similique temporibus voluptatum aspernatur aliquid? Aspernatur libero quis nostrum. Ex, hic consequuntur rerum consequatur fugit blanditiis ipsum!'
+
+        ],
+        [
+            'title' => 'Haji & Umroh',
+            'gambar' => '1.jpg',
+            'slug' => 'haji-umroh',
+            'deskripsi' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum hic excepturi exercitationem, nisi doloribus quibusdam delectus, commodi, officiis porro facilis cupiditate! Sapiente nostrum possimus, delectus totam modi fugit unde corrupti magni dicta nobis! Dicta aliquid consectetur eius optio dignissimos totam aspernatur, velit libero explicabo nisi veniam fuga eveniet porro deserunt accusantium illum alias repudiandae esse veritatis. Quas ad nesciunt facilis, neque ut temporibus debitis, autem eos aspernatur nam quod ratione impedit. Magnam nulla debitis quos et cum a mollitia optio. Voluptatum, pariatur? Unde similique temporibus voluptatum aspernatur aliquid? Aspernatur libero quis nostrum. Ex, hic consequuntur rerum consequatur fugit blanditiis ipsum!'
+
+        ],
+        [
+            'title' => 'Haji & Umroh',
+            'gambar' => '1.jpg',
+            'slug' => 'haji-umroh',
+            'deskripsi' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum hic excepturi exercitationem, nisi doloribus quibusdam delectus, commodi, officiis porro facilis cupiditate! Sapiente nostrum possimus, delectus totam modi fugit unde corrupti magni dicta nobis! Dicta aliquid consectetur eius optio dignissimos totam aspernatur, velit libero explicabo nisi veniam fuga eveniet porro deserunt accusantium illum alias repudiandae esse veritatis. Quas ad nesciunt facilis, neque ut temporibus debitis, autem eos aspernatur nam quod ratione impedit. Magnam nulla debitis quos et cum a mollitia optio. Voluptatum, pariatur? Unde similique temporibus voluptatum aspernatur aliquid? Aspernatur libero quis nostrum. Ex, hic consequuntur rerum consequatur fugit blanditiis ipsum!'
+
+        ],
+    ];
+    return view('usaha/travel' , [
+        'title' => 'Usaha',
+        'travel' => $travel
+    ]);
+});
+
+// usaha detail
+Route::get('/travel/{slug}', function($slug) {
+       $travel = [
+        [
+            'title' => 'Haji & Umroh',
+            'gambar' => '1.jpg',
+            'slug' => 'haji-umroh',
+            'deskripsi' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum hic excepturi exercitationem, nisi doloribus quibusdam delectus, commodi, officiis porro facilis cupiditate! Sapiente nostrum possimus, delectus totam modi fugit unde corrupti magni dicta nobis! Dicta aliquid consectetur eius optio dignissimos totam aspernatur, velit libero explicabo nisi veniam fuga eveniet porro deserunt accusantium illum alias repudiandae esse veritatis. Quas ad nesciunt facilis, neque ut temporibus debitis, autem eos aspernatur nam quod ratione impedit. Magnam nulla debitis quos et cum a mollitia optio. Voluptatum, pariatur? Unde similique temporibus voluptatum aspernatur aliquid? Aspernatur libero quis nostrum. Ex, hic consequuntur rerum consequatur fugit blanditiis ipsum!'
+
+        ],
+        [
+            'title' => 'Haji & Umroh',
+            'gambar' => '1.jpg',
+            'slug' => 'haji-umroh',
+            'deskripsi' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum hic excepturi exercitationem, nisi doloribus quibusdam delectus, commodi, officiis porro facilis cupiditate! Sapiente nostrum possimus, delectus totam modi fugit unde corrupti magni dicta nobis! Dicta aliquid consectetur eius optio dignissimos totam aspernatur, velit libero explicabo nisi veniam fuga eveniet porro deserunt accusantium illum alias repudiandae esse veritatis. Quas ad nesciunt facilis, neque ut temporibus debitis, autem eos aspernatur nam quod ratione impedit. Magnam nulla debitis quos et cum a mollitia optio. Voluptatum, pariatur? Unde similique temporibus voluptatum aspernatur aliquid? Aspernatur libero quis nostrum. Ex, hic consequuntur rerum consequatur fugit blanditiis ipsum!'
+
+        ],
+        [
+            'title' => 'Haji & Umroh',
+            'gambar' => '1.jpg',
+            'slug' => 'haji-umroh',
+            'deskripsi' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum hic excepturi exercitationem, nisi doloribus quibusdam delectus, commodi, officiis porro facilis cupiditate! Sapiente nostrum possimus, delectus totam modi fugit unde corrupti magni dicta nobis! Dicta aliquid consectetur eius optio dignissimos totam aspernatur, velit libero explicabo nisi veniam fuga eveniet porro deserunt accusantium illum alias repudiandae esse veritatis. Quas ad nesciunt facilis, neque ut temporibus debitis, autem eos aspernatur nam quod ratione impedit. Magnam nulla debitis quos et cum a mollitia optio. Voluptatum, pariatur? Unde similique temporibus voluptatum aspernatur aliquid? Aspernatur libero quis nostrum. Ex, hic consequuntur rerum consequatur fugit blanditiis ipsum!'
+
+        ],
+    ];
+    $detail_travel = [];
+    foreach ($travel as $usa ) {
+       if($usa['slug'] === $slug) {
+           $detail_travel = $usa;
+       }
+    }
+
+   return view('usaha/detail/detailtravel', [
+       'title' => 'single',
+       'travel' => $detail_travel
+   ]);
+});
 
 // berita terkini all
 Route::get('/berita', function () {

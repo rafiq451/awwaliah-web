@@ -254,7 +254,7 @@
               <div class="img-content  ">
                 <span class="overlay  "></span>
                 <div class="card-image">
-                  <img src="{{ asset('img/ketua yayasan.png') }}" alt="" class="card-img ">
+                  <img src="{{ asset('img/rafiq_dosen1.png') }}" alt="" class="card-img ">
                 </div>
               </div>
               <div class="card-content mb-4 ">
@@ -266,7 +266,7 @@
               <div class="img-content  ">
                 <span class="overlay  "></span>
                 <div class="card-image">
-                  <img src="{{ asset('img/ketua yayasan.png') }}" alt="" class="card-img ">
+                  <img src="{{ asset('img/rafiq_dosen1.png') }}" alt="" class="card-img ">
                 </div>
               </div>
               <div class="card-content mb-4 ">
@@ -278,7 +278,7 @@
               <div class="img-content  ">
                 <span class="overlay  "></span>
                 <div class="card-image">
-                  <img src="{{ asset('img/ketua yayasan.png') }}" alt="" class="card-img ">
+                  <img src="{{ asset('img/rafiq_dosen1.png') }}" alt="" class="card-img ">
                 </div>
               </div>
               <div class="card-content mb-4 ">
@@ -290,7 +290,7 @@
               <div class="img-content  ">
                 <span class="overlay  "></span>
                 <div class="card-image">
-                  <img src="{{ asset('img/ketua yayasan.png') }}" alt="" class="card-img ">
+                  <img src="{{ asset('img/rafiq_dosen1.png') }}" alt="" class="card-img ">
                 </div>
               </div>
               <div class="card-content mb-4 ">
@@ -302,7 +302,7 @@
               <div class="img-content  ">
                 <span class="overlay  "></span>
                 <div class="card-image">
-                  <img src="{{ asset('img/ketua yayasan.png') }}" alt="" class="card-img ">
+                  <img src="{{ asset('img/rafiq_dosen1.png') }}" alt="" class="card-img ">
                 </div>
               </div>
               <div class="card-content mb-4 ">
@@ -314,7 +314,7 @@
               <div class="img-content  ">
                 <span class="overlay  "></span>
                 <div class="card-image">
-                  <img src="{{ asset('img/ketua yayasan.png') }}" alt="" class="card-img ">
+                  <img src="{{ asset('img/rafiq_dosen1.png') }}" alt="" class="card-img ">
                 </div>
               </div>
               <div class="card-content mb-4 ">
@@ -326,7 +326,7 @@
               <div class="img-content  ">
                 <span class="overlay  "></span>
                 <div class="card-image">
-                  <img src="{{ asset('img/ketua yayasan.png') }}" alt="" class="card-img ">
+                  <img src="{{ asset('img/rafiq_dosen1.png') }}" alt="" class="card-img ">
                 </div>
               </div>
               <div class="card-content mb-4 ">
@@ -338,7 +338,7 @@
               <div class="img-content  ">
                 <span class="overlay  "></span>
                 <div class="card-image">
-                  <img src="{{ asset('img/ketua yayasan.png') }}" alt="" class="card-img ">
+                  <img src="{{ asset('img/rafiq_dosen1.png') }}" alt="" class="card-img ">
                 </div>
               </div>
               <div class="card-content mb-4 ">
@@ -350,7 +350,7 @@
               <div class="img-content  ">
                 <span class="overlay  "></span>
                 <div class="card-image">
-                  <img src="{{ asset('img/ketua yayasan.png') }}" alt="" class="card-img ">
+                  <img src="{{ asset('img/rafiq_dosen1.png') }}" alt="" class="card-img ">
                 </div>
               </div>
               <div class="card-content mb-4 ">
@@ -362,7 +362,7 @@
               <div class="img-content  ">
                 <span class="overlay  "></span>
                 <div class="card-image">
-                  <img src="{{ asset('img/ketua yayasan.png') }}" alt="" class="card-img ">
+                  <img src="{{ asset('img/rafiq_dosen1.png') }}" alt="" class="card-img ">
                 </div>
               </div>
               <div class="card-content mb-4 ">

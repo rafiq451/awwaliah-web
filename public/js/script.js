@@ -107,6 +107,7 @@ listBerita.addEventListener('mouseover', function () {
         listNonFormal.classList.remove('dropdown');
       });
   });
+
 var swiper1 = new Swiper('.mySwiper', {
     slidesPerView: 1,
     centeredSlides: !1,

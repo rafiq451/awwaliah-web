@@ -27,7 +27,6 @@
     <!-- hero section end -->
 
       <!-- visi&misi section start -->
-<<<<<<< HEAD
       <section id="#pendiri" class="p-8  ">
       <div class="container">
         <div  class="w-full">

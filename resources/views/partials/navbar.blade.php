@@ -17,9 +17,9 @@
                 </li>
                 <li class="group">
                   <a href="#about" class="text-base text-secondry py-3 lg:mx-3 mx-6 flex hover:text-primary"
-                    >Tentang Kami <span class="mx-2"><i class="bi bi-chevron-down"></i></span
+                    >Tentang Kami <span class="mx-2"><i class="fa-solid fa-chevron-down"></i></span
                   ></a>
-                  <div class="absolute hidden bg-slate-50 shadow-lg rounded-lg max-w-[250px] w-full top-19 left-4 lg:left-auto">
+                  <div class="absolute hidden  bg-slate-50 shadow-lg rounded-lg max-w-[250px] w-full top-19 left-4 lg:left-auto">
                     <ul class="block">
                       <li><a href="/sejarah" class="dropdown-menu">Sejarah Berdirinya yayasan</a></li>
                       <li><a href="/visi&misi" class="dropdown-menu">Visi Misi Yayasan</a></li>
@@ -30,19 +30,19 @@
                   </div>
                 </li>
                 <li class="color">
-                  <a href="/usaha" class="text-base text-secondry py-3 mx-6 flex hover:text-primary">Usaha</a>
+                  <a href="/travel" class="text-base text-secondry py-3 mx-6 flex hover:text-primary">Usaha</a>
                 </li>
                 <li class="color">
                   <a href="/berita" class="text-base text-secondry py-3 mx-6 flex hover:text-primary">Berita</a>
                 </li>
                 <li class="color">
                   <a href="#" class="text-base text-secondry py-3 mx-6 flex hover:text-primary"
-                    >Pendidikan <span class="mx-2"><i class="bi bi-chevron-down"></i></span
+                    >Pendidikan <span class="mx-2"><i class="fa-solid fa-chevron-down"></i></span
                   ></a>
                   <div class="absolute hidden bg-slate-50 shadow-lg rounded-lg max-w-[250px] w-full top-19 left-4 lg:left-auto">
                     <ul class="block">
                       <li>
-                        <a href="#formal" class="dropdown-menu ">FORMAL <span class="mx-2"><i class="bi bi-chevron-down"></i></span
+                        <a href="#formal" class="dropdown-menu ">FORMAL <span class="mx-2"><i class="fa-solid fa-chevron-down"></i></span
                           ></a>
                         <div class="absolute hidden border border-primary bg-slate-50 shadow-lg rounded-lg max-w-[250px] w-full top-19 left-4 lg:left-10">
                           <ul class="block">
@@ -54,7 +54,7 @@
                         </div>
                       </li>
                       <li>
-                        <a href="#non-formal" class="dropdown-menu">NON FORMAL <span class="mx-2"><i class="bi bi-chevron-down"></i></span></a>
+                        <a href="#non-formal" class="dropdown-menu">NON FORMAL <span class="mx-2"><i class="fa-solid fa-chevron-down"></i></span></a>
                         <div class="absolute hidden border border-primary bg-slate-50 shadow-lg rounded-lg max-w-[250px] w-full top-19 left-4 lg:left-10">
                           <ul class="block">
                             <li><a href="#" class="dropdown-menu">Pondok Pesantren</a></li>

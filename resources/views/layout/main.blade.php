@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <!-- fontawwesome -->
     <link rel="stylesheet" href="{{ asset("fontawesome/css/all.css")  }}"/>
 
@@ -18,13 +17,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600&family=Viga&display=swap" rel="stylesheet">
 
-    {{-- <link href="https://cdn.jsdelivr.net/npm/swiper@10.0.4/swiper-bundle.min.css" rel="stylesheet"> --}}
-
     {{-- swiper css --}}
     @vite('public/css/swiper-bundle.min.css')
-
-    {{-- <link rel="stylesheet" href="css/style.css"> --}}
-    
 
     {{-- custom css --}}
     @vite('resources/css/app.css' )
@@ -50,11 +44,11 @@
                 <a href=""><p class="catagory-footer">Awwaliah Al-asiyah</p></a>
               </div>
               <div class="flex text-center my-5">
-                <span class="mx-3"><i class="bi bi-geo-alt-fill"></i></span>
+                <span class="mx-3"><i class="fa-solid fa-map-location-dot"></i></span>
                 <a href=""><p class="catagory-footer">Lorem ipsum dolor sit amet.</p></a>
               </div>
               <div class="flex text-center my-5">
-                <span class="mx-3"><i class="bi bi-telephone-fill"></i></span>
+                <span class="mx-3"><i class="fa-solid fa-phone"></i></span>
                 <a href=""><p class="catagory-footer">-0187198279287</p></a>
               </div>
             </div>
@@ -131,18 +125,8 @@
     </footer>
     <!-- footer end -->
 
-    {{-- <script src="{{ @vite('js/script.js') }}" defer></script> --}}
     @vite('public/js/script.js')
-    
-    {{-- swiper js --}}
-    {{-- @vite('public/js/swiper-bundle.min.js') --}}
-    
-    
-
-
-
   <script src="https://cdn.jsdelivr.net/npm/swiper@10.0.4/swiper-bundle.min.js"></script>
 
-  <!-- Initialize Swiper -->
   </body>
 </html>

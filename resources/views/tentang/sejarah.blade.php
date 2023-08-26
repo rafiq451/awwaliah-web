@@ -33,6 +33,7 @@
           <div class="w-full">
             
             <div class="  my-10  w-full">
+              
               <h2 class="sejarah">Sejarah</h2>
               <p> </p>
               <h2 class="sejarah">Kurikulum</h2>

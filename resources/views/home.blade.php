@@ -16,8 +16,8 @@
           </div>
         </div>
         <div class="carousel-nav absolute -top-[200px] sm:-top-[150px] md:-top-[20px] left-0 right-0 bottom-0 flex justify-between items-center p-2">
-          <button id="prevBtn" class="carousel-prev px-3 py-2 bg-gray-800 text-white rounded-full focus:outline-none"><i class="bi bi-arrow-left"></i></button>
-          <button id="nextBtn" class="carousel-next px-3 py-2 bg-gray-800 text-white rounded-full focus:outline-none"><i class="bi bi-arrow-right"></i></button>
+          <button id="prevBtn" class="carousel-prev px-3 py-2 bg-gray-800 text-white rounded-full focus:outline-none"><i class="fa-solid fa-arrow-left-long"></i></button>
+          <button id="nextBtn" class="carousel-next px-3 py-2 bg-gray-800 text-white rounded-full focus:outline-none"><i class="fa-solid fa-arrow-right-long"></i></button>
         </div>
       </div>
     </section>
@@ -116,11 +116,9 @@
           <div class="swiper-button-prev NButton"></div>
           <div class="swiper-pagination overflow-hidden "></div>
         </div>
-        
       </div>
       </div>
     </section>
-    
     <!-- berita section end -->
 
     <!-- logo section start -->
@@ -132,14 +130,12 @@
           <div class="flex justify-center mt-4 mx-6 items-center">
             <span class="mx-2"><div class="w-9 lg:w-10 h-[1px] bg-white"></div></span>
             <div class=" w-12">
-              {{-- <i class="fa-solid fa-school"></i> --}}
               <img src="{{ asset('img/logo/logo_yayasan.svg') }}" alt="" />
             </div>
             <span class="mx-2"><div class="w-9 lg:w-10 h-[1px] bg-white"></div></span>
           </div>
           <div class="flex flex-wrap justify-center py-10 w-full">
             @foreach ($pendidikanF as $item)
-                
             <div class="mb-4 mx-2 lg:mx-4 sm:mx-6 mt-2 py-2">
               <div class="mb-4 w-32 h-32">
                 <a href="" class="grayscale opacity-60 transition hover:opacity-100 hover:grayscale-0 duration-500"><img src="img/logo/{{ $item['logo'] }}" alt="" /></a>
@@ -218,7 +214,6 @@
     </section>
     <!-- pendidikan section end -->
     
-    
     <!-- Video section start -->
     <section id="#video" class=" bg-fixed w-full bg-cover bg-center h-[800px] md:h-[950px] lg:h-[600px] xl:h-[620px] relative" style="background-image: url('img/sekolah/school.jpg');">
       <div class="bg-black w-full h-full bg-opacity-60">
@@ -235,7 +230,7 @@
                   <div class="animasi-pingvideo ping"></div>
                   <div class=" video-conten">
                     <span class="text-white mx-auto text-4xl ">
-                      <i class="bi bi-caret-right-fill"></i>
+                      <i class="fa-solid fa-caret-right"></i>
                     </span>
                   </div>
                 <div class=" z-10 bottom-5  lg:translate-x-8 scale-110 overflow-hidden rounded-lg relative w-80 md:w-96 md:left-3 md:bottom-0  ">
@@ -247,7 +242,7 @@
                     <div class="animasi-pingvideo ping "></div>
                     <div class="video-conten">
                       <span class="text-white mx-auto text-4xl ">
-                        <i class="bi bi-caret-right-fill"></i>
+                        <i class="fa-solid fa-caret-right"></i>
                       </span>
                     </div>
                   <div class=" z-10 bottom-5 translate-x-8 scale-110 overflow-hidden rounded-lg relative w-80 md:w-96 md:left-3 md:bottom-0  ">
